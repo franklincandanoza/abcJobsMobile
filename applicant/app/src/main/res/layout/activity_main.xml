@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Fondo de la interfaz -->
+    <!-- Título -->
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ABC JOBS"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="24dp" />
+
+    <!-- Formulario -->
+    <LinearLayout
+        android:id="@+id/formLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp">
+
+        <!-- Campo de Usuario -->
+        <TextView
+            android:id="@+id/txtUserLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usuario" />
+
+        <EditText
+            android:id="@+id/edtUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese su usuario" />
+
+        <!-- Campo de Contraseña -->
+        <TextView
+            android:id="@+id/txtPasswordLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contraseña"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese su contraseña"
+            android:inputType="textPassword" />
+
+        <!-- Spinner para seleccionar idioma -->
+        <Spinner
+            android:id="@+id/spinnerLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:entries="@array/language" />
+
+
+        <!-- ¿Eres nuevo? -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="¿Eres nuevo?"
+            android:layout_marginTop="16dp" />
+
+        <!-- Enlace para registrarte -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Regístrate"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/holo_blue_light"
+            android:clickable="true"
+            android:onClick="openRegistrationPage" />
+    </LinearLayout>
+
+    <!-- Botones Aceptar y Cancelar en la parte inferior -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnAceptar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aceptar"
+            android:drawableLeft="@android:drawable/ic_input_add"
+            android:drawablePadding="8dp" />
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:layout_marginLeft="16dp"
+            android:drawableLeft="@android:drawable/ic_menu_close_clear_cancel"
+            android:drawablePadding="8dp" />
+    </LinearLayout>
+</RelativeLayout>
+
+
