@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string-array name="language">
-        <item>@string/englishLanguageLevel</item>
-        <item>@string/spanishLanguageLevel</item>
-    </string-array>
-</resources>

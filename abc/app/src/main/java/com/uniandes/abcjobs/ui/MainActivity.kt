@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.ui.AppBarConfiguration
 import com.uniandes.abcjobs.databinding.ActivityMainBinding
+import android.content.Intent
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +16,11 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.registerButton.setOnClickListener {
+            val intent = Intent(this, CreateCandidateActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 
