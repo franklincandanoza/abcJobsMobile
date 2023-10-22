@@ -50,4 +50,8 @@
     <string name="ciudadInvalida">Ingrese una ciudad entre 2 y 30 caracteres.</string>
     <string name="telefonoInvalido">Enter a phone number between 8 and 30 digits.</string>
     <string name="politicaInvalida">You must accept the data policy</string>
+    <string name="usuarioInvalido">Enter a user between 2 and 30 characters.</string>
+    <string name="networkError">Network error</string>
+    <string name="invalidCredentials">Invalid user or password</string>
+    <string name="loginSuccess">Login Successful</string>
 </resources>
