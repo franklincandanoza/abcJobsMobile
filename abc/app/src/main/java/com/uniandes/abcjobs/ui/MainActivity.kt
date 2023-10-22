@@ -5,13 +5,22 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.ui.AppBarConfiguration
 import com.uniandes.abcjobs.databinding.ActivityMainBinding
 import android.content.Intent
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
+import android.widget.EditText
 import android.widget.Spinner
 import com.uniandes.abcjobs.R
 import org.intellij.lang.annotations.Language
-import java.util.*
+import androidx.lifecycle.ViewModelProvider
 import android.widget.Toast
+import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
+import com.uniandes.abcjobs.models.CandidateRequest
+import com.uniandes.abcjobs.models.LoginRequest
+import com.uniandes.abcjobs.viewmodels.LoginViewModel
+import kotlinx.coroutines.launch
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,9 +32,14 @@ class MainActivity : AppCompatActivity() {
     companion object {
         public var dLocale: Locale? = null
     }
+    private lateinit var viewModel: LoginViewModel
+    //candidateAdapter = CandidateAdapter()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -58,7 +72,53 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.BotonAceptar.setOnClickListener{
+            // Do click handling here
+            var editTextUser: EditText = findViewById(R.id.editTextUser)
+            var userName = editTextUser.text.toString()
+
+            var passwordEditText: EditText = findViewById(R.id.editTextPassword)
+            var password = passwordEditText.text.toString()
+
+            if(password.isEmpty()){
+                passwordEditText.error = resources.getString(R.string.claveInvalida)
+                return@setOnClickListener
+            }
+            if(userName.isEmpty() ){
+                editTextUser.error = resources.getString(R.string.usuarioInvalido)
+                return@setOnClickListener
+            }
+
+            var loginRequest=LoginRequest(userName,password)
+            login(loginRequest)
+
+
+        }
+        binding.imagenCancelar.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        viewModel.eventNetworkError.observe(this, Observer<Boolean> { isNetworkError ->
+            if (isNetworkError) onNetworkError()
+        })
+
+        viewModel.eventLoginFail.observe(this, Observer<Boolean> { isLoginError ->
+            if (isLoginError) onLoginFail()
+        })
+        viewModel.eventLoginSuccess.observe(this, Observer<Boolean> { isLoginSuccessful ->
+            if (isLoginSuccessful) onLoginSuccess()
+        })
     }
+
+    private fun login(loginRequest: LoginRequest) {
+        lifecycleScope.launch {
+            viewModel.login(loginRequest)
+
+        }
+
+    }
+
     private fun setLocale(localeName: String) {
         if (localeName != currentLanguage) {
             //println("Ingresando a canviar")
@@ -80,4 +140,34 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun onNetworkError() {
+        Log.i("onNetworkError", ""+!viewModel.isNetworkErrorShown.value!!)
+        if(!viewModel.isNetworkErrorShown.value!!) {
+            Toast.makeText(applicationContext, resources.getString(R.string.networkError), Toast.LENGTH_LONG).show()
+            viewModel.onNetworkErrorShown()
+        }
+    }
+
+    private fun onLoginFail() {
+        Log.i("onNetworkError", ""+!viewModel.isUnSuccessShown.value!!)
+        if(!viewModel.isUnSuccessShown.value!!) {
+            Toast.makeText(applicationContext, resources.getString(R.string.invalidCredentials), Toast.LENGTH_LONG).show()
+            viewModel.onUnSuccessLoginShown()
+        }
+    }
+
+    private fun onLoginSuccess() {
+        Log.i("onNetworkError", ""+!viewModel.isSuccessShown.value!!)
+        if(!viewModel.isSuccessShown.value!!) {
+            Toast.makeText(applicationContext, resources.getString(R.string.loginSuccess), Toast.LENGTH_LONG).show()
+
+            viewModel.onSuccessLoginShown()
+
+            var editTextUser: EditText = findViewById(R.id.editTextUser)
+            editTextUser.text.clear()
+
+            var passwordEditText: EditText = findViewById(R.id.editTextPassword)
+            passwordEditText.text.clear()
+        }
+    }
 }

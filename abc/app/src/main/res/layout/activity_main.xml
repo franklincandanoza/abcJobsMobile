@@ -102,7 +102,7 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/editTextLlamada"
+            android:id="@+id/editTextUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -110,7 +110,7 @@
             android:layout_marginBottom="15dp"
             android:background="@drawable/campotexto"
             android:ems="10"
-            android:inputType="number"
+            android:inputType="text"
             android:minHeight="48dp"
             android:text=""
             android:textColor="@color/Gris80AOC"
@@ -134,7 +134,7 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/editTextSMS"
+            android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -142,9 +142,8 @@
             android:layout_marginBottom="15dp"
             android:background="@drawable/campotexto"
             android:ems="10"
-            android:inputType="number"
+            android:inputType="textPassword"
             android:minHeight="48dp"
-            android:text=""
             android:textColor="@color/Gris80AOC"
             android:textSize="14sp" />
 

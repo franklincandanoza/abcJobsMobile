@@ -8,7 +8,7 @@ apply plugin: 'kotlin-kapt'
 
 android {
     compileSdk 31
-    buildToolsVersion "30.0.3"
+    buildToolsVersion "34.0.0"
 
     defaultConfig {
         applicationId "com.uniandes.abcjobs"
@@ -37,6 +37,7 @@ android {
         viewBinding true
         dataBinding true
     }
+    namespace 'com.uniandes.abcjobs'
 }
 
 dependencies {

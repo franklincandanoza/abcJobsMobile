@@ -93,6 +93,10 @@
     <string name="candidatoCreado">Se ha creado el candidato de forma exitosa</string>
 
     <!--Error messages-->
+    <string name="networkError">Error de red</string>
+    <string name="invalidCredentials">Usuario o contraseña errada</string>
+    <!--Info messages -->
+    <string name="loginSuccess">Login existoso</string>
     <!--CreateCandidate-->
     <string name="correoInvalido">Ingrese un correo valido</string>
     <string name="claveInvalida">La clave debe contener minimo 6 caracteres.Debe incluir una Mayuscula una minuscula, numero y caracter especial</string>
@@ -103,5 +107,5 @@
     <string name="ciudadInvalida">Ingrese una ciudad entre 2 y 30 caracteres.</string>
     <string name="telefonoInvalido">Ingrese un telefono entre 8 y 30 digitos.</string>
     <string name="politicaInvalida">Debe aceptar la politica de datos</string>
-
+    <string name="usuarioInvalido">Ingrese un usuario entre 6 y 30 digitos.</string>
 </resources>
