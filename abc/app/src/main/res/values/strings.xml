@@ -1,6 +1,107 @@
 <resources>
-    <string name="app_name">ABC Jobs</string>
-    <string name="englishLanguageLevel">Español</string>
-    <string name="spanishLanguageLevel">English</string>
+    <string name="app_name" translatable="false">ABCJobs</string>
+    <string name="DatosBasicosTitulo">Datos Basicos</string>
+    <string name="AlarmasNuevaTitulo">Nueva Alarma</string>
+    <string name="CandidatoConfigTitulo">Menu</string>
+    <string name="AlarmasDetencionTitulo">Modo detencion</string>
+    <string name="AlarmasCompartirTitulo">Compartir</string>
+    <string name="AlarmasRepeticionTitulo">Repetición</string>
+    <string name="AlarmasNotficacionTitulo">Notificaciones</string>
+    <string name="AsistentePaso1Titulo">Bienvenido</string>
+    <string name="AsistentePaso1Desc">Ingrese la hora de la alarma</string>
+    <string name="AsistentePaso2Titulo">Paso 2</string>
+    <string name="AsistentePaso2Desc">Seleccione los días de la semana</string>
+    <string name="AsistentePaso3Titulo">Paso 3</string>
+    <string name="AsistentePaso3Desc">Seleccione el tiempo de repetición</string>
+    <string name="AsistentePaso4Titulo">Paso 4</string>
+    <string name="AsistentePaso4Desc">Seleccione un sonido</string>
+    <string name="AsistentePaso5Titulo">Paso 5</string>
+    <string name="AsistentePaso5Desc">Seleccione la forma de detener la alarma</string>
+    <string name="AsistentePaso6Titulo">Paso 6</string>
+    <string name="AsistentePaso6Desc">Ingrese un nombre para su nueva alarma</string>
+    <!--texto Botones-->
+    <string name="BotonCrear">Crear</string>
+    <string name="BotonAceptar">Aceptar</string>
+    <string name="BotonCancelar">Cancelar</string>
+    <string name="BotonSiguiente">Siguiente</string>
+    <string name="BotonAnterior">Anterior</string>
+    <string name="BotonTonos">Tonos</string>
+    <string name="BotonReloj">Reloj</string>
+    <string name="BotonMusica">Música</string>
+    <string name="BotonAm" translatable="false">AM</string>
+    <string name="BotonPm" translatable="false">PM</string>
+    <string name="BotonDatos">Mis Datos</string>
+    <string name="BotonPruebas">Mis Pruebas</string>
+    <string name="BotonEntrevistas">Mis Entrevistas</string>
+    <string name="BotonPagos">Mis Pagos</string>
+    <string name="BotonAsistenteDesc">Boton para iniciar asistente</string>
+    <string name="BotonNuevaAlarmaDesc">Boton para Crear Alarma</string>
+    <string name="BotonCompartirDesc">Compartir</string>
+    <string name="BotonBorrarDesc">Boton para Eliminar</string>
+    <string name="BotonVolverDesc">Boton para Volver</string>
+    <string name="BotonSonidoDesc">Boton para Sonido</string>
+    <string name="BotonRepeticionDesc">Boton para retardar la alarma</string>
+    <string name="BotonDetenerDesc">Boton para detener la alarma</string>
+    <string name="BotonNotificacionDesc">Boton para notificaciones de la alarma</string>
+    <string name="BotonCrearDesc">Boton para Crear</string>
+    <string name="BotonCancelarDesc">Boton para Cancelar</string>
+    <string name="BotonAceptarDesc">Boton para confirmar el proceso</string>
+    <string name="BotonRelojDesc">Boton para seleccionar hora</string>
+    <string name="Lenguaje1" translatable="false">Español</string>
+    <string name="Lenguaje2" translatable="false">English</string>
+    <!--label-->
+    <string name="LabelUsuario">Usuario</string>
+    <string name="LabelPassword">Clave</string>
+    <string name="LabelRegistro">Eres Nuevo?:</string>
+    <string name="LabelRegistro2">Registrate</string>
+    <string name="LabelCorreo">Correo</string>
+    <string name="LabelTipoDoc">Tipo Documento</string>
+    <string name="LabelDocumento">Documento</string>
+    <string name="LabelNombre">Nombre(s)</string>
+    <string name="LabelApellido">Apellido(s)</string>
+    <string name="LabelEdad">Edad</string>
+    <string name="LabelDireccion">Direccion</string>
+    <string name="LabelCiudad">Ciudad</string>
+    <string name="LabelPais">Pais de Residencia</string>
+    <string name="LabelOrigen">Pais de Origen</string>
+    <string name="LabelTelefono">Telefono</string>
+    <string name="LabelFoto">Foto</string>
+    <string name="LabelPolitica">Acepta Politica de Datos</string>
+    <string name="LabelSms">SMS</string>
+
+    <!--objeto formulario-->
+    <string name="placeCorreo">Ingrese su correo</string>
+    <string name="placeClave">Ingrese su Clave</string>
+    <string name="placeDocumento">Ingrese su numero de identificacion</string>
+    <string name="placeNombre">Ingrese su(s) Nombres(s)</string>
+    <string name="placeApelliido">Ingrese su(s) Apellidos(s)</string>
+    <string name="placeDireccion">Ingrese su direccion de residencia</string>
+    <string name="placeCiudad">Ingrese su ciudad de residencia</string>
+    <string name="placeTelefono">Ingrese su numero de telefono</string>
+    <string name="placeFoto">Importe una foto</string>
+    <string name="InputNombre">Nombre</string>
+    <string name="InputNombreDesc">Ingrese Nombre Alarma</string>
+    <string name="InputHora">00</string>
+    <string name="InputHoraDesc">Ingrese Hora Alarma</string>
+    <string name="InputMinutos">00</string>
+    <string name="InputMinutosaDesc">Ingrese Minutos Alarma</string>
+
+    <!--invalid values -->
+    <string name="invalidSelect">Seleccione</string>
+
+    <!--Info messages -->
+    <string name="candidatoCreado">Se ha creado el candidato de forma exitosa</string>
+
+    <!--Error messages-->
+    <!--CreateCandidate-->
+    <string name="correoInvalido">Ingrese un correo valido</string>
+    <string name="claveInvalida">La clave debe contener minimo 6 caracteres.Debe incluir una Mayuscula una minuscula, numero y caracter especial</string>
+    <string name="documentoInvalido">Ingrese un numero de documento entre 6 y 30 digitos.</string>
+    <string name="nombreInvalido">Ingrese un nombre entre 2 y 30 caracteres.</string>
+    <string name="apellidoInvalido">Ingrese un apellido entre 2 y 30 caracteres</string>
+    <string name="direccionInvalida">Ingrese una direccion valida entre 8 y 60 caracteres</string>
+    <string name="ciudadInvalida">Ingrese una ciudad entre 2 y 30 caracteres.</string>
+    <string name="telefonoInvalido">Ingrese un telefono entre 8 y 30 digitos.</string>
+    <string name="politicaInvalida">Debe aceptar la politica de datos</string>
 
 </resources>
