@@ -5,10 +5,10 @@
         <item>@string/Lenguaje2</item>
     </string-array>
     <string-array name="documentType">
-        <item>Cedula-CC</item>
-        <item>ID Nacional-IN</item>
-        <item>Pasaporte-PA</item>
-        <item>Otro-OT</item>
+        <item>Identification Card-CC</item>
+        <item>National ID-IN</item>
+        <item>Passport-PA</item>
+        <item>Other-OT</item>
     </string-array>
     <string-array name="age">
         <item>18</item>

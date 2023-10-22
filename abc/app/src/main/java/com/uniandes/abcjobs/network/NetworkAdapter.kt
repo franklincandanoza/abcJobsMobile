@@ -31,8 +31,9 @@ object RetrofitHelper {
             .callTimeout(60, TimeUnit.SECONDS)
             .build()
 
+        //.baseUrl("https://backend-test-dw7pbvtayq-uc.a.run.app")
         return Retrofit.Builder()
-            .baseUrl("https://backend-test-dw7pbvtayq-uc.a.run.app")
+            .baseUrl("http://192.168.17.21:8001")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

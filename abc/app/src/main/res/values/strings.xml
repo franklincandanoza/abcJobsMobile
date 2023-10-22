@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ABCJobs</string>
+    <string name="app_name" translatable="false">ABCJobs</string>
     <string name="DatosBasicosTitulo">Datos Basicos</string>
     <string name="AlarmasNuevaTitulo">Nueva Alarma</string>
     <string name="CandidatoConfigTitulo">Menu</string>
@@ -28,8 +28,8 @@
     <string name="BotonTonos">Tonos</string>
     <string name="BotonReloj">Reloj</string>
     <string name="BotonMusica">Música</string>
-    <string name="BotonAm">AM</string>
-    <string name="BotonPm">PM</string>
+    <string name="BotonAm" translatable="false">AM</string>
+    <string name="BotonPm" translatable="false">PM</string>
     <string name="BotonDatos">Mis Datos</string>
     <string name="BotonPruebas">Mis Pruebas</string>
     <string name="BotonEntrevistas">Mis Entrevistas</string>
@@ -47,8 +47,8 @@
     <string name="BotonCancelarDesc">Boton para Cancelar</string>
     <string name="BotonAceptarDesc">Boton para confirmar el proceso</string>
     <string name="BotonRelojDesc">Boton para seleccionar hora</string>
-    <string name="Lenguaje1">Español</string>
-    <string name="Lenguaje2">English</string>
+    <string name="Lenguaje1" translatable="false">Español</string>
+    <string name="Lenguaje2" translatable="false">English</string>
     <!--label-->
     <string name="LabelUsuario">Usuario</string>
     <string name="LabelPassword">Clave</string>
@@ -89,15 +89,19 @@
     <!--invalid values -->
     <string name="invalidSelect">Seleccione</string>
 
-    <string-array name="repeticiones">
-        <item>Diario</item>
-        <item>Mensual</item>
-        <item>Semanal</item>
-        <item>Anual</item>
-    </string-array>
-    <string-array name="snooze">
-        <item>Horas</item>
-        <item>Minutos</item>
-        <item>Días</item>
-    </string-array>
+    <!--Info messages -->
+    <string name="candidatoCreado">Se ha creado el candidato de forma exitosa</string>
+
+    <!--Error messages-->
+    <!--CreateCandidate-->
+    <string name="correoInvalido">Ingrese un correo valido</string>
+    <string name="claveInvalida">La clave debe contener minimo 6 caracteres.Debe incluir una Mayuscula una minuscula, numero y caracter especial</string>
+    <string name="documentoInvalido">Ingrese un numero de documento entre 6 y 30 digitos.</string>
+    <string name="nombreInvalido">Ingrese un nombre entre 2 y 30 caracteres.</string>
+    <string name="apellidoInvalido">Ingrese un apellido entre 2 y 30 caracteres</string>
+    <string name="direccionInvalida">Ingrese una direccion valida entre 8 y 60 caracteres</string>
+    <string name="ciudadInvalida">Ingrese una ciudad entre 2 y 30 caracteres.</string>
+    <string name="telefonoInvalido">Ingrese un telefono entre 8 y 30 digitos.</string>
+    <string name="politicaInvalida">Debe aceptar la politica de datos</string>
+
 </resources>

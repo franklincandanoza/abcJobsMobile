@@ -47,7 +47,7 @@ class CreateCandidateActivity : AppCompatActivity(){
             var candidatePassword = passwordEditText.text.toString()
 
             var typeSpinner: Spinner = findViewById(R.id.documentType)
-            var candidateTypeDoc = typeSpinner.selectedItem.toString()
+            var candidateTypeDoc = typeSpinner.selectedItem.toString().split("-").get(1).toString()
 
             var documentEditText: EditText = findViewById(R.id.document)
             var candidateDocument = documentEditText.text.toString()
@@ -57,7 +57,7 @@ class CreateCandidateActivity : AppCompatActivity(){
             var candidateName = firstNameEditText.text.toString()
 
             var lastNameEditText: EditText = findViewById(R.id.lastName)
-            var candidateLast = lastNameEditText.text.toString()
+            var candidateLastName = lastNameEditText.text.toString()
 
             var ageSpinner: Spinner = findViewById(R.id.Age)
             var candidateAge = ageSpinner.selectedItem.toString()
@@ -69,10 +69,11 @@ class CreateCandidateActivity : AppCompatActivity(){
             var candidateCity = cityEditText.text.toString()
 
             var residenceSpinner: Spinner = findViewById(R.id.residenceCountry)
-            var candidateResidence = residenceSpinner.selectedItem.toString()
+            var candidateResidence = residenceSpinner.selectedItem.toString().split("-").get(1).toString()
 
             var originSpinner: Spinner = findViewById(R.id.originCountry)
-            var candidateOrigin = originSpinner.selectedItem.toString()
+            var candidateOrigin = originSpinner.selectedItem.toString().split("-").get(1).toString()
+
 
             var phoneEditText: EditText = findViewById(R.id.phoneNumber)
             var candidatePhone = phoneEditText.text.toString()
@@ -83,41 +84,41 @@ class CreateCandidateActivity : AppCompatActivity(){
             var policyCheck: CheckBox = findViewById(R.id.policy)
 
             if(candidateEmail.isEmpty() || !isValidEmail(candidateEmail)){
-                emailEditText.error = "Ingrese un correo valido"
+                emailEditText.error = resources.getString(R.string.correoInvalido)
                 return@setOnClickListener
             }
             if(candidatePassword.isEmpty() || !isValidPassword(candidatePassword)){
-                passwordEditText.error = "La clave debe contener minimo 6 caracteres.Debe incluir una Mayuscula una minuscula, numero y caracter especial"
+                passwordEditText.error = resources.getString(R.string.claveInvalida)
                 return@setOnClickListener
             }
             if(candidateDocument.isEmpty() || !isValidNumber(candidateDocument,6,30)){
-                documentEditText.error = "Ingrese un numero de documento entre 6 y 30 digitos."
+                documentEditText.error = resources.getString(R.string.documentoInvalido)
                 return@setOnClickListener
             }
 
             if(candidateName.isEmpty() || !isValidName(candidateName)){
-                firstNameEditText.error = "Ingrese un nombre entre 2 y 30 caracteres."
+                firstNameEditText.error = resources.getString(R.string.nombreInvalido)
                 return@setOnClickListener
             }
-            if(candidateLast.isEmpty() || !isValidName(candidateLast)){
-                lastNameEditText.error = "Ingrese un apellido entre 2 y 30 caracteres."
+            if(candidateLastName.isEmpty() || !isValidName(candidateLastName)){
+                lastNameEditText.error = resources.getString(R.string.apellidoInvalido)
                 return@setOnClickListener
             }
             if(candidateAddress.isEmpty() || !isValidAddress(candidateAddress)){
-                addressEditText.error = "Ingrese una direccion valida entre 8 y 60 caracteres."
+                addressEditText.error = resources.getString(R.string.direccionInvalida)
                 return@setOnClickListener
             }
             if(candidateCity.isEmpty() || !isValidName(candidateCity)){
-                cityEditText.error = "Ingrese una ciudad entre 2 y 30 caracteres."
+                cityEditText.error = resources.getString(R.string.ciudadInvalida)
                 return@setOnClickListener
             }
             if(candidatePhone.isEmpty() || !isValidNumber(candidatePhone,8,30)){
-                phoneEditText.error = "Ingrese un telefono entre 8 y 30 digitos."
+                phoneEditText.error = resources.getString(R.string.telefonoInvalido)
                 return@setOnClickListener
             }
             if(!policyCheck.isChecked)
             {
-                policyCheck.error ="Debe aceptar la politica de datos"
+                policyCheck.error =resources.getString(R.string.politicaInvalida)
                 policyCheck.requestFocus()
                 return@setOnClickListener
             }
@@ -126,11 +127,10 @@ class CreateCandidateActivity : AppCompatActivity(){
                 candidateDocument,
                 candidateTypeDoc,
                 candidateName,
-                candidateLast,
+                candidateLastName,
                 candidatePhone,
                 candidateEmail,
                 candidatePassword,
-                candidateRole,
                 candidateBD,
                 candidateAge.toInt(),
                 candidateOrigin,
@@ -139,7 +139,7 @@ class CreateCandidateActivity : AppCompatActivity(){
                 candidateAddress
             )
 
-            println("Enviando Peticion")
+            //println("Enviando Peticion $candidateDocument, $candidateTypeDoc $candidateOrigin $candidateResidence")
             createCandidate(candidateRequest)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -148,7 +148,7 @@ class CreateCandidateActivity : AppCompatActivity(){
         }
 
         cancelCreateCandidateButton.setOnClickListener {
-            //openCancelDialog(Intent(this, AlbumActivity::class.java))
+            openCancelDialog(Intent(this, MainActivity::class.java))
         }
 
     }
@@ -158,7 +158,7 @@ class CreateCandidateActivity : AppCompatActivity(){
           val responseCode = viewModel.createCandidate(candidateRequest)
 
             if (responseCode.length == 0)
-                message="Se ha creado el candidato de forma exitosa";
+                message=resources.getString(R.string.candidatoCreado)
 
             val toast =
                 Toast.makeText(applicationContext, message, Toast.LENGTH_LONG)
@@ -209,5 +209,23 @@ class CreateCandidateActivity : AppCompatActivity(){
 
             return addressMatcher.find(address) != null
         } ?: return false
+    }
+    private fun openCancelDialog(intent: Intent){
+        val builder = AlertDialog.Builder(this@CreateCandidateActivity)
+        builder.setMessage("Esta seguro de cancelar la creacion del Candidato?")
+        builder.setTitle("Advertencia!")
+        builder.setCancelable(false)
+        builder.setPositiveButton("Si",
+            DialogInterface.OnClickListener { dialog: DialogInterface?, which: Int ->
+                startActivity(intent)
+            })
+
+        builder.setNegativeButton("No",
+            DialogInterface.OnClickListener { dialog: DialogInterface, which: Int ->
+                dialog.cancel()
+            } as DialogInterface.OnClickListener)
+
+        val alertDialog = builder.create()
+        alertDialog.show()
     }
 }

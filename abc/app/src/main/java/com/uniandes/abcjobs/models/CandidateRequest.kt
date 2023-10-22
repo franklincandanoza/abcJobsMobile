@@ -8,7 +8,6 @@ class CandidateRequest(
     phoneNumber: String,
     username: String,
     password: String,
-    role: String,
     birthDate: String,
     age: Int,
     originCountry: String,
@@ -24,7 +23,6 @@ class CandidateRequest(
     var phoneNumber = phoneNumber
     var username = username
     var password = password
-    var role = role
     var birthDate = birthDate
     var age =  age
     var originCountry = originCountry

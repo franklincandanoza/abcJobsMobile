@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ABCJobs</string>
+    <string name="DatosBasicosTitulo" translatable="false">Basic Data</string>
+    <string name="CandidatoConfigTitulo">Menu</string>
+    <string name="BotonCrear">Create</string>
+    <string name="BotonAceptar">Accept</string>
+    <string name="BotonCancelar">Cancel</string>
+    <string name="BotonSiguiente">Next</string>
+    <string name="BotonAnterior">Previous</string>
+    <string name="BotonDatos">My Data</string>
+    <string name="BotonPruebas">My Tests</string>
+    <string name="BotonEntrevistas">My Interviews</string>
+    <string name="BotonPagos">MY Payments</string>
+    <string name="LabelUsuario">Username</string>
+    <string name="LabelPassword">Password</string>
+    <string name="LabelRegistro">Don\'t have a user?:</string>
+    <string name="LabelRegistro2">Sign Up</string>
+    <string name="LabelCorreo">Email</string>
+    <string name="LabelTipoDoc">Document Type</string>
+    <string name="LabelDocumento">Document</string>
+    <string name="LabelNombre">First Name</string>
+    <string name="LabelApellido">Last Name</string>
+    <string name="LabelEdad">Age</string>
+    <string name="LabelDireccion">Address</string>
+    <string name="LabelCiudad">City</string>
+    <string name="LabelPais">Residence Country</string>
+    <string name="LabelOrigen">Origin Country</string>
+    <string name="LabelTelefono">Phone Number</string>
+    <string name="LabelFoto">Photo</string>
+    <string name="LabelPolitica">Accept Data Policy</string>
+    <string name="placeCorreo">Enter your email</string>
+    <string name="placeClave">Enter your password</string>
+    <string name="placeDocumento">Enter your document</string>
+    <string name="placeNombre">Enter your first Name</string>
+    <string name="placeApelliido">Enter your Last Name</string>
+    <string name="placeDireccion">Enter your residence address</string>
+    <string name="placeCiudad">Enter your residence city</string>
+    <string name="placeTelefono">Enter your phone number</string>
+    <string name="placeFoto">Upload a photo</string>
+    <string name="InputNombre">Name</string>
+    <string name="invalidSelect">Select</string>
+    <string name="candidatoCreado">The candidate has been created successfully</string>
+    <string name="correoInvalido">Enter a valid email</string>
+    <string name="claveInvalida">The password must contain a minimum of 6 characters. It must include an uppercase letter, a lowercase letter, a number and a special character.</string>
+    <string name="documentoInvalido">Enter a document number between 6 and 30 digits.</string>
+    <string name="nombreInvalido">Enter a name between 2 and 30 characters.</string>
+    <string name="apellidoInvalido">Enter a last name between 2 and 30 characters</string>
+    <string name="direccionInvalida">Enter a valid address between 8 and 60 characters</string>
+    <string name="ciudadInvalida">Ingrese una ciudad entre 2 y 30 caracteres.</string>
+    <string name="telefonoInvalido">Enter a phone number between 8 and 30 digits.</string>
+    <string name="politicaInvalida">You must accept the data policy</string>
+</resources>
