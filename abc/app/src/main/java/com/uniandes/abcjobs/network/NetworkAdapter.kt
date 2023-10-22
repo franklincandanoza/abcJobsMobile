@@ -33,7 +33,7 @@ object RetrofitHelper {
 
         //.baseUrl("https://backend-test-dw7pbvtayq-uc.a.run.app")
         return Retrofit.Builder()
-            .baseUrl("http://192.168.17.21:8001")
+            .baseUrl("https://backend-test-dw7pbvtayq-uc.a.run.app")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()
