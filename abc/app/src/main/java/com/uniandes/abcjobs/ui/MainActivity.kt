@@ -95,8 +95,11 @@ class MainActivity : AppCompatActivity() {
 
         }
         binding.imagenCancelar.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            var editTextUser: EditText = findViewById(R.id.editTextUser)
+            editTextUser.text.clear()
+
+            var passwordEditText: EditText = findViewById(R.id.editTextPassword)
+            passwordEditText.text.clear()
         }
 
         viewModel.eventNetworkError.observe(this, Observer<Boolean> { isNetworkError ->
@@ -136,7 +139,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(refresh)
         } else {
             Toast.makeText(
-                this@MainActivity, "Language, , already, , selected!", Toast.LENGTH_SHORT).show();
+                this@MainActivity, "Language, already, selected!", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -168,6 +171,9 @@ class MainActivity : AppCompatActivity() {
 
             var passwordEditText: EditText = findViewById(R.id.editTextPassword)
             passwordEditText.text.clear()
+
+            val intent = Intent(this, CandidateOptionsActivity::class.java)
+            startActivity(intent)
         }
     }
 }
