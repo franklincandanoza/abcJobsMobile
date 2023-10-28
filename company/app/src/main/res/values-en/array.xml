@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="language">
+        <item>@string/Lenguaje1</item>
+        <item>@string/Lenguaje2</item>
+    </string-array>
+    <string-array name="documentType">
+        <item>Identification Card-CC</item>
+        <item>National ID-IN</item>
+        <item>Passport-PA</item>
+        <item>Other-OT</item>
+    </string-array>
+    <string-array name="age">
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+        <item>61</item>
+        <item>62</item>
+        <item>63</item>
+        <item>64</item>
+        <item>65</item>
+    </string-array>
+    <string-array name="country">
+        <item>Afganistán-AF</item>
+        <item>Albania-AL</item>
+        <item>Alemania-DE</item>
+        <item>Andorra-AD</item>
+        <item>Angola-AO</item>
+        <item>Anguila-AI</item>
+        <item>Antártida-AQ</item>
+        <item>Antigua y Barbuda-AG</item>
+        <item>Arabia Saudita-SA</item>
+        <item>Argelia-DZ</item>
+        <item>Argentina-AR</item>
+        <item>Armenia-AM</item>
+        <item>Aruba-AW</item>
+        <item>Australia-AU</item>
+        <item>Austria-AT</item>
+        <item>Azerbaiyán-AZ</item>
+        <item>Bahamas-BS</item>
+        <item>Bahrein-BH</item>
+        <item>Bailía de Guernsey-GG</item>
+        <item>Bangladesh-BD</item>
+        <item>Barbados-BB</item>
+        <item>Belarús-BY</item>
+        <item>Bélgica-BE</item>
+        <item>Belice-BZ</item>
+        <item>Benín-BJ</item>
+        <item>Bermudas-BM</item>
+        <item>Bolivia-BO</item>
+        <item>Bosnia y Hercegovina-BA</item>
+        <item>Botsuana-BW</item>
+        <item>Brasil-BR</item>
+        <item>Brunéi-BN</item>
+        <item>Bulgaria-BG</item>
+        <item>Burkina Faso-BF</item>
+        <item>Burundi-BI</item>
+        <item>Bután-BT</item>
+        <item>Cabo Verde-CV</item>
+        <item>Camboya-KH</item>
+        <item>Camerún-CM</item>
+        <item>Canadá-CA</item>
+        <item>Caribe Neerlandés-BQ</item>
+        <item>Catar-QA</item>
+        <item>Chad-TD</item>
+        <item>Chequia-CZ</item>
+        <item>Chile-CL</item>
+        <item>China-CN</item>
+        <item>Chipre-CY</item>
+        <item>Ciudad del Vaticano-VA</item>
+        <item>Colombia-CO</item>
+        <item>Comores-KM</item>
+        <item>Corea del Norte-KP</item>
+        <item>Corea del Sur-KR</item>
+        <item>Costa de Marfil-CI</item>
+        <item>Costa Rica-CR</item>
+        <item>Croacia-HR</item>
+        <item>Cuba-CU</item>
+        <item>Curaçao-CW</item>
+        <item>Dinamarca-DK</item>
+        <item>Dominica-DM</item>
+        <item>Ecuador-EC</item>
+        <item>Egipto-EG</item>
+        <item>El Salvador-SV</item>
+        <item>Emiratos Árabes Unidos-AE</item>
+        <item>Eritrea-ER</item>
+        <item>Eslovaquia-SK</item>
+        <item>Eslovenia-SI</item>
+        <item>España-ES</item>
+        <item>Estados Federados de Micronesia-FM</item>
+        <item>Estados Unidos de América-US</item>
+        <item>Estonia-EE</item>
+        <item>Esuatini-SZ</item>
+        <item>Etiopía-ET</item>
+        <item>Filipinas-PH</item>
+        <item>Finlandia-FI</item>
+        <item>Fiyi-FJ</item>
+        <item>Francia-FR</item>
+        <item>Gabón-GA</item>
+        <item>Gambia-GM</item>
+        <item>Georgia-GE</item>
+        <item>Georgia del Sur y las Islas Sandwich del Sur-GS</item>
+        <item>Ghana-GH</item>
+        <item>Gibraltar-GI</item>
+        <item>Granada-GD</item>
+        <item>Grecia-GR</item>
+        <item>Groenlandia-GL</item>
+        <item>Guadalupe-GP</item>
+        <item>Guam-GU</item>
+        <item>Guatemala-GT</item>
+        <item>Guayana-GY</item>
+        <item>Guayana Francesa-GF</item>
+        <item>Guinea-GN</item>
+        <item>Guinea Ecuatorial-GQ</item>
+        <item>Guinea-Bissau-GW</item>
+        <item>Haití-HT</item>
+        <item>Honduras-HN</item>
+        <item>Hong Kong-HK</item>
+        <item>Hungría-HU</item>
+        <item>India-IN</item>
+        <item>Indonesia-ID</item>
+        <item>Irán-IR</item>
+        <item>Iraq-IQ</item>
+        <item>Irlanda-IE</item>
+        <item>Isla Bouvet-BV</item>
+        <item>Isla de Man-IM</item>
+        <item>Isla de Navidad-CX</item>
+        <item>Isla de San Martín-MF</item>
+        <item>Isla Mauricio-MU</item>
+        <item>Isla Norfolk-NF</item>
+        <item>Islandia-IS</item>
+        <item>Islas Åland-AX</item>
+        <item>Islas Caimán-KY</item>
+        <item>Islas Cocos-CC</item>
+        <item>Islas Cook-CK</item>
+        <item>Islas Feroe-FO</item>
+        <item>Islas Heard y McDonald-HM</item>
+        <item>Islas Malvinas-FK</item>
+        <item>Islas Marianas del Norte-MP</item>
+        <item>Islas Marshall-MH</item>
+        <item>Islas Pitcairn-PN</item>
+        <item>Islas Salomón-SB</item>
+        <item>Islas Turcas y Caicos-TC</item>
+        <item>Islas ultramarinas menores de los Estados Unidos-UM</item>
+        <item>Islas Vírgenes (UK)-VG</item>
+        <item>Islas Vírgenes Americanas-VI</item>
+        <item>Israel-IL</item>
+        <item>Italia-IT</item>
+        <item>Jamaica-JM</item>
+        <item>Japón-JP</item>
+        <item>Jersey-JE</item>
+        <item>Jordania-JO</item>
+        <item>Kazajistán​​​-KZ</item>
+        <item>Kenia-KE</item>
+        <item>Kirguistán-KG</item>
+        <item>Kiribati-KI</item>
+        <item>Kosovo-XK</item>
+        <item>Kuwait-KW</item>
+        <item>Laos-LA</item>
+        <item>Lesotho-LS</item>
+        <item>Letonia-LV</item>
+        <item>Líbano-LB</item>
+        <item>Liberia-LR</item>
+        <item>Libia-LY</item>
+        <item>Liechtenstein-LI</item>
+        <item>Lituania-LT</item>
+        <item>Luxemburgo-LU</item>
+        <item>Macao-MO</item>
+        <item>Macedonia del Norte-MK</item>
+        <item>Madagascar-MG</item>
+        <item>Malasia-MY</item>
+        <item>Malaui-MW</item>
+        <item>Maldivas-MV</item>
+        <item>Malí-ML</item>
+        <item>Malta-MT</item>
+        <item>Marruecos-MA</item>
+        <item>Martinica-MQ</item>
+        <item>Mauritania-MR</item>
+        <item>Mayotte-YT</item>
+        <item>México-MX</item>
+        <item>Moldavia-MD</item>
+        <item>Mongolia-MN</item>
+        <item>Montenegro-ME</item>
+        <item>Montserrat-MS</item>
+        <item>Mozambique-MZ</item>
+        <item>Myanmar-MM</item>
+        <item>Namibia-NA</item>
+        <item>Nauru-NR</item>
+        <item>Nepal-NP</item>
+        <item>Nicaragua-NI</item>
+        <item>Níger-NE</item>
+        <item>Nigeria-NG</item>
+        <item>Niue-NU</item>
+        <item>Noruega-NO</item>
+        <item>Nueva Caledonia-NC</item>
+        <item>Nueva Zelandia-NZ</item>
+        <item>Omán-OM</item>
+        <item>Países Bajos-NL</item>
+        <item>Pakistán-PK</item>
+        <item>Palaos-PW</item>
+        <item>Palestina-PS</item>
+        <item>Panamá-PA</item>
+        <item>Papúa Nueva Guinea-PG</item>
+        <item>Paraguay-PY</item>
+        <item>Perú-PE</item>
+        <item>Polinesia Francesa-PF</item>
+        <item>Polonia-PL</item>
+        <item>Portugal-PT</item>
+        <item>Principado de Mónaco-MC</item>
+        <item>Puerto Rico-PR</item>
+        <item>Reino Unido-GB</item>
+        <item>República Centroafricana-CF</item>
+        <item>República del Congo-CG</item>
+        <item>República Democrática del Congo-CD</item>
+        <item>República Dominicana-DO</item>
+        <item>Reunión-RE</item>
+        <item>Ruanda-RW</item>
+        <item>Rumania-RO</item>
+        <item>Rusia-RU</item>
+        <item>Sáhara Occidental-EH</item>
+        <item>Samoa-WS</item>
+        <item>Samoa Americana-AS</item>
+        <item>San Bartolomé-BL</item>
+        <item>San Cristóbal y Nieves-KN</item>
+        <item>San Marino-SM</item>
+        <item>San Pedro y Miquelón-PM</item>
+        <item>San Vicente y las Granadinas-VC</item>
+        <item>Santa Elena, Ascensión y Tristán de Acuña-SH</item>
+        <item>Santa Lucía-LC</item>
+        <item>Santo Tomé y Príncipe-ST</item>
+        <item>Senegal-SN</item>
+        <item>Serbia-RS</item>
+        <item>Seychelles-SC</item>
+        <item>Sierra Leona-SL</item>
+        <item>Singapur-SG</item>
+        <item>Sint Maarten-SX</item>
+        <item>Siria-SY</item>
+        <item>Somalia-SO</item>
+        <item>Sri Lanka-LK</item>
+        <item>Sudáfrica-ZA</item>
+        <item>Sudán-SD</item>
+        <item>Sudán del Sur-SS</item>
+        <item>Suecia-SE</item>
+        <item>Suiza-CH</item>
+        <item>Surinam-SR</item>
+        <item>Svalbard y Jan Mayen-SJ</item>
+        <item>Tailandia-TH</item>
+        <item>Taiwán-TW</item>
+        <item>Tanzania-TZ</item>
+        <item>Tayikistán-TJ</item>
+        <item>Territorio Británico del Océano Índico-IO</item>
+        <item>Territorios Australes y Antárticos Franceses-TF</item>
+        <item>Timor Oriental-TL</item>
+        <item>Togo-TG</item>
+        <item>Tokelau-TK</item>
+        <item>Tonga-TO</item>
+        <item>Trinidad y Tobago-TT</item>
+        <item>Túnez-TN</item>
+        <item>Turkmenistán-TM</item>
+        <item>Turquía-TR</item>
+        <item>Tuvalu-TV</item>
+        <item>Ucrania-UA</item>
+        <item>Uganda-UG</item>
+        <item>Uruguay-UY</item>
+        <item>Uzbekistán-UZ</item>
+        <item>Vanuatu-VU</item>
+        <item>Venezuela-VE</item>
+        <item>Vietnam-VN</item>
+        <item>Wallis y Futuna-WF</item>
+        <item>Yemen-YE</item>
+        <item>Yibuti-DJ</item>
+        <item>Zambia-ZM</item>
+        <item>Zimbabue-ZW</item>
+    </string-array>
+
+</resources>
