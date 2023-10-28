@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="blue">#ADBDFF</color>
-    <color name="red">#DF071A</color>
-
+    <color name="magentaAOC">#8AD11779</color>
+    <color name="verdeAOC">#AB077104</color>
+    <color name="azulClaAOC">#FF729FCF</color>
+    <color name="azulMedAOC">#FF3465A4</color>
+    <color name="azulOscAOC">#FF0C27D6</color>
+    <color name="negroAOC">#FF000000</color>
+    <color name="blancoAOC">#FFFFFFFF</color>
+    <color name="Gris00AOC">#ecf0f1</color>
+    <color name="Gris10AOC">#FFe6e6e6</color>
+    <color name="Gris20AOC">#FFcccccc</color>
+    <color name="Gris30AOC">#FFb3b3b3</color>
+    <color name="Gris37AOC">#5EFFFFFF</color>
+    <color name="Gris40AOC">#FF999999</color>
+    <color name="Gris50AOC">#FF808080</color>
+    <color name="Gris60AOC">#FF666666</color>
+    <color name="Gris70AOC">#FF4d4d4d</color>
+    <color name="Gris80AOC">#FF333333</color>
+    <color name="Gris90AOC">#FF1a1a1a</color>
+    <color name="capa3">#7AE6E6E6</color>
 </resources>
