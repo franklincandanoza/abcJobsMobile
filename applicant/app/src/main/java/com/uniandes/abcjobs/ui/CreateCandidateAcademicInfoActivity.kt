@@ -13,9 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.Observer
 import com.uniandes.abcjobs.R
 import com.uniandes.abcjobs.databinding.ActivityCreateCandidateAcademicInfoBinding
-import com.uniandes.abcjobs.models.CandidateRequest
 import com.uniandes.abcjobs.models.CreateAcademicInfoRequest
-import com.uniandes.abcjobs.models.LoginRequest
 import com.uniandes.abcjobs.viewmodels.CandidateViewModel
 import kotlinx.coroutines.launch
 
@@ -170,7 +168,7 @@ class CreateCandidateAcademicInfoActivity : AppCompatActivity(){
         builder.setTitle(R.string.Advertencia)
         builder.setCancelable(false)
         builder.setPositiveButton(R.string.ConfirmationSi,
-            DialogInterface.OnClickListener { dialog: DialogInterface?, which: Int ->
+            DialogInterface.OnClickListener { _: DialogInterface?, _: Int ->
                 startActivity(intent)
             })
 

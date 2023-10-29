@@ -167,7 +167,7 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
             }
         }
 
-}
+    }
 
 
 
