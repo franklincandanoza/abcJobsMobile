@@ -108,6 +108,11 @@ class CreateCandidateAcademicInfoActivity : AppCompatActivity(){
             openCancelDialog(Intent(this, MainActivity::class.java))
         }
 
+        createObservers()
+
+    }
+
+    private fun createObservers(){
         viewModel.eventNetworkError.observe(this, Observer<Boolean> { isNetworkError ->
             if (isNetworkError) onNetworkError()
         })
@@ -119,11 +124,6 @@ class CreateCandidateAcademicInfoActivity : AppCompatActivity(){
         viewModel.eventCreationSuccess.observe(this, Observer<Boolean> { success ->
             if (success) onCreateSuccess()
         })
-
-
-
-
-
     }
 
     private fun createCandidateAcademicInfo(request: CreateAcademicInfoRequest) {
