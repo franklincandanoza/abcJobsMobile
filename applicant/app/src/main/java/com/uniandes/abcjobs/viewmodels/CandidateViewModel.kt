@@ -17,6 +17,8 @@ import com.uniandes.abcjobs.repositories.LoginRepository
 
 class CandidateViewModel(application: Application) :  AndroidViewModel(application) {
 
+    val ERROR_RESPONSE_MESSAGE = "ErrorResponse"
+
     private val candidatesRepo = CandidateRepository()
 
     private val loginRepository = LoginRepository()
@@ -108,8 +110,8 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
 
         viewModelScope.launch (Dispatchers.Default ){
             withContext(Dispatchers.IO){
-                loginRepository.whoIAm({ it ->
-                    var token = it.token
+                loginRepository.whoIAm({ response ->
+                    var token = response.token
                     viewModelScope.launch (Dispatchers.Default){
                         withContext(Dispatchers.IO) {
                             if (token != null) {
@@ -117,7 +119,6 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
                                     {
                                         it.msg?.let { it1 -> Log.d("Success", it1) }
 
-                                        //LoginResponseMutableData.postValue(it)
                                         _eventCreationSuccess.postValue(true)
                                         _isSuccessShownToCreateAcademicInfo.postValue(false)
                                     },
@@ -140,13 +141,13 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
         Log.d("Error", exception.toString())
         if (exception is retrofit2.HttpException){
             val err = exception as retrofit2.HttpException
-            Log.d("Error Response", err.response()?.code().toString())
+            Log.d(ERROR_RESPONSE_MESSAGE, err.response()?.code().toString())
             if (err.response()?.code()==401){
-                Log.d("Error Response", "response code 401 trying to create academic info")
+                Log.d(ERROR_RESPONSE_MESSAGE, "response code 401 trying to create academic info")
                 _eventLoginFail.postValue(true)
                 _isUnSuccessShownToCreateAcademicInfo.postValue(true)
             }else{
-                Log.d("Error Response", "response code else")
+                Log.d(ERROR_RESPONSE_MESSAGE, "response code else")
                 _eventNetworkError.postValue(true)
                 _isNetworkErrorShown.postValue(false)
             }

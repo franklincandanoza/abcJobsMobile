@@ -174,7 +174,7 @@ class CreateCandidateAcademicInfoActivity : AppCompatActivity(){
             })
 
         builder.setNegativeButton(R.string.ConfirmationNo,
-            DialogInterface.OnClickListener { dialog: DialogInterface, which: Int ->
+            DialogInterface.OnClickListener { dialog: DialogInterface, _: Int ->
                 dialog.cancel()
             } as DialogInterface.OnClickListener)
 
