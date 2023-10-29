@@ -108,7 +108,7 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
 
         viewModelScope.launch (Dispatchers.Default ){
             withContext(Dispatchers.IO){
-                loginRepository.whoIAm({
+                loginRepository.whoIAm({ it ->
                     var token = it.token
                     viewModelScope.launch (Dispatchers.Default){
                         withContext(Dispatchers.IO) {
@@ -122,51 +122,38 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
                                         _isSuccessShownToCreateAcademicInfo.postValue(false)
                                     },
                                     {
-                                        Log.d("Error", it.toString())
-                                        if (it is retrofit2.HttpException){
-                                            val err = it as retrofit2.HttpException
-                                            Log.d("Error Response", err.response()?.code().toString())
-                                            if (err.response()?.code()==401){
-                                                Log.d("Error Response", "response code 401 trying to create academic info")
-                                                _eventLoginFail.postValue(true)
-                                                _isUnSuccessShownToCreateAcademicInfo.postValue(false)
-                                            }else{
-                                                Log.d("Error Response", "response code else")
-                                                _eventNetworkError.postValue(true)
-                                                _isNetworkErrorShown.postValue(false)
-                                            }
-                                        }else{
-                                            _eventNetworkError.postValue(true)
-                                            _isNetworkErrorShown.postValue(false)
-                                        }
-
+                                        handleException(it)
                                     }
                                 )
                             }
                         }
                     }
                 },{
-                    Log.d("Error", it.toString())
-                    if (it is retrofit2.HttpException){
-                        val err = it as retrofit2.HttpException
-                        Log.d("Error Response", err.response()?.code().toString())
-                        if (err.response()?.code()==401){
-                            Log.d("Error Response", "response code 401 trying to create academic info")
-                            _eventLoginFail.postValue(true)
-                            _isUnSuccessShownToCreateAcademicInfo.postValue(true)
-                        }else{
-                            Log.d("Error Response", "response code else")
-                            _eventNetworkError.postValue(true)
-                            _isNetworkErrorShown.postValue(false)
-                        }
-                    }else{
-                        _eventNetworkError.postValue(true)
-                        _isNetworkErrorShown.postValue(false)
-                    }
+                    handleException(it)
                 })
             }
         }
 
+    }
+
+    private fun handleException(exception: Exception){
+        Log.d("Error", exception.toString())
+        if (exception is retrofit2.HttpException){
+            val err = exception as retrofit2.HttpException
+            Log.d("Error Response", err.response()?.code().toString())
+            if (err.response()?.code()==401){
+                Log.d("Error Response", "response code 401 trying to create academic info")
+                _eventLoginFail.postValue(true)
+                _isUnSuccessShownToCreateAcademicInfo.postValue(true)
+            }else{
+                Log.d("Error Response", "response code else")
+                _eventNetworkError.postValue(true)
+                _isNetworkErrorShown.postValue(false)
+            }
+        }else{
+            _eventNetworkError.postValue(true)
+            _isNetworkErrorShown.postValue(false)
+        }
     }
 
 

@@ -169,6 +169,7 @@ class CreateCandidateAcademicInfoActivity : AppCompatActivity(){
         builder.setCancelable(false)
         builder.setPositiveButton(R.string.ConfirmationSi,
             DialogInterface.OnClickListener { _: DialogInterface?, _: Int ->
+                val intent = Intent(this, CandidateOptionsMyData::class.java)
                 startActivity(intent)
             })
 
