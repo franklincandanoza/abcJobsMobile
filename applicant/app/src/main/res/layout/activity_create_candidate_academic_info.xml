@@ -5,7 +5,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".ui.CreateCandidateActivity">
+tools:context=".ui.CreateCandidateAcademicInfoActivity">
 <LinearLayout
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
@@ -48,7 +48,7 @@ tools:context=".ui.CreateCandidateActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:paddingBottom="5dp"
-                android:text="@string/DatosBasicosTitulo"
+                android:text="@string/DatosAcademicosTitulo"
                 android:textColor="@color/negroAOC"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -92,7 +92,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/LabelCorreo"
+                    android:text="@string/LabelTitleAcademicInfo"
                     android:textColor="@color/Gris70AOC"
                     android:textSize="16dp" />
 
@@ -100,7 +100,7 @@ tools:context=".ui.CreateCandidateActivity">
             </LinearLayout>
 
             <EditText
-                android:id="@+id/Email"
+                android:id="@+id/academicInfoTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
@@ -108,9 +108,9 @@ tools:context=".ui.CreateCandidateActivity">
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/campotexto"
                 android:ems="10"
-                android:inputType="textEmailAddress"
+                android:inputType="textCapCharacters"
                 android:minHeight="48dp"
-                android:hint="@string/placeCorreo"
+                android:hint="@string/placeTitleAcademicInfo"
                 android:textColor="@color/Gris80AOC"
                 android:textSize="14sp" />
 
@@ -126,7 +126,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/LabelPassword"
+                    android:text="@string/LabelInstitutionAcademicInfo"
                     android:textColor="@color/Gris70AOC"
                     android:textSize="16dp" />
 
@@ -134,7 +134,7 @@ tools:context=".ui.CreateCandidateActivity">
             </LinearLayout>
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/academicInfoInstitution"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
@@ -142,223 +142,10 @@ tools:context=".ui.CreateCandidateActivity">
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/campotexto"
                 android:ems="10"
-                android:hint="@string/placeClave"
-                android:inputType="textPassword"
+                android:hint="@string/placeInstitutionAcademicInfo"
+                android:inputType="text"
                 android:minHeight="48dp"
                 android:textColor="@color/Gris80AOC"
-                android:textSize="14sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/LabelTipoDoc"
-                    android:textColor="@color/Gris70AOC"
-                    android:textSize="16dp" />
-            </LinearLayout>
-
-            <Spinner
-                android:id="@+id/documentType"
-                style="@style/SpinnerTheme"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="15dp"
-                android:entries="@array/documentType" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/LabelDocumento"
-                    android:textColor="@color/Gris70AOC"
-                    android:textSize="16dp" />
-            </LinearLayout>
-
-
-            <EditText
-                android:id="@+id/document"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="15dp"
-                android:background="@drawable/campotexto"
-                android:ems="10"
-                android:inputType="number"
-                android:hint="@string/placeDocumento"
-                android:minHeight="48dp"
-                android:textColor="@color/Gris80AOC"
-                android:textSize="14sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/LabelNombre"
-                    android:textColor="@color/Gris70AOC"
-                    android:textSize="16dp" />
-
-
-            </LinearLayout>
-
-            <EditText
-                android:id="@+id/firstName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="15dp"
-                android:background="@drawable/campotexto"
-                android:ems="10"
-                android:hint="@string/placeNombre"
-                android:inputType="textCapCharacters"
-                android:minHeight="48dp"
-                android:textColor="@color/Gris80AOC"
-                android:textSize="14sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/LabelApellido"
-                    android:textColor="@color/Gris70AOC"
-                    android:textSize="16dp" />
-            </LinearLayout>
-
-
-            <EditText
-                android:id="@+id/lastName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="15dp"
-                android:background="@drawable/campotexto"
-                android:ems="10"
-                android:hint="@string/placeApelliido"
-                android:inputType="textCapCharacters"
-                android:minHeight="48dp"
-                android:textColor="@color/Gris70AOC"
-                android:textSize="14sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/LabelEdad"
-                    android:textColor="@color/Gris70AOC"
-                    android:textSize="16dp" />
-            </LinearLayout>
-
-            <Spinner
-                android:id="@+id/Age"
-                style="@style/SpinnerTheme"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="15dp"
-                android:entries="@array/age" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/LabelDireccion"
-                    android:textColor="@color/Gris70AOC"
-                    android:textSize="16dp" />
-            </LinearLayout>
-
-
-            <EditText
-                android:id="@+id/address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="15dp"
-                android:background="@drawable/campotexto"
-                android:ems="10"
-                android:hint="@string/placeDireccion"
-                android:inputType="textCapCharacters"
-                android:minHeight="48dp"
-                android:textColor="@color/Gris70AOC"
-                android:textSize="14sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/LabelCiudad"
-                    android:textColor="@color/Gris70AOC"
-                    android:textSize="16dp" />
-            </LinearLayout>
-
-
-            <EditText
-                android:id="@+id/city"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="15dp"
-                android:background="@drawable/campotexto"
-                android:ems="10"
-                android:inputType="textCapCharacters"
-                android:minHeight="48dp"
-                android:hint="@string/placeCiudad"
-                android:textColor="@color/Gris70AOC"
                 android:textSize="14sp" />
 
             <LinearLayout
@@ -372,13 +159,13 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/LabelPais"
+                    android:text="@string/LabelCountryAcademicInfo"
                     android:textColor="@color/Gris70AOC"
                     android:textSize="16dp" />
             </LinearLayout>
 
             <Spinner
-                android:id="@+id/residenceCountry"
+                android:id="@+id/country"
                 style="@style/SpinnerTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -393,25 +180,112 @@ tools:context=".ui.CreateCandidateActivity">
                 android:layout_marginStart="10dp"
                 android:orientation="horizontal">
 
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
                 <TextView
-                    android:id="@+id/textView12"
+                    android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/LabelOrigen"
+                    android:text="@string/LabelStartDateAcademicInfo"
                     android:textColor="@color/Gris70AOC"
                     android:textSize="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/startMonth"
+                        style="@style/SpinnerTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:entries="@array/month" />
+                    <Space
+                        android:layout_width="8dp"
+                        android:layout_height="8dp" />
+                    <Spinner
+                        android:id="@+id/startYear"
+                        style="@style/SpinnerTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:entries="@array/year"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/labelFin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/LabelEndDateAcademicInfo"
+                        android:textColor="@color/Gris70AOC"
+                        android:textSize="16dp" />
+
+                    <CheckBox
+                        android:id="@+id/vigente"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/LabelVigente" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/endMonth"
+                        style="@style/SpinnerTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:entries="@array/month" />
+                    <Space
+                        android:layout_width="8dp"
+                        android:layout_height="8dp" />
+                    <Spinner
+                        android:id="@+id/endYear"
+                        style="@style/SpinnerTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:entries="@array/year"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <Spinner
-                android:id="@+id/originCountry"
-                style="@style/SpinnerTheme"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="15dp"
-                android:entries="@array/country" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -420,18 +294,18 @@ tools:context=".ui.CreateCandidateActivity">
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/textView16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/LabelTelefono"
+                    android:text="@string/LabelDescriptionAcademicInfo"
                     android:textColor="@color/Gris70AOC"
                     android:textSize="16dp" />
             </LinearLayout>
 
 
             <EditText
-                android:id="@+id/phoneNumber"
+                android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
@@ -439,55 +313,14 @@ tools:context=".ui.CreateCandidateActivity">
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/campotexto"
                 android:ems="10"
-                android:inputType="number"
-                android:hint="@string/placeTelefono"
+                android:inputType="textMultiLine"
+                android:hint="@string/placeDescriptionAcademicInfo"
                 android:minHeight="48dp"
-                android:textColor="@color/Gris70AOC"
+                android:lines="5"
+                android:scrollbars="vertical"
+                android:textColor="@color/Gris80AOC"
+                android:scrollbarStyle="insideInset"
                 android:textSize="14sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/LabelFoto"
-                    android:textColor="@color/Gris70AOC"
-                    android:textSize="16dp" />
-
-            </LinearLayout>
-
-            <ImageView
-                android:id="@+id/photo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:hint="@string/placeFoto"
-                android:layout_marginBottom="15dp"
-                app:srcCompat="@drawable/foto_perfil" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:orientation="horizontal">
-
-                <CheckBox
-                    android:id="@+id/policy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/LabelPolitica"
-                    />
-
-            </LinearLayout>
-
 
         </LinearLayout>
         </ScrollView>
@@ -517,7 +350,7 @@ tools:context=".ui.CreateCandidateActivity">
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/CreateCandidateButton"
+            android:id="@+id/createCandidateAcademicInfoButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="2dp"
@@ -572,7 +405,7 @@ tools:context=".ui.CreateCandidateActivity">
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cancelCreateCandidateButton"
+            android:id="@+id/cancelCreateCandidateAcademicInfoButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"

@@ -142,6 +142,7 @@
             android:layout_marginBottom="15dp"
             android:background="@drawable/campotexto"
             android:ems="10"
+            android:text=""
             android:inputType="textPassword"
             android:minHeight="48dp"
             android:textColor="@color/Gris80AOC"
@@ -251,7 +252,7 @@
                     android:baselineAligned="false"
                     android:orientation="horizontal">
 
-                    <TextView
+                     <TextView
                         android:id="@+id/BotonAceptar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

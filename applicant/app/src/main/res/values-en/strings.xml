@@ -2,13 +2,16 @@
 <resources>
     <string name="app_name">ABCJobs</string>
     <string name="DatosBasicosTitulo" translatable="false">Basic Data</string>
+    <string name="DatosAcademicosTitulo">Información académica</string>
     <string name="CandidatoConfigTitulo">Menu</string>
+    <string name="CandidatoMyDataMenuName">My Data</string>
     <string name="BotonCrear">Create</string>
     <string name="BotonAceptar">Accept</string>
     <string name="BotonCancelar">Cancel</string>
     <string name="BotonSiguiente">Next</string>
     <string name="BotonAnterior">Previous</string>
     <string name="BotonDatos">My Data</string>
+    <string name="BotonDatosAcademicos">Academic data</string>
     <string name="BotonPruebas">My Tests</string>
     <string name="BotonEntrevistas">My Interviews</string>
     <string name="BotonPagos">MY Payments</string>
@@ -29,6 +32,14 @@
     <string name="LabelTelefono">Phone Number</string>
     <string name="LabelFoto">Photo</string>
     <string name="LabelPolitica">Accept Data Policy</string>
+    <string name="LabelTitleAcademicInfo">Title</string>
+    <string name="LabelInstitutionAcademicInfo">Institution</string>
+    <string name="LabelCountryAcademicInfo">Country</string>
+    <string name="LabelStartDateAcademicInfo">Start</string>
+    <string name="LabelEndDateAcademicInfo">End</string>
+    <string name="LabelVigenteAcademicInfo">Current</string>
+    <string name="LabelDescriptionAcademicInfo">Description</string>
+    <string name="LabelVigente">Current</string>
     <string name="placeCorreo">Enter your email</string>
     <string name="placeClave">Enter your password</string>
     <string name="placeDocumento">Enter your document</string>
@@ -38,9 +49,11 @@
     <string name="placeCiudad">Enter your residence city</string>
     <string name="placeTelefono">Enter your phone number</string>
     <string name="placeFoto">Upload a photo</string>
+    <string name="placeTitleAcademicInfo">Enter your title</string>
+    <string name="placeInstitutionAcademicInfo">Enter the institution</string>
+    <string name="placeDescriptionAcademicInfo">Enter description</string>
     <string name="InputNombre">Name</string>
     <string name="invalidSelect">Select</string>
-    <string name="candidatoCreado">The candidate has been created successfully</string>
     <string name="correoInvalido">Enter a valid email</string>
     <string name="claveInvalida">The password must contain a minimum of 6 characters. It must include an uppercase letter, a lowercase letter, a number and a special character.</string>
     <string name="documentoInvalido">Enter a document number between 6 and 30 digits.</string>
@@ -54,4 +67,17 @@
     <string name="networkError">Network error</string>
     <string name="invalidCredentials">Invalid user or password</string>
     <string name="loginSuccess">Login Successful</string>
+    <string name="tituloInvalido">Enter a title of maximum 60 characters</string>
+    <string name="institucionInvalida">Enter an institution of maximum 60 characters</string>
+    <string name="descriptionInvalida">Enter an description of maximum 500 characters</string>
+
+    <!--Info messages -->
+    <string name="candidatoCreado">The candidate has been created successfully</string>
+    <string name="InformacionAcademicaCreada">Academic information has been created successfully</string>
+    <string name="ConfirmationToCancelCreateAcademicInfo">Are you sure about canceling the creation of the academic record?</string>
+    <string name="ConfirmationSi">Yes</string>
+    <string name="ConfirmationNo">No</string>
+    <string name="Advertencia">Warning!</string>
+    <string name="sesionCerrada">You must log in again</string>
+
 </resources>

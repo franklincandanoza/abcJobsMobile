@@ -27,7 +27,9 @@ class LoginRepository (){
     suspend fun whoIAm(onComplete:(resp: MyselfResponse)->Unit, onError: (error: Exception)->Unit) {
         try{
             var token = CacheManager.getInstance().get("token", String::class.java)
+            Log.i("tokenActual", "$token ")
             var myselfResponse = NetworkAdapter.whoIAm("Bearer "+token);
+            Log.i("newToken", "${myselfResponse.token} ")
             myselfResponse.token?.let {
                 CacheManager.getInstance().put("token",
                     it,String::class.java)

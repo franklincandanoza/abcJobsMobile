@@ -7,6 +7,7 @@ import com.google.gson.JsonObject
 import com.uniandes.abcjobs.models.*
 
 class CandidateRepository (){
+
     suspend fun refreshData(onComplete:(resp:List<Candidate>)->Unit, onError: (error: Exception)->Unit) {
 
         var potentialResp = CacheManager.getInstance().get("", Candidate::class.java)
@@ -51,6 +52,24 @@ class CandidateRepository (){
         CacheManager.getInstance().invalidate("", Candidate::class.java)
         return NetworkAdapter.createCandidate(candidate)
     }
+
+    suspend fun createCandidateAcademicInfo(createCandidateAcademicInfo: JsonObject, token: String,
+                                            onComplete:(resp: CreateAcademicInfoResponse)->Unit,
+                                            onError: (error: Exception)->Unit) {
+
+        try{
+
+            Log.i("createCandidateAcademic", "${createCandidateAcademicInfo} ")
+            var response = NetworkAdapter.createCandidateAcademicInfo(createCandidateAcademicInfo,
+                "Bearer $token"
+            )
+            onComplete(response)
+        }catch (e:Exception){
+            Log.i("Error", "${e} ")
+            onError(e)
+        }
+    }
+
     /* ---- Metodos crear adjuntos de candidato--*/
 }
 
