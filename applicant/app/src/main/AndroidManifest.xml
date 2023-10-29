@@ -49,6 +49,20 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".ui.CandidateOptionsMyData"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.CreateCandidateAcademicInfoActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ui.CandidateOptionsActivity"
             android:exported="false">
             <meta-data

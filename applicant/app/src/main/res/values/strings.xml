@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name" translatable="false">ABCJobs</string>
     <string name="DatosBasicosTitulo">Datos Basicos</string>
+    <string name="DatosAcademicosTitulo">Información académica</string>
     <string name="AlarmasNuevaTitulo">Nueva Alarma</string>
     <string name="CandidatoConfigTitulo">Menu</string>
+    <string name="CandidatoMyDataMenuName">Mis Datos</string>
     <string name="AlarmasDetencionTitulo">Modo detencion</string>
     <string name="AlarmasCompartirTitulo">Compartir</string>
     <string name="AlarmasRepeticionTitulo">Repetición</string>
@@ -31,6 +33,7 @@
     <string name="BotonAm" translatable="false">AM</string>
     <string name="BotonPm" translatable="false">PM</string>
     <string name="BotonDatos">Mis Datos</string>
+    <string name="BotonDatosAcademicos">Datos académicos</string>
     <string name="BotonPruebas">Mis Pruebas</string>
     <string name="BotonEntrevistas">Mis Entrevistas</string>
     <string name="BotonPagos">Mis Pagos</string>
@@ -55,6 +58,13 @@
     <string name="LabelRegistro">Eres Nuevo?:</string>
     <string name="LabelRegistro2">Registrate</string>
     <string name="LabelCorreo">Correo</string>
+    <string name="LabelTitleAcademicInfo">Título</string>
+    <string name="LabelInstitutionAcademicInfo">Institución</string>
+    <string name="LabelCountryAcademicInfo">País</string>
+    <string name="LabelStartDateAcademicInfo">Inicio</string>
+    <string name="LabelEndDateAcademicInfo">Fin</string>
+    <string name="LabelVigenteAcademicInfo">Vigente</string>
+    <string name="LabelDescriptionAcademicInfo">Descripción</string>
     <string name="LabelTipoDoc">Tipo Documento</string>
     <string name="LabelDocumento">Documento</string>
     <string name="LabelNombre">Nombre(s)</string>
@@ -67,10 +77,14 @@
     <string name="LabelTelefono">Telefono</string>
     <string name="LabelFoto">Foto</string>
     <string name="LabelPolitica">Acepta Politica de Datos</string>
+    <string name="LabelVigente">Vigente</string>
     <string name="LabelSms">SMS</string>
 
     <!--objeto formulario-->
     <string name="placeCorreo">Ingrese su correo</string>
+    <string name="placeTitleAcademicInfo">Ingrese su título</string>
+    <string name="placeInstitutionAcademicInfo">Ingrese la institución</string>
+    <string name="placeDescriptionAcademicInfo">Ingrese la descripción</string>
     <string name="placeClave">Ingrese su Clave</string>
     <string name="placeDocumento">Ingrese su numero de identificacion</string>
     <string name="placeNombre">Ingrese su(s) Nombres(s)</string>
@@ -91,14 +105,24 @@
 
     <!--Info messages -->
     <string name="candidatoCreado">Se ha creado el candidato de forma exitosa</string>
+    <string name="InformacionAcademicaCreada">Se ha creado la información académica exitósamente</string>
+    <string name="ConfirmationToCancelCreateAcademicInfo">Está seguro de cancelar la creacion del registro académico?</string>
+    <string name="ConfirmationSi">Si</string>
+    <string name="ConfirmationNo">No</string>
+    <string name="Advertencia">Advertencia!</string>
+
 
     <!--Error messages-->
     <string name="networkError">Error de red</string>
     <string name="invalidCredentials">Usuario o contraseña errada</string>
+    <string name="sesionCerrada">Debes iniciar sesión nuevamente</string>
     <!--Info messages -->
     <string name="loginSuccess">Login existoso</string>
     <!--CreateCandidate-->
     <string name="correoInvalido">Ingrese un correo valido</string>
+    <string name="tituloInvalido">Ingrese un título de máximo 60 caracteres</string>
+    <string name="institucionInvalida">Ingrese una institución de máximo 60 caracteres</string>
+    <string name="descriptionInvalida">Ingrese una institución de máximo 500 caracteres</string>
     <string name="claveInvalida">La clave debe contener minimo 6 caracteres.Debe incluir una Mayuscula una minuscula, numero y caracter especial</string>
     <string name="documentoInvalido">Ingrese un numero de documento entre 6 y 30 digitos.</string>
     <string name="nombreInvalido">Ingrese un nombre entre 2 y 30 caracteres.</string>
