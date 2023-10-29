@@ -100,7 +100,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
             </LinearLayout>
 
             <EditText
-                android:id="@+id/title"
+                android:id="@+id/academicInfoTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
@@ -134,7 +134,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
             </LinearLayout>
 
             <EditText
-                android:id="@+id/institution"
+                android:id="@+id/academicInfoInstitution"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
@@ -367,7 +367,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/BotonAceptar"
+                    android:id="@+id/createAcademicInfoAcceptButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"

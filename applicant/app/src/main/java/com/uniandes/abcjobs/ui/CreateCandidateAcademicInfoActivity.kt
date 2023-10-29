@@ -21,7 +21,6 @@ import kotlinx.coroutines.launch
 class CreateCandidateAcademicInfoActivity : AppCompatActivity(){
 
     private lateinit var viewModel: CandidateViewModel
-    /*private var canadidateAdapter: CandidateAdapter? = null*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,25 +34,25 @@ class CreateCandidateAcademicInfoActivity : AppCompatActivity(){
         var createCandidateButton: CardView = binding.createCandidateAcademicInfoButton
 
         var cancelCreateCandidateButton: CardView = binding.cancelCreateCandidateAcademicInfoButton
-        var vigenteCheckBox: CheckBox = binding.vigente
+        var currentCheckBox: CheckBox = binding.vigente
 
         var endMonthSpinner: Spinner = binding.endMonth
         var endYearSpinner: Spinner = binding.endYear
 
-        vigenteCheckBox.setOnClickListener {
+        currentCheckBox.setOnClickListener {
 
-            endMonthSpinner.isEnabled = !vigenteCheckBox.isChecked
-            endYearSpinner.isEnabled = !vigenteCheckBox.isChecked
+            endMonthSpinner.isEnabled = !currentCheckBox.isChecked
+            endYearSpinner.isEnabled = !currentCheckBox.isChecked
 
         }
 
         createCandidateButton.setOnClickListener {
 
             // Do click handling here
-            var titleEditText: EditText = findViewById(R.id.title)
+            var titleEditText: EditText = findViewById(R.id.academicInfoTitle)
             var candidateTitle = titleEditText.text.toString()
 
-            var institutionEditText: EditText = findViewById(R.id.institution)
+            var institutionEditText: EditText = findViewById(R.id.academicInfoInstitution)
             var candidateInstitution = institutionEditText.text.toString()
 
             var countrySpinner: Spinner = findViewById(R.id.country)
@@ -95,8 +94,8 @@ class CreateCandidateAcademicInfoActivity : AppCompatActivity(){
                 candidateCountry,
                 candidateStartMonth,
                 candidateStartYear,
-                if (vigenteCheckBox.isChecked) null else candidateEndMonth,
-                if (vigenteCheckBox.isChecked) null else candidateEndYear,
+                if (currentCheckBox.isChecked) null else candidateEndMonth,
+                if (currentCheckBox.isChecked) null else candidateEndYear,
                 candidateDescription,
             )
 

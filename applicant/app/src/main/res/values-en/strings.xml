@@ -69,7 +69,7 @@
     <string name="loginSuccess">Login Successful</string>
     <string name="tituloInvalido">Enter a title of maximum 60 characters</string>
     <string name="institucionInvalida">Enter an institution of maximum 60 characters</string>
-    <string name="descriptionInvalida">Enter an institution of maximum 500 characters</string>
+    <string name="descriptionInvalida">Enter an description of maximum 500 characters</string>
 
     <!--Info messages -->
     <string name="candidatoCreado">The candidate has been created successfully</string>
