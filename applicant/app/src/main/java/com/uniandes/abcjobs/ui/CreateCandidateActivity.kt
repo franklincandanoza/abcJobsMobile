@@ -4,8 +4,10 @@ import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.*
+import android.widget.CheckBox
+import android.widget.EditText
+import android.widget.Spinner
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.lifecycle.ViewModelProvider
@@ -15,8 +17,6 @@ import com.uniandes.abcjobs.databinding.ActivityCreateCandidateBinding
 import com.uniandes.abcjobs.models.CandidateRequest
 import com.uniandes.abcjobs.viewmodels.CandidateViewModel
 import kotlinx.coroutines.launch
-import java.text.SimpleDateFormat
-import java.util.*
 
 
 class CreateCandidateActivity : AppCompatActivity(){

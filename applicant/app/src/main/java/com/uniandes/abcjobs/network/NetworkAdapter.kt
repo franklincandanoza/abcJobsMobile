@@ -1,17 +1,15 @@
 package com.uniandes.abcjobs.network
 
+import com.google.gson.JsonObject
+import com.uniandes.abcjobs.models.*
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
 import retrofit2.http.GET
-import retrofit2.http.Path
-import retrofit2.http.POST
 import retrofit2.http.Header
-
-import com.google.gson.JsonObject
-import com.uniandes.abcjobs.models.*
-
+import retrofit2.http.POST
+import retrofit2.http.Path
 import java.util.concurrent.TimeUnit
 
 object NetworkAdapter {
