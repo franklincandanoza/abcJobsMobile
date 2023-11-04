@@ -2,10 +2,12 @@
 <resources>
     <string name="app_name">ABCJobs</string>
     <string name="DatosBasicosTitulo" translatable="false">Basic Data</string>
-    <string name="DatosAcademicosTitulo">Información académica</string>
+    <string name="DatosAcademicosTitulo">Academic information</string>
+    <string name="TechnicalInfoTitle">Technical role information</string>
     <string name="CandidatoConfigTitulo">Menu</string>
     <string name="CandidatoMyDataMenuName">My Data</string>
     <string name="BotonCrear">Create</string>
+    <string name="CandidateMyDataTechnicalInfo">Technical information</string>
     <string name="BotonAceptar">Accept</string>
     <string name="BotonCancelar">Cancel</string>
     <string name="BotonSiguiente">Next</string>
@@ -34,7 +36,10 @@
     <string name="LabelPolitica">Accept Data Policy</string>
     <string name="LabelTitleAcademicInfo">Title</string>
     <string name="LabelInstitutionAcademicInfo">Institution</string>
+    <string name="BotonRolesTecnicos">Technical information</string>
+    <string name="BotonTecnologías">Technologies</string>
     <string name="LabelCountryAcademicInfo">Country</string>
+    <string name="BotonTechcnicalRoles">Technical roles</string>
     <string name="LabelStartDateAcademicInfo">Start</string>
     <string name="LabelEndDateAcademicInfo">End</string>
     <string name="LabelVigenteAcademicInfo">Current</string>
@@ -60,6 +65,8 @@
     <string name="nombreInvalido">Enter a name between 2 and 30 characters.</string>
     <string name="apellidoInvalido">Enter a last name between 2 and 30 characters</string>
     <string name="direccionInvalida">Enter a valid address between 8 and 60 characters</string>
+    <string name="LabelNameCreateTechnicalRoles">Role name</string>
+    <string name="LabelExperienceCreateTechnicalRoles">Experience in years</string>
     <string name="ciudadInvalida">Ingrese una ciudad entre 2 y 30 caracteres.</string>
     <string name="telefonoInvalido">Enter a phone number between 8 and 30 digits.</string>
     <string name="politicaInvalida">You must accept the data policy</string>
@@ -74,10 +81,14 @@
     <!--Info messages -->
     <string name="candidatoCreado">The candidate has been created successfully</string>
     <string name="InformacionAcademicaCreada">Academic information has been created successfully</string>
-    <string name="ConfirmationToCancelCreateAcademicInfo">Are you sure about canceling the creation of the academic record?</string>
+    <string name="ConfirmationToCancelCreateAcademicInfo">Are you sure about canceling the creation of the technical role?</string>
     <string name="ConfirmationSi">Yes</string>
     <string name="ConfirmationNo">No</string>
     <string name="Advertencia">Warning!</string>
     <string name="sesionCerrada">You must log in again</string>
+    <string name="roleTecnicoCreado">The technical role has been created successfully</string>
+    <string name="RoleTecnicoInvalido">Enter a correct name</string>
+    <string name="experienciaRoleTecnicoInvalida">Enter a value greater than 0</string>
+    <string name="descriptionInvalidaRoleTecnico">Enter a description of maximum 500 characters</string>
 
 </resources>

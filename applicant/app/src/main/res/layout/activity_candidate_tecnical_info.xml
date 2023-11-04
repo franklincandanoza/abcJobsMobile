@@ -5,7 +5,7 @@
     android:id="@+id/global"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.CandidateOptionsActivity">
+    tools:context=".ui.CandidateOptionsMyDataActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -82,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:paddingBottom="10dp"
-            android:text="@string/CandidatoConfigTitulo"
+            android:text="@string/CandidateMyDataTechnicalInfo"
             android:textColor="@color/negroAOC"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -93,8 +93,8 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="32dp"
+            android:id="@+id/createTechnicalRoles"
             android:clickable="true"
-            android:onClick="goMyData"
             app:cardCornerRadius="10dp"
             app:cardPreventCornerOverlap="false">
 
@@ -119,7 +119,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
-                        android:text="@string/BotonDatos"
+                        android:text="@string/BotonTechcnicalRoles"
                         android:textColor="@color/blancoAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -157,14 +157,13 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/myTestCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="32dp"
-            android:background="@color/Gris00AOC"
-            android:clickable="false"
+            android:id="@+id/createTechnologies"
+            android:clickable="true"
             app:cardCornerRadius="10dp"
             app:cardPreventCornerOverlap="false">
 
@@ -182,27 +181,19 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/listaAlarma2Label"
+                        android:id="@+id/technicalRoleLabel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
-                        android:text="@string/BotonPruebas"
+                        android:text="@string/BotonTecnologías"
                         android:textColor="@color/blancoAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/listaAlarma2Dias"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="0dp"
-                        android:text=""
-                        android:textColor="@color/blancoAOC"
-                        android:textSize="13sp" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -213,154 +204,19 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/ConfigAlarma2"
+                        android:id="@+id/ImageTechnicalInfo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="clip_vertical|right"
                         android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="@string/BotonRepeticionDesc"
-                        app:srcCompat="@drawable/ic_retardar"
+                        android:contentDescription="@string/BotonEntrevistas"
+                        app:srcCompat="@drawable/ic_sonido"
                         tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
 
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="32dp"
-            android:clickable="false"
-            app:cardCornerRadius="10dp"
-            app:cardPreventCornerOverlap="false">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/botoncompuesto"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/listaAlarma3Label"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:minHeight="22sp"
-                        android:text="@string/BotonEntrevistas"
-                        android:textColor="@color/blancoAOC"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/listaAlarma3Dias"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="0dp"
-                        android:text=""
-                        android:textColor="@color/blancoAOC"
-                        android:textSize="13sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/ConfigAlarma3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="clip_vertical|right"
-                        android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="@string/BotonDetenerDesc"
-                        app:srcCompat="@drawable/ic_detener"
-                        tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
-
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="16dp"
-            android:clickable="false"
-            app:cardCornerRadius="10dp"
-            app:cardPreventCornerOverlap="false">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/botoncompuesto"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/listaAlarma4Label"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:minHeight="22sp"
-                        android:text="@string/BotonPagos"
-                        android:textColor="@color/blancoAOC"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/listaAlarma4Dias"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="0dp"
-                        android:text=""
-                        android:textColor="@color/blancoAOC"
-                        android:textSize="13sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/ConfigAlarma4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="clip_vertical|right"
-                        android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="@string/BotonNotificacionDesc"
-                        app:srcCompat="@drawable/ic_notificacion"
-                        tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
-
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

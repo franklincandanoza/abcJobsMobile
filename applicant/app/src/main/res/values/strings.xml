@@ -2,54 +2,33 @@
     <string name="app_name" translatable="false">ABCJobs</string>
     <string name="DatosBasicosTitulo">Datos Basicos</string>
     <string name="DatosAcademicosTitulo">Información académica</string>
-    <string name="AlarmasNuevaTitulo">Nueva Alarma</string>
+    <string name="TechnicalInfoTitle">Información técnica de roles</string>
     <string name="CandidatoConfigTitulo">Menu</string>
     <string name="CandidatoMyDataMenuName">Mis Datos</string>
-    <string name="AlarmasDetencionTitulo">Modo detencion</string>
-    <string name="AlarmasCompartirTitulo">Compartir</string>
-    <string name="AlarmasRepeticionTitulo">Repetición</string>
-    <string name="AlarmasNotficacionTitulo">Notificaciones</string>
-    <string name="AsistentePaso1Titulo">Bienvenido</string>
-    <string name="AsistentePaso1Desc">Ingrese la hora de la alarma</string>
-    <string name="AsistentePaso2Titulo">Paso 2</string>
-    <string name="AsistentePaso2Desc">Seleccione los días de la semana</string>
-    <string name="AsistentePaso3Titulo">Paso 3</string>
-    <string name="AsistentePaso3Desc">Seleccione el tiempo de repetición</string>
-    <string name="AsistentePaso4Titulo">Paso 4</string>
-    <string name="AsistentePaso4Desc">Seleccione un sonido</string>
-    <string name="AsistentePaso5Titulo">Paso 5</string>
-    <string name="AsistentePaso5Desc">Seleccione la forma de detener la alarma</string>
-    <string name="AsistentePaso6Titulo">Paso 6</string>
-    <string name="AsistentePaso6Desc">Ingrese un nombre para su nueva alarma</string>
+    <string name="CandidateMyDataTechnicalInfo">Información técnica</string>
     <!--texto Botones-->
     <string name="BotonCrear">Crear</string>
     <string name="BotonAceptar">Aceptar</string>
     <string name="BotonCancelar">Cancelar</string>
     <string name="BotonSiguiente">Siguiente</string>
     <string name="BotonAnterior">Anterior</string>
-    <string name="BotonTonos">Tonos</string>
-    <string name="BotonReloj">Reloj</string>
-    <string name="BotonMusica">Música</string>
     <string name="BotonAm" translatable="false">AM</string>
     <string name="BotonPm" translatable="false">PM</string>
     <string name="BotonDatos">Mis Datos</string>
     <string name="BotonDatosAcademicos">Datos académicos</string>
+    <string name="BotonTechcnicalRoles">Roles técnicos</string>
+    <string name="BotonRolesTecnicos">Información técnica</string>
+    <string name="BotonTecnologías">Tecnologías</string>
     <string name="BotonPruebas">Mis Pruebas</string>
     <string name="BotonEntrevistas">Mis Entrevistas</string>
     <string name="BotonPagos">Mis Pagos</string>
-    <string name="BotonAsistenteDesc">Boton para iniciar asistente</string>
-    <string name="BotonNuevaAlarmaDesc">Boton para Crear Alarma</string>
-    <string name="BotonCompartirDesc">Compartir</string>
-    <string name="BotonBorrarDesc">Boton para Eliminar</string>
     <string name="BotonVolverDesc">Boton para Volver</string>
-    <string name="BotonSonidoDesc">Boton para Sonido</string>
     <string name="BotonRepeticionDesc">Boton para retardar la alarma</string>
     <string name="BotonDetenerDesc">Boton para detener la alarma</string>
     <string name="BotonNotificacionDesc">Boton para notificaciones de la alarma</string>
     <string name="BotonCrearDesc">Boton para Crear</string>
     <string name="BotonCancelarDesc">Boton para Cancelar</string>
     <string name="BotonAceptarDesc">Boton para confirmar el proceso</string>
-    <string name="BotonRelojDesc">Boton para seleccionar hora</string>
     <string name="Lenguaje1" translatable="false">Español</string>
     <string name="Lenguaje2" translatable="false">English</string>
     <!--label-->
@@ -59,7 +38,9 @@
     <string name="LabelRegistro2">Registrate</string>
     <string name="LabelCorreo">Correo</string>
     <string name="LabelTitleAcademicInfo">Título</string>
+    <string name="LabelNameCreateTechnicalRoles">Nombre del rol</string>
     <string name="LabelInstitutionAcademicInfo">Institución</string>
+    <string name="LabelExperienceCreateTechnicalRoles">Experiencia en años</string>
     <string name="LabelCountryAcademicInfo">País</string>
     <string name="LabelStartDateAcademicInfo">Inicio</string>
     <string name="LabelEndDateAcademicInfo">Fin</string>
@@ -83,7 +64,9 @@
     <!--objeto formulario-->
     <string name="placeCorreo">Ingrese su correo</string>
     <string name="placeTitleAcademicInfo">Ingrese su título</string>
+    <string name="placeRoleNameCreateTechnicalRole">Ingrese el nombre del rol</string>
     <string name="placeInstitutionAcademicInfo">Ingrese la institución</string>
+    <string name="placeExperienceCreateTechnicalRole">Ingrese la experiencia</string>
     <string name="placeDescriptionAcademicInfo">Ingrese la descripción</string>
     <string name="placeClave">Ingrese su Clave</string>
     <string name="placeDocumento">Ingrese su numero de identificacion</string>
@@ -94,11 +77,6 @@
     <string name="placeTelefono">Ingrese su numero de telefono</string>
     <string name="placeFoto">Importe una foto</string>
     <string name="InputNombre">Nombre</string>
-    <string name="InputNombreDesc">Ingrese Nombre Alarma</string>
-    <string name="InputHora">00</string>
-    <string name="InputHoraDesc">Ingrese Hora Alarma</string>
-    <string name="InputMinutos">00</string>
-    <string name="InputMinutosaDesc">Ingrese Minutos Alarma</string>
 
     <!--invalid values -->
     <string name="invalidSelect">Seleccione</string>
@@ -106,7 +84,8 @@
     <!--Info messages -->
     <string name="candidatoCreado">Se ha creado el candidato de forma exitosa</string>
     <string name="InformacionAcademicaCreada">Se ha creado la información académica exitósamente</string>
-    <string name="ConfirmationToCancelCreateAcademicInfo">Está seguro de cancelar la creacion del registro académico?</string>
+    <string name="roleTecnicoCreado">Se ha creado el rol técnico exitósamente</string>
+    <string name="ConfirmationToCancelCreateAcademicInfo">Está seguro de cancelar la creacion del role técnico?</string>
     <string name="ConfirmationSi">Si</string>
     <string name="ConfirmationNo">No</string>
     <string name="Advertencia">Advertencia!</string>
@@ -121,8 +100,11 @@
     <!--CreateCandidate-->
     <string name="correoInvalido">Ingrese un correo valido</string>
     <string name="tituloInvalido">Ingrese un título de máximo 60 caracteres</string>
+    <string name="RoleTecnicoInvalido">Ingrese un nombre correcto</string>
     <string name="institucionInvalida">Ingrese una institución de máximo 60 caracteres</string>
+    <string name="experienciaRoleTecnicoInvalida">Ingrese un valor mayor a 0</string>
     <string name="descriptionInvalida">Ingrese una institución de máximo 500 caracteres</string>
+    <string name="descriptionInvalidaRoleTecnico">Ingrese una descripción de máximo 500 caracteres</string>
     <string name="claveInvalida">La clave debe contener minimo 6 caracteres.Debe incluir una Mayuscula una minuscula, numero y caracter especial</string>
     <string name="documentoInvalido">Ingrese un numero de documento entre 6 y 30 digitos.</string>
     <string name="nombreInvalido">Ingrese un nombre entre 2 y 30 caracteres.</string>

@@ -49,7 +49,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.CandidateOptionsMyData"
+            android:name=".ui.CandidateOptionsMyDataActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -57,6 +57,20 @@
         </activity>
         <activity
             android:name=".ui.CreateCandidateAcademicInfoActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.CandidateOptionsTechnicalInfo"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.CreateCandidateTechnicalRolesInfoActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -10,6 +10,7 @@ import com.google.gson.JsonObject
 import com.uniandes.abcjobs.models.Candidate
 import com.uniandes.abcjobs.models.CandidateRequest
 import com.uniandes.abcjobs.models.CreateAcademicInfoRequest
+import com.uniandes.abcjobs.models.CreateCandidateTechnicalRoleInfoRequest
 import com.uniandes.abcjobs.repositories.CandidateRepository
 import com.uniandes.abcjobs.repositories.LoginRepository
 import kotlinx.coroutines.Dispatchers
@@ -138,6 +139,37 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
 
     }
 
+    fun createCandidateRoleTechnicalInfo(request : CreateCandidateTechnicalRoleInfoRequest) {
+
+        viewModelScope.launch (Dispatchers.Default ){
+            withContext(Dispatchers.IO){
+                loginRepository.whoIAm({ response ->
+                    var token = response.token
+                    viewModelScope.launch (Dispatchers.Default){
+                        withContext(Dispatchers.IO) {
+                            if (token != null) {
+                                candidatesRepo.createCandidateTechnicalRoleInfo(candidateTechnicalRoleInfoToJsonObject(request),token,
+                                    {
+                                        it.msg?.let { it1 -> Log.d("Success", it1) }
+
+                                        _eventCreationSuccess.postValue(true)
+                                        _isSuccessShownToCreateAcademicInfo.postValue(false)
+                                    },
+                                    {
+                                        handleException(it)
+                                    }
+                                )
+                            }
+                        }
+                    }
+                },{
+                    handleException(it)
+                })
+            }
+        }
+
+    }
+
     private fun handleException(exception: Exception){
         Log.d("Error", exception.toString())
         if (exception is retrofit2.HttpException){
@@ -189,6 +221,14 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
         paramObject.addProperty("year_end_date", academicInfoRequest.yearEndDate)
         paramObject.addProperty("month_end_date", academicInfoRequest.monthEndDate)
         paramObject.addProperty("description", academicInfoRequest.description)
+        return paramObject
+    }
+
+    private fun candidateTechnicalRoleInfoToJsonObject(technicalRoleInfoRequest: CreateCandidateTechnicalRoleInfoRequest): JsonObject {
+        val paramObject = JsonObject()
+        paramObject.addProperty("role", technicalRoleInfoRequest.name)
+        paramObject.addProperty("experience_years", technicalRoleInfoRequest.experience)
+        paramObject.addProperty("description", technicalRoleInfoRequest.description)
         return paramObject
     }
 }

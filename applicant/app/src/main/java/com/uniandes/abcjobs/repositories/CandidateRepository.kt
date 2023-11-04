@@ -72,6 +72,23 @@ class CandidateRepository (){
         }
     }
 
+    suspend fun createCandidateTechnicalRoleInfo(createCandidateTechnicalRoleInfo: JsonObject, token: String,
+                                            onComplete:(resp: CreateAcademicInfoResponse)->Unit,
+                                            onError: (error: Exception)->Unit) {
+
+        try{
+
+            Log.i("TechnicalRoleInfo", "$createCandidateTechnicalRoleInfo ")
+            var response = NetworkAdapter.createCandidateTechnicalRoleInfo(createCandidateTechnicalRoleInfo,
+                "Bearer $token"
+            )
+            onComplete(response)
+        }catch (e:Exception){
+            Log.i("Error", "${e} ")
+            onError(e)
+        }
+    }
+
     /* ---- Metodos crear adjuntos de candidato--*/
 }
 

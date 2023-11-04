@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.uniandes.abcjobs.databinding.ActivityCandidateMyDataBinding
 
 
-class CandidateOptionsMyData : AppCompatActivity() {
+class CandidateOptionsMyDataActivity : AppCompatActivity() {
     //private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityCandidateMyDataBinding
 
@@ -17,6 +17,11 @@ class CandidateOptionsMyData : AppCompatActivity() {
 
         binding.createAcademicInfo.setOnClickListener {
             val intent = Intent(this, CreateCandidateAcademicInfoActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.createTechnicalInfo.setOnClickListener {
+            val intent = Intent(this, CandidateOptionsTechnicalInfo::class.java)
             startActivity(intent)
         }
 
