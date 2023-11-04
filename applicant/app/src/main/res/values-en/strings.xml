@@ -77,6 +77,17 @@
     <string name="tituloInvalido">Enter a title of maximum 60 characters</string>
     <string name="institucionInvalida">Enter an institution of maximum 60 characters</string>
     <string name="descriptionInvalida">Enter an description of maximum 500 characters</string>
+    <string name="TechnologyInfoTitle">Technology information</string>
+    <string name="LabelNameCreateTechnologyInfo">Technology</string>
+    <string name="placeNameCreateTechnology">Enter the name of the technology</string>
+    <string name="LabelLevelCreateTechnology">Level</string>
+
+    <string name="nombreTecnologiaInvalido">Enter a correct name</string>
+    <string name="experienciaCreateTechnologyInvalida">Enter a value greater than 0</string>
+    <string name="descriptionInvalidaCreateTechnology">Enter a description of maximum 500 characters</string>
+    <string name="TecnologiaCreada">Technology information has been successfully created</string>
+    <string name="ConfirmationToCancelCreateTechnologyInfo">Are you sure about canceling the creation of the technology?</string>
+    <string name="ConfirmationToCancelCreateTechnicalRoleInfo">Are you sure about canceling the creation of the technical role?</string>
 
     <!--Info messages -->
     <string name="candidatoCreado">The candidate has been created successfully</string>

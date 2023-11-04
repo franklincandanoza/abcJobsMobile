@@ -22,7 +22,8 @@ class CandidateOptionsTechnicalInfo : AppCompatActivity() {
         }
 
         binding.createTechnologies.setOnClickListener {
-
+            val intent = Intent(this, CreateCandidateTechnologyInfoActivity::class.java)
+            startActivity(intent)
         }
 
     }
