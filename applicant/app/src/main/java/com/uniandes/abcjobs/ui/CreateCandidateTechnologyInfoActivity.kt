@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.EditText
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
@@ -13,29 +14,29 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.Observer
 import com.uniandes.abcjobs.R
-import com.uniandes.abcjobs.databinding.ActivityCreateCandidateTechnicalRolesBinding
+import com.uniandes.abcjobs.databinding.ActivityCreateCandidateTechnologyBinding
 import com.uniandes.abcjobs.viewmodels.CandidateViewModel
-import com.uniandes.abcjobs.models.CreateCandidateTechnicalRoleInfoRequest
+import com.uniandes.abcjobs.models.CreateCandidateTechnologyInfoRequest
 import kotlinx.coroutines.launch
 
-class CreateCandidateTechnicalRolesInfoActivity : AppCompatActivity() {
+class CreateCandidateTechnologyInfoActivity : AppCompatActivity() {
 
     private lateinit var viewModel: CandidateViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val binding = ActivityCreateCandidateTechnicalRolesBinding.inflate(layoutInflater)
+        val binding = ActivityCreateCandidateTechnologyBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         //candidateAdapter = CandidateAdapter()
         viewModel = ViewModelProvider(this).get(CandidateViewModel::class.java)
 
-        var createCandidateTechnicalRoleButton: CardView = binding.createCandidateTechnicalRoleButton
+        var createCandidateTechnologyButton: CardView = binding.createCandidateTechnologyButton
 
-        var cancelCreateCandidateTechnicalRoleButton: CardView = binding.cancelCreateCandidateTechnicalRoleButton
+        var cancelCreateCandidateTechnologyButton: CardView = binding.cancelCreateCandidateTechnologyButton
 
-        createCandidateTechnicalRoleButton.setOnClickListener {
+        createCandidateTechnologyButton.setOnClickListener {
             // Do click handling here
             var nameEditText: EditText = findViewById(R.id.name)
             var name = nameEditText.text.toString()
@@ -43,36 +44,39 @@ class CreateCandidateTechnicalRolesInfoActivity : AppCompatActivity() {
             var experienceEditText: EditText = findViewById(R.id.experience)
             var experience = if (experienceEditText.text.toString().isEmpty()) 0 else experienceEditText.text.toString().toInt()
 
+            var levelSpinner: Spinner = findViewById(R.id.level)
+            var level = levelSpinner.selectedItem.toString().toInt()
 
             var descriptionEditText: EditText = findViewById(R.id.description)
             var description = descriptionEditText.text.toString()
 
             if(name.isEmpty()){
-                nameEditText.error = resources.getString(R.string.RoleTecnicoInvalido)
+                nameEditText.error = resources.getString(R.string.nombreTecnologiaInvalido)
                 return@setOnClickListener
             }
 
             if(experience<=0){
-                experienceEditText.error = resources.getString(R.string.experienciaRoleTecnicoInvalida)
+                experienceEditText.error = resources.getString(R.string.experienciaCreateTechnologyInvalida)
                 return@setOnClickListener
             }
 
             if(description.isEmpty()){
-                descriptionEditText.error = resources.getString(R.string.descriptionInvalidaRoleTecnico)
+                descriptionEditText.error = resources.getString(R.string.descriptionInvalidaCreateTechnology)
                 return@setOnClickListener
             }
 
-            var createTechnicalRoleInfoRequest = CreateCandidateTechnicalRoleInfoRequest(
+            var createTechnologyInfoRequest = CreateCandidateTechnologyInfoRequest(
                 name,
                 experience,
+                level,
                 description
             )
 
-            createTechnicalRoleInfo(createTechnicalRoleInfoRequest)
+            createTechnologyInfo(createTechnologyInfoRequest)
 
         }
 
-        cancelCreateCandidateTechnicalRoleButton.setOnClickListener {
+        cancelCreateCandidateTechnologyButton.setOnClickListener {
             openCancelDialog(Intent(this, MainActivity::class.java))
         }
 
@@ -113,7 +117,7 @@ class CreateCandidateTechnicalRolesInfoActivity : AppCompatActivity() {
         Log.i("CreateAcademicInfoOK", ""+!viewModel.isSuccessShownToCreateAcademicInfo.value!!)
         if(!viewModel.isSuccessShownToCreateAcademicInfo.value!!) {
             Log.i("ShowMessageToCreateAI", ""+!viewModel.isSuccessShownToCreateAcademicInfo.value!!)
-            Toast.makeText(applicationContext, resources.getString(R.string.roleTecnicoCreado), Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext, resources.getString(R.string.TecnologiaCreada), Toast.LENGTH_LONG).show()
 
             viewModel.onSuccessCreateAcademiInfoShown()
 
@@ -123,16 +127,16 @@ class CreateCandidateTechnicalRolesInfoActivity : AppCompatActivity() {
 
     }
 
-    private fun createTechnicalRoleInfo(request: CreateCandidateTechnicalRoleInfoRequest) {
+    private fun createTechnologyInfo(request: CreateCandidateTechnologyInfoRequest) {
         lifecycleScope.launch {
-            viewModel.createCandidateRoleTechnicalInfo(request)
+            viewModel.createCandidateTechnologyInfo(request)
 
         }
     }
 
     private fun openCancelDialog(intent: Intent){
-        val builder = AlertDialog.Builder(this@CreateCandidateTechnicalRolesInfoActivity)
-        builder.setMessage(R.string.ConfirmationToCancelCreateTechnicalRoleInfo)
+        val builder = AlertDialog.Builder(this@CreateCandidateTechnologyInfoActivity)
+        builder.setMessage(R.string.ConfirmationToCancelCreateTechnologyInfo)
         builder.setTitle(R.string.Advertencia)
         builder.setCancelable(false)
         builder.setPositiveButton(R.string.ConfirmationSi,
