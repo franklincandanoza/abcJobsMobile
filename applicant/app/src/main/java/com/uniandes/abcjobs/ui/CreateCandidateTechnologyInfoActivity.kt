@@ -16,7 +16,6 @@ import androidx.lifecycle.Observer
 import com.uniandes.abcjobs.R
 import com.uniandes.abcjobs.databinding.ActivityCreateCandidateTechnologyBinding
 import com.uniandes.abcjobs.viewmodels.CandidateViewModel
-import com.uniandes.abcjobs.models.CreateCandidateTechnicalRoleInfoRequest
 import com.uniandes.abcjobs.models.CreateCandidateTechnologyInfoRequest
 import kotlinx.coroutines.launch
 
