@@ -113,7 +113,7 @@
             android:ems="10"
             android:inputType="text"
             android:minHeight="48dp"
-            android:text="f@gmail.com"
+            android:text=""
             android:textColor="@color/Gris80AOC"
             android:textSize="14sp" />
 
@@ -143,7 +143,7 @@
             android:layout_marginBottom="15dp"
             android:background="@drawable/campotexto"
             android:ems="10"
-            android:text="Lgar2023.."
+            android:text=""
             android:inputType="textPassword"
             android:minHeight="48dp"
             android:textColor="@color/Gris80AOC"
