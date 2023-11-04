@@ -1,10 +1,12 @@
 package com.uniandes.abcjobs.repositories
 
 import android.util.Log
+import com.google.gson.JsonObject
+import com.uniandes.abcjobs.models.Candidate
+import com.uniandes.abcjobs.models.CandidateResponse
+import com.uniandes.abcjobs.models.CreateAcademicInfoResponse
 import com.uniandes.abcjobs.network.CacheManager
 import com.uniandes.abcjobs.network.NetworkAdapter
-import com.google.gson.JsonObject
-import com.uniandes.abcjobs.models.*
 
 class CandidateRepository (){
 

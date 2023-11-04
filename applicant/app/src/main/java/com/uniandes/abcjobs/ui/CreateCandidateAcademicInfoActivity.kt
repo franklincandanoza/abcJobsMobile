@@ -5,12 +5,15 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.*
+import android.widget.CheckBox
+import android.widget.EditText
+import android.widget.Spinner
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.Observer
 import com.uniandes.abcjobs.R
 import com.uniandes.abcjobs.databinding.ActivityCreateCandidateAcademicInfoBinding
 import com.uniandes.abcjobs.models.CreateAcademicInfoRequest

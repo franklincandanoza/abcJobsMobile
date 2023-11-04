@@ -11,12 +11,12 @@ import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
 import com.uniandes.abcjobs.R
+import org.hamcrest.Description
+import org.hamcrest.Matcher
 import org.hamcrest.TypeSafeMatcher
 import org.junit.Rule
 import org.junit.Test
-import org.hamcrest.Description
 import org.junit.runner.RunWith
-import org.hamcrest.Matcher
 
 
 @RunWith(AndroidJUnit4::class)

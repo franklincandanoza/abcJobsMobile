@@ -1,10 +1,11 @@
 package com.uniandes.abcjobs.repositories
 
 import android.util.Log
+import com.google.gson.JsonObject
+import com.uniandes.abcjobs.models.LoginResponse
+import com.uniandes.abcjobs.models.MyselfResponse
 import com.uniandes.abcjobs.network.CacheManager
 import com.uniandes.abcjobs.network.NetworkAdapter
-import com.google.gson.JsonObject
-import com.uniandes.abcjobs.models.*
 
 class LoginRepository (){
     suspend fun login(login: JsonObject,onComplete:(resp: LoginResponse)->Unit, onError: (error: Exception)->Unit) {

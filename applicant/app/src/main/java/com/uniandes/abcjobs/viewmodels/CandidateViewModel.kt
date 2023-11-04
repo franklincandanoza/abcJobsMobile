@@ -2,18 +2,19 @@ package com.uniandes.abcjobs.viewmodels
 
 import android.app.Application
 import android.util.Log
-import android.widget.Toast
-import androidx.lifecycle.*
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
+import com.google.gson.JsonObject
 import com.uniandes.abcjobs.models.Candidate
 import com.uniandes.abcjobs.models.CandidateRequest
 import com.uniandes.abcjobs.models.CreateAcademicInfoRequest
 import com.uniandes.abcjobs.repositories.CandidateRepository
+import com.uniandes.abcjobs.repositories.LoginRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.google.gson.JsonObject
-import com.uniandes.abcjobs.models.CandidateResponse
-import com.uniandes.abcjobs.repositories.LoginRepository
 
 class CandidateViewModel(application: Application) :  AndroidViewModel(application) {
 

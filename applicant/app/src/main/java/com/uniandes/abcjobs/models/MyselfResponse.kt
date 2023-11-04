@@ -1,6 +1,5 @@
 package com.uniandes.abcjobs.models
 import com.google.gson.annotations.SerializedName
-import java.util.ArrayList
 
 class MyselfResponse {
     @SerializedName("new_token")
