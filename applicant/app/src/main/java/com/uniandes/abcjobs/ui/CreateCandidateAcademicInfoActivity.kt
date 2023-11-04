@@ -158,7 +158,7 @@ class CreateCandidateAcademicInfoActivity : AppCompatActivity(){
 
             viewModel.onSuccessCreateAcademiInfoShown()
 
-            val intent = Intent(this, CandidateOptionsMyData::class.java)
+            val intent = Intent(this, CandidateOptionsMyDataActivity::class.java)
             startActivity(intent)
         }
 
@@ -171,7 +171,7 @@ class CreateCandidateAcademicInfoActivity : AppCompatActivity(){
         builder.setCancelable(false)
         builder.setPositiveButton(R.string.ConfirmationSi,
             DialogInterface.OnClickListener { _: DialogInterface?, _: Int ->
-                val intent = Intent(this, CandidateOptionsMyData::class.java)
+                val intent = Intent(this, CandidateOptionsMyDataActivity::class.java)
                 startActivity(intent)
             })
 

@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
+import com.uniandes.abcjobs.R
 import com.uniandes.abcjobs.databinding.ActivityCandidateOptionsBinding
 
 
@@ -16,10 +18,11 @@ class CandidateOptionsActivity : AppCompatActivity() {
         binding = ActivityCandidateOptionsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
     }
 
     fun goMyData(view: View) {
-        val intent = Intent(this, CandidateOptionsMyData::class.java)
+        val intent = Intent(this, CandidateOptionsMyDataActivity::class.java)
         startActivity(intent)
     }
 }
