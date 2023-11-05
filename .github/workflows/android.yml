@@ -23,3 +23,9 @@ jobs:
         chmod +x gradlew
         ./gradlew test
         ./gradlew build
+        ./gradlew assembleRelease
+        ls -la
+    - uses: actions/upload-artifac@v1
+      with:
+        name: app-debug.pk
+        path: ./applicant/build/outputs/apk/release
