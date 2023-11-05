@@ -25,4 +25,4 @@ jobs:
         cd applicant
         ls -la
         chmod +x gradlew
-        ./gradlew test
+        ./gradlew build
