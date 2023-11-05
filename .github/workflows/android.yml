@@ -25,7 +25,7 @@ jobs:
         ./gradlew build
         ./gradlew assembleRelease
         ls -la
-    - uses: actions/upload-artifac@v1
+    - uses: actions/upload-artifact@v1
       with:
         name: app-debug.pk
         path: ./applicant/build/outputs/apk/release
