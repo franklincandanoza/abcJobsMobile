@@ -16,16 +16,9 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
-    - name: Move to specific project
+    - name: Move to specific project and run test
       run: |
         cd applicant
         ls -la
         chmod +x gradlew
         ./gradlew test
-        ./gradlew build
-        ./gradlew assembleRelease
-        ls -la
-    - uses: actions/upload-artifact@v1
-      with:
-        name: app-debug.pk
-        path: ./applicant/build/outputs/apk/release
