@@ -18,7 +18,6 @@ class CandidateOptionsActivity : AppCompatActivity() {
         binding = ActivityCandidateOptionsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
     }
 
     fun goMyData(view: View) {
