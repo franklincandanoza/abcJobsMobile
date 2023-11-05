@@ -84,6 +84,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".ui.CreateCandidateWorkingInfoActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ui.CandidateOptionsActivity"
             android:exported="false">
             <meta-data

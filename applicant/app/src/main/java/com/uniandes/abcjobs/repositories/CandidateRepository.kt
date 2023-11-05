@@ -72,6 +72,23 @@ class CandidateRepository (){
         }
     }
 
+    suspend fun createCandidateWorkingInfo(createCandidateWorkingInfo: JsonObject, token: String,
+                                            onComplete:(resp: CreateAcademicInfoResponse)->Unit,
+                                            onError: (error: Exception)->Unit) {
+
+        try{
+
+            Log.i("createCandidateWorking", "$createCandidateWorkingInfo ")
+            var response = NetworkAdapter.createCandidateWorkingInfo(createCandidateWorkingInfo,
+                "Bearer $token"
+            )
+            onComplete(response)
+        }catch (e:Exception){
+            Log.i("Error", "$e ")
+            onError(e)
+        }
+    }
+
     suspend fun createCandidateTechnicalRoleInfo(createCandidateTechnicalRoleInfo: JsonObject, token: String,
                                             onComplete:(resp: CreateAcademicInfoResponse)->Unit,
                                             onError: (error: Exception)->Unit) {

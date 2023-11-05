@@ -217,6 +217,67 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="32dp"
+            android:id="@+id/createWorkingInfo"
+            android:clickable="true"
+            app:cardCornerRadius="10dp"
+            app:cardPreventCornerOverlap="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botoncompuesto"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/WorkingInfoLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:minHeight="22sp"
+                        android:text="@string/BotonInformacionLaboral"
+                        android:textColor="@color/blancoAOC"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/ImageWorkingInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="clip_vertical|right"
+                        android:backgroundTint="#00FFFFFF"
+                        android:contentDescription="@string/BotonEntrevistas"
+                        app:srcCompat="@drawable/ic_sonido"
+                        tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -245,7 +306,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="2dp"
                 android:clickable="true"
-                android:onClick="irAInicio"
                 app:cardCornerRadius="10dp"
                 app:cardPreventCornerOverlap="false"/>
 
@@ -266,7 +326,6 @@
                 android:layout_marginBottom="0dp"
                 app:cardCornerRadius="10dp"
                 android:clickable="true"
-                android:onClick="irAtras"
                 app:cardPreventCornerOverlap="false"/>
 
 
