@@ -12,6 +12,7 @@ import com.uniandes.abcjobs.models.CandidateRequest
 import com.uniandes.abcjobs.models.CreateAcademicInfoRequest
 import com.uniandes.abcjobs.models.CreateCandidateTechnicalRoleInfoRequest
 import com.uniandes.abcjobs.models.CreateCandidateTechnologyInfoRequest
+import com.uniandes.abcjobs.models.CreateWorkingInfoRequest
 import com.uniandes.abcjobs.repositories.CandidateRepository
 import com.uniandes.abcjobs.repositories.LoginRepository
 import kotlinx.coroutines.Dispatchers
@@ -119,6 +120,37 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
                         withContext(Dispatchers.IO) {
                             if (token != null) {
                                 candidatesRepo.createCandidateAcademicInfo(candidateAcademicInfoToJsonObject(request),token,
+                                    {
+                                        it.msg?.let { it1 -> Log.d("Success", it1) }
+
+                                        _eventCreationSuccess.postValue(true)
+                                        _isSuccessShownToCreateAcademicInfo.postValue(false)
+                                    },
+                                    {
+                                        handleException(it)
+                                    }
+                                )
+                            }
+                        }
+                    }
+                },{
+                    handleException(it)
+                })
+            }
+        }
+
+    }
+
+    fun createCandidateWorkingInfo(request : CreateWorkingInfoRequest) {
+
+        viewModelScope.launch (Dispatchers.Default ){
+            withContext(Dispatchers.IO){
+                loginRepository.whoIAm({ response ->
+                    var token = response.token
+                    viewModelScope.launch (Dispatchers.Default){
+                        withContext(Dispatchers.IO) {
+                            if (token != null) {
+                                candidatesRepo.createCandidateWorkingInfo(candidateWorkingInfoToJsonObject(request),token,
                                     {
                                         it.msg?.let { it1 -> Log.d("Success", it1) }
 
@@ -253,6 +285,21 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
         paramObject.addProperty("year_end_date", academicInfoRequest.yearEndDate)
         paramObject.addProperty("month_end_date", academicInfoRequest.monthEndDate)
         paramObject.addProperty("description", academicInfoRequest.description)
+        return paramObject
+    }
+
+    private fun candidateWorkingInfoToJsonObject(workingInfoRequest: CreateWorkingInfoRequest): JsonObject {
+        val paramObject = JsonObject()
+        paramObject.addProperty("position", workingInfoRequest.position)
+        paramObject.addProperty("company_name", workingInfoRequest.company)
+        paramObject.addProperty("company_country", workingInfoRequest.country)
+        paramObject.addProperty("company_address", workingInfoRequest.address)
+        paramObject.addProperty("company_phone", workingInfoRequest.telephone)
+        paramObject.addProperty("year_start_date", workingInfoRequest.yearStartDate)
+        paramObject.addProperty("month_start_date", workingInfoRequest.monthStartDate)
+        paramObject.addProperty("year_end_date", workingInfoRequest.yearEndDate)
+        paramObject.addProperty("month_end_date", workingInfoRequest.monthEndDate)
+        paramObject.addProperty("description", workingInfoRequest.description)
         return paramObject
     }
 

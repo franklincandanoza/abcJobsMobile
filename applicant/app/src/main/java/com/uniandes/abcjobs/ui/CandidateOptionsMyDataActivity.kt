@@ -25,6 +25,11 @@ class CandidateOptionsMyDataActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.createWorkingInfo.setOnClickListener {
+            val intent = Intent(this, CreateCandidateWorkingInfoActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
 
