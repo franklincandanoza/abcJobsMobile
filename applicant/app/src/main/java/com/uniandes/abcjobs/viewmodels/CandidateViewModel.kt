@@ -71,12 +71,6 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
         _isNetworkErrorShown.value = true
     }
 
-    //val candidates: LiveData<List<Candidate>>
-      //  get() = candidatesMutableData
-
-    init {
-        //refreshCandidates()
-    }
 
     private fun refreshCandidates() {
         viewModelScope.launch(Dispatchers.Default) {

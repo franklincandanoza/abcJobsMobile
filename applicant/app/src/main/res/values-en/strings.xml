@@ -118,6 +118,8 @@
     <string name="workingInfoInvalidAddress">Enter the company address of maximum 60 characters</string>
     <string name="workingInfoInvalidTelephone">Enter the company phone number</string>
     <string name="workingInfoInvalidDescription">Enter the position description of maximum 500 characters</string>
+    <string name="InformacionLaboralCreada">Job information has been created successfully</string>
+    <string name="ConfirmationToCancelCreateWorkingInfo">Are you sure about canceling the creation of working information?</string>
 
 
 

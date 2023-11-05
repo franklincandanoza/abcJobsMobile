@@ -175,7 +175,7 @@ class CreateCandidateWorkingInfoActivity : AppCompatActivity(){
         Log.i("CreateAcademicInfoOK", ""+!viewModel.isSuccessShownToCreateAcademicInfo.value!!)
         if(!viewModel.isSuccessShownToCreateAcademicInfo.value!!) {
             Log.i("ShowMessageToCreateAI", ""+!viewModel.isSuccessShownToCreateAcademicInfo.value!!)
-            Toast.makeText(applicationContext, resources.getString(R.string.InformacionAcademicaCreada), Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext, resources.getString(R.string.InformacionLaboralCreada), Toast.LENGTH_LONG).show()
 
             viewModel.onSuccessCreateAcademiInfoShown()
 
@@ -187,7 +187,7 @@ class CreateCandidateWorkingInfoActivity : AppCompatActivity(){
 
     private fun openCancelDialog(intent: Intent){
         val builder = AlertDialog.Builder(this@CreateCandidateWorkingInfoActivity)
-        builder.setMessage(R.string.ConfirmationToCancelCreateAcademicInfo)
+        builder.setMessage(R.string.ConfirmationToCancelCreateWorkingInfo)
         builder.setTitle(R.string.Advertencia)
         builder.setCancelable(false)
         builder.setPositiveButton(R.string.ConfirmationSi,
