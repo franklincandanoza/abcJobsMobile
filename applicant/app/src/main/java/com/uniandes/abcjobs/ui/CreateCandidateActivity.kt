@@ -154,16 +154,14 @@ class CreateCandidateActivity : AppCompatActivity(){
     }
     private fun createCandidate(candidateRequest: CandidateRequest) {
         lifecycleScope.launch {
-          var message:String =""
-          val responseCode = viewModel.createCandidate(candidateRequest)
+            var message:String =""
+            val responseCode = viewModel.createCandidate(candidateRequest)
 
             if (responseCode.length == 0)
                 message=resources.getString(R.string.candidatoCreado)
 
             val toast =
                 Toast.makeText(applicationContext, message, Toast.LENGTH_LONG)
-
-
 
             toast.show()
         }

@@ -68,7 +68,6 @@
     <string name="LabelFoto">Foto</string>
     <string name="LabelPolitica">Acepta Politica de Datos</string>
     <string name="LabelVigente">Vigente</string>
-    <string name="LabelSms">SMS</string>
 
     <!--objeto formulario-->
     <string name="placeCorreo">Ingrese su correo</string>
