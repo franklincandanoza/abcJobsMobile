@@ -15,28 +15,30 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.uniandes.abcjobs.R
-import com.uniandes.abcjobs.databinding.ActivityCreateCandidateAcademicInfoBinding
-import com.uniandes.abcjobs.models.CreateAcademicInfoRequest
+import com.uniandes.abcjobs.databinding.ActivityCreateCandidateWorkingInfoBinding
+
+import com.uniandes.abcjobs.models.CreateWorkingInfoRequest
 import com.uniandes.abcjobs.viewmodels.CandidateViewModel
 import kotlinx.coroutines.launch
 
 
-class CreateCandidateAcademicInfoActivity : AppCompatActivity(){
+class CreateCandidateWorkingInfoActivity : AppCompatActivity(){
 
     private lateinit var viewModel: CandidateViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val binding = ActivityCreateCandidateAcademicInfoBinding.inflate(layoutInflater)
+        val binding = ActivityCreateCandidateWorkingInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         //candidateAdapter = CandidateAdapter()
         viewModel = ViewModelProvider(this).get(CandidateViewModel::class.java)
 
-        var createCandidateButton: CardView = binding.createCandidateAcademicInfoButton
+        var createWorkingInfoButton: CardView = binding.createCandidateWorkingInfoButton
 
-        var cancelCreateCandidateButton: CardView = binding.cancelCreateCandidateAcademicInfoButton
+        var cancelCreateWorkingInfoButton: CardView = binding.cancelCreateCandidateWorkingInfoButton
+
         var currentCheckBox: CheckBox = binding.vigente
 
         var endMonthSpinner: Spinner = binding.endMonth
@@ -49,17 +51,17 @@ class CreateCandidateAcademicInfoActivity : AppCompatActivity(){
 
         }
 
-        createCandidateButton.setOnClickListener {
+        createWorkingInfoButton.setOnClickListener {
 
             // Do click handling here
-            var titleEditText: EditText = findViewById(R.id.academicInfoTitle)
-            var candidateTitle = titleEditText.text.toString()
+            var positionEditText: EditText = findViewById(R.id.workingInfoPosition)
+            var candidatePosition = positionEditText.text.toString()
 
-            var institutionEditText: EditText = findViewById(R.id.academicInfoInstitution)
-            var candidateInstitution = institutionEditText.text.toString()
+            var companyEditText: EditText = findViewById(R.id.workingInfoCompany)
+            var candidateCompany = companyEditText.text.toString()
 
             var countrySpinner: Spinner = findViewById(R.id.country)
-            var candidateCountry = countrySpinner.selectedItem.toString().split("-").get(1).toString()
+            var companyCountry = countrySpinner.selectedItem.toString().split("-").get(1).toString()
 
             var startMonthSpinner: Spinner = findViewById(R.id.startMonth)
             var candidateStartMonth = startMonthSpinner.selectedItem.toString().toInt()
@@ -71,42 +73,61 @@ class CreateCandidateAcademicInfoActivity : AppCompatActivity(){
 
             var candidateEndYear = endYearSpinner.selectedItem.toString().toInt()
 
+            var addressEditText: EditText = findViewById(R.id.workingInfoAddress)
+            var companyAddress = addressEditText.text.toString()
+
+            var telephoneEditText: EditText = findViewById(R.id.workingInfoTelephone)
+            var companyTelephone = telephoneEditText.text.toString()
+
             var descriptionEditText: EditText = findViewById(R.id.description)
             var candidateDescription = descriptionEditText.text.toString()
 
 
 
-            if(candidateTitle.isEmpty()){
-                titleEditText.error = resources.getString(R.string.tituloInvalido)
+            if(candidatePosition.isEmpty()){
+                positionEditText.error = resources.getString(R.string.workingInfoInvalidPosition)
                 return@setOnClickListener
             }
 
-            if(candidateInstitution.isEmpty()){
-                institutionEditText.error = resources.getString(R.string.institucionInvalida)
+            if(candidateCompany.isEmpty()){
+                companyEditText.error = resources.getString(R.string.workingInfoInvalidCompany)
+                return@setOnClickListener
+            }
+
+            if(companyAddress.isEmpty()){
+                addressEditText.error = resources.getString(R.string.workingInfoInvalidAddress)
+                return@setOnClickListener
+            }
+
+            if(companyTelephone.isEmpty()){
+                telephoneEditText.error = resources.getString(R.string.workingInfoInvalidTelephone)
                 return@setOnClickListener
             }
 
             if(candidateDescription.isEmpty()){
-                descriptionEditText.error = resources.getString(R.string.descriptionInvalida)
+                descriptionEditText.error = resources.getString(R.string.workingInfoInvalidDescription)
                 return@setOnClickListener
             }
 
-            var createAcademicInfoRequest = CreateAcademicInfoRequest(
-                candidateTitle,
-                candidateInstitution,
-                candidateCountry,
+
+            var createWorkingInfoRequest = CreateWorkingInfoRequest(
+                candidatePosition,
+                candidateCompany,
+                companyCountry,
                 candidateStartMonth,
                 candidateStartYear,
                 if (currentCheckBox.isChecked) null else candidateEndMonth,
                 if (currentCheckBox.isChecked) null else candidateEndYear,
+                companyAddress,
+                companyTelephone,
                 candidateDescription,
             )
 
-            createCandidateAcademicInfo(createAcademicInfoRequest)
+            createCandidateWorkingInfo(createWorkingInfoRequest)
 
         }
 
-        cancelCreateCandidateButton.setOnClickListener {
+        cancelCreateWorkingInfoButton.setOnClickListener {
             openCancelDialog(Intent(this, MainActivity::class.java))
         }
 
@@ -128,9 +149,9 @@ class CreateCandidateAcademicInfoActivity : AppCompatActivity(){
         })
     }
 
-    private fun createCandidateAcademicInfo(request: CreateAcademicInfoRequest) {
+    private fun createCandidateWorkingInfo(request: CreateWorkingInfoRequest) {
         lifecycleScope.launch {
-            viewModel.createCandidateAcademicInfo(request)
+            viewModel.createCandidateWorkingInfo(request)
 
         }
     }
@@ -165,7 +186,7 @@ class CreateCandidateAcademicInfoActivity : AppCompatActivity(){
     }
 
     private fun openCancelDialog(intent: Intent){
-        val builder = AlertDialog.Builder(this@CreateCandidateAcademicInfoActivity)
+        val builder = AlertDialog.Builder(this@CreateCandidateWorkingInfoActivity)
         builder.setMessage(R.string.ConfirmationToCancelCreateAcademicInfo)
         builder.setTitle(R.string.Advertencia)
         builder.setCancelable(false)

@@ -24,6 +24,8 @@ object NetworkAdapter {
 
     suspend fun createCandidateAcademicInfo(candidateAcademicInfo : JsonObject, bearerToken : String): CreateAcademicInfoResponse = candidateResource.createCandidateAcademicInfo(candidateAcademicInfo, bearerToken)
 
+    suspend fun createCandidateWorkingInfo(candidateWorkingInfo : JsonObject, bearerToken : String): CreateAcademicInfoResponse = candidateResource.createCandidateWorkingInfo(candidateWorkingInfo, bearerToken)
+
     suspend fun createCandidateTechnicalRoleInfo(candidateTechnicalRoleInfo : JsonObject, bearerToken : String): CreateAcademicInfoResponse = candidateResource.createCandidateTechnicalRoleInfo(candidateTechnicalRoleInfo, bearerToken)
 
     suspend fun createCandidateTechnologyInfo(candidateTechnologyInfo : JsonObject, bearerToken : String): CreateAcademicInfoResponse = candidateResource.createCandidateTechnologyInfo(candidateTechnologyInfo, bearerToken)
@@ -65,6 +67,9 @@ interface CandidatesResource {
 
     @POST("/candidates/myself/academic_info")
     suspend fun createCandidateAcademicInfo(@Body academicInfo: JsonObject, @Header("Authorization") bearerToken : String): CreateAcademicInfoResponse
+
+    @POST("/candidates/myself/laboral_info")
+    suspend fun createCandidateWorkingInfo(@Body workingInfo: JsonObject, @Header("Authorization") bearerToken : String): CreateAcademicInfoResponse
 
     @POST("/candidates/myself/technical_roles")
     suspend fun createCandidateTechnicalRoleInfo(@Body technicalRoleInfo: JsonObject, @Header("Authorization") bearerToken : String): CreateAcademicInfoResponse

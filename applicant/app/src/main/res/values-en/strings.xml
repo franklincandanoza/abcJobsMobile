@@ -40,6 +40,7 @@
     <string name="BotonTecnologías">Technologies</string>
     <string name="LabelCountryAcademicInfo">Country</string>
     <string name="BotonTechcnicalRoles">Technical roles</string>
+    <string name="BotonInformacionLaboral">Working information</string>
     <string name="LabelStartDateAcademicInfo">Start</string>
     <string name="LabelEndDateAcademicInfo">End</string>
     <string name="LabelVigenteAcademicInfo">Current</string>
@@ -81,6 +82,17 @@
     <string name="LabelNameCreateTechnologyInfo">Technology</string>
     <string name="placeNameCreateTechnology">Enter the name of the technology</string>
     <string name="LabelLevelCreateTechnology">Level</string>
+    <string name="LabelCargoLaboralInfo">Position</string>
+    <string name="InformaciónLaboralTitulo">Working Information</string>
+    <string name="placePositionWorkingInfo">Enter a position</string>
+    <string name="LabelCompanyWorkingInfo">Company</string>
+    <string name="placeCompanyWorkingInfo">Enter the company</string>
+    <string name="LabelDireccionLaboralInfo">Address</string>
+    <string name="placeAddressWorkingInfo">Enter the address</string>
+    <string name="LabelTelephoneLaboralInfo">Telephone</string>
+    <string name="placeTelephoneWorkingInfo">Enter the telephone</string>
+    <string name="placeDescriptionWorkingInfo">Enter the description</string>
+
 
     <string name="nombreTecnologiaInvalido">Enter a correct name</string>
     <string name="experienciaCreateTechnologyInvalida">Enter a value greater than 0</string>
@@ -101,5 +113,12 @@
     <string name="RoleTecnicoInvalido">Enter a correct name</string>
     <string name="experienciaRoleTecnicoInvalida">Enter a value greater than 0</string>
     <string name="descriptionInvalidaRoleTecnico">Enter a description of maximum 500 characters</string>
+    <string name="workingInfoInvalidPosition">Enter a charge of up to 60 characters</string>
+    <string name="workingInfoInvalidCompany">Enter the company name of maximum 40 characters</string>
+    <string name="workingInfoInvalidAddress">Enter the company address of maximum 60 characters</string>
+    <string name="workingInfoInvalidTelephone">Enter the company phone number</string>
+    <string name="workingInfoInvalidDescription">Enter the position description of maximum 500 characters</string>
+
+
 
 </resources>

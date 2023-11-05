@@ -2,6 +2,7 @@
     <string name="app_name" translatable="false">ABCJobs</string>
     <string name="DatosBasicosTitulo">Datos Basicos</string>
     <string name="DatosAcademicosTitulo">Información académica</string>
+    <string name="InformaciónLaboralTitulo">Información laboral</string>
     <string name="TechnicalInfoTitle">Información técnica de roles</string>
     <string name="TechnologyInfoTitle">Información de tecnologías</string>
     <string name="CandidatoConfigTitulo">Menu</string>
@@ -19,6 +20,7 @@
     <string name="BotonDatosAcademicos">Datos académicos</string>
     <string name="BotonTechcnicalRoles">Roles técnicos</string>
     <string name="BotonRolesTecnicos">Información técnica</string>
+    <string name="BotonInformacionLaboral">Información laboral</string>
     <string name="BotonTecnologías">Tecnologías</string>
     <string name="BotonPruebas">Mis Pruebas</string>
     <string name="BotonEntrevistas">Mis Entrevistas</string>
@@ -39,9 +41,13 @@
     <string name="LabelRegistro2">Registrate</string>
     <string name="LabelCorreo">Correo</string>
     <string name="LabelTitleAcademicInfo">Título</string>
+    <string name="LabelCargoLaboralInfo">Cargo</string>
+    <string name="LabelDireccionLaboralInfo">Dirección</string>
+    <string name="LabelTelephoneLaboralInfo">Teléfono</string>
     <string name="LabelNameCreateTechnicalRoles">Nombre del rol</string>
     <string name="LabelNameCreateTechnologyInfo">Tecnología</string>
     <string name="LabelInstitutionAcademicInfo">Institución</string>
+    <string name="LabelCompanyWorkingInfo">Organización</string>
     <string name="LabelExperienceCreateTechnicalRoles">Experiencia en años</string>
     <string name="LabelLevelCreateTechnology">Nivel</string>
     <string name="LabelCountryAcademicInfo">País</string>
@@ -67,11 +73,16 @@
     <!--objeto formulario-->
     <string name="placeCorreo">Ingrese su correo</string>
     <string name="placeTitleAcademicInfo">Ingrese su título</string>
+    <string name="placePositionWorkingInfo">Ingrese su cargo</string>
+    <string name="placeAddressWorkingInfo">Ingrese la dirección</string>
+    <string name="placeTelephoneWorkingInfo">Ingrese el teléfono</string>
     <string name="placeRoleNameCreateTechnicalRole">Ingrese el nombre del rol</string>
     <string name="placeNameCreateTechnology">Ingrese el nombre de la tecnología</string>
     <string name="placeInstitutionAcademicInfo">Ingrese la institución</string>
+    <string name="placeCompanyWorkingInfo">Ingrese la compañía</string>
     <string name="placeExperienceCreateTechnicalRole">Ingrese la experiencia</string>
     <string name="placeDescriptionAcademicInfo">Ingrese la descripción</string>
+    <string name="placeDescriptionWorkingInfo">Ingrese la descripción</string>
     <string name="placeClave">Ingrese su Clave</string>
     <string name="placeDocumento">Ingrese su numero de identificacion</string>
     <string name="placeNombre">Ingrese su(s) Nombres(s)</string>
@@ -107,6 +118,11 @@
     <!--CreateCandidate-->
     <string name="correoInvalido">Ingrese un correo valido</string>
     <string name="tituloInvalido">Ingrese un título de máximo 60 caracteres</string>
+    <string name="workingInfoInvalidPosition">Ingrese un cargo de máximo 60 caracteres</string>
+    <string name="workingInfoInvalidCompany">Ingrese el nombre de la compañia de máximo 40 caracteres</string>
+    <string name="workingInfoInvalidAddress">Ingrese la dirección de la compañía de máximo 60 caracteres</string>
+    <string name="workingInfoInvalidTelephone">Ingrese el teléfono de la compañia</string>
+    <string name="workingInfoInvalidDescription">Ingrese la descripción del cargo de máximo 500 caracteres</string>
     <string name="RoleTecnicoInvalido">Ingrese un nombre correcto</string>
     <string name="nombreTecnologiaInvalido">Ingrese un nombre correcto</string>
     <string name="institucionInvalida">Ingrese una institución de máximo 60 caracteres</string>
