@@ -10,9 +10,10 @@ on:
 jobs:
   create-release-branch:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout del repositorio
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Obtener versión desde build.gradle
         id: get-version
@@ -28,5 +29,4 @@ jobs:
 
       - name: Finalizar Flujo de Trabajo
         run: echo "Rama de lanzamiento creada y actualizada."
-  
     
