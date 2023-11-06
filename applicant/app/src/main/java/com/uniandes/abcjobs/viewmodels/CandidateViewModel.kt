@@ -92,6 +92,21 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
         }
     }
 
+    private fun refreshCandidates2() {
+        viewModelScope.launch(Dispatchers.Default) {
+            withContext(Dispatchers.IO) {
+                candidatesRepo.refreshData({
+                    candidatesMutableData.postValue(it)
+                    _eventNetworkError.postValue(false)
+                    _isNetworkErrorShown.postValue(false)
+                }, {
+                    Log.d("Error", it.toString())
+                    _eventNetworkError.postValue(true)
+                })
+            }
+        }
+    }
+
     fun createCandidate(request : CandidateRequest): String {
         var responseCode="";
         try {
