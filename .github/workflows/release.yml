@@ -8,42 +8,25 @@ on:
         required: true
 
 jobs:
-  build:
+  create-release-branch:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: set up JDK 11
-      uses: actions/setup-java@v3
-      with:
-        java-version: '11'
-        distribution: 'temurin'
-        cache: gradle
-    - name: Release version
-      run: |
-        cd applicant
-        ls -la
-        chmod +x gradlew
-        ./gradlew build
-        ./gradlew assembleRelease
+      - name: Checkout del repositorio
+      - uses: actions/checkout@v3
 
-    - name: Set up Google Cloud SDK
-      uses: google-github-actions/setup-gcloud@v0
-      with:
-        version: 343.0.0
-        service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
-    - name: Generate Signed URL
-      id: signed-url
-      run: |
-        SIGNED_URL=$(gsutil signurl -d 10m $GCLOUD_BUCKET_URL)
-        echo "::set-output name=signed_url::${SIGNED_URL}"
-      env:
-        GCLOUD_BUCKET_URL: "gs://your-bucket-name/path/to/apk.apk"
-    - name: Upload APK to GCS
-      run: |
-        curl -X PUT -T app/build/outputs/apk/release/app-release.apk "${{ steps.signed-url.outputs.signed_url }}"
-      env:
-        GCS_APK_PATH: "gs://your-bucket-name/path/to/apk.apk"
-      working-directory: app/build/outputs/apk/release
+      - name: Obtener versión desde build.gradle
+        id: get-version
+        run: echo "::set-output name=version::$(cat app/build.gradle | grep "versionCode" | grep -o '[0-9]\+')"
 
+      - name: Crear Rama de Lanzamiento
+        run: |
+          VERSION=${{ steps.get-version.outputs.version }}
+          RELEASE_BRANCH=release/v$VERSION
+          
+          git checkout -b $RELEASE_BRANCH
+          git push origin $RELEASE_BRANCH
+
+      - name: Finalizar Flujo de Trabajo
+        run: echo "Rama de lanzamiento creada y actualizada."
   
     
