@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ABCJobs</string>
+    <string name="DatosBasicosTitulo" translatable="false">Basic Data</string>
+    <string name="DatosAcademicosTitulo">Academic information</string>
+    <string name="TechnicalInfoTitle">Technical role information</string>
+    <string name="CandidatoConfigTitulo">Menu</string>
+    <string name="CandidatoMyDataMenuName">My Data</string>
+    <string name="BotonCrear">Create</string>
+    <string name="CandidateMyDataTechnicalInfo">Technical information</string>
+    <string name="BotonAceptar">Accept</string>
+    <string name="BotonCancelar">Cancel</string>
+    <string name="BotonSiguiente">Next</string>
+    <string name="BotonAnterior">Previous</string>
+    <string name="BotonDatos">My Data</string>
+    <string name="BotonDatosAcademicos">Academic data</string>
+    <string name="BotonPruebas">My Tests</string>
+    <string name="BotonEntrevistas">My Interviews</string>
+    <string name="BotonPagos">MY Payments</string>
+    <string name="LabelUsuario">Username</string>
+    <string name="LabelPassword">Password</string>
+    <string name="LabelRegistro">Don\'t have a user?:</string>
+    <string name="LabelRegistro2">Sign Up</string>
+    <string name="LabelCorreo">Email</string>
+    <string name="LabelTipoDoc">Document Type</string>
+    <string name="LabelDocumento">Document</string>
+    <string name="LabelNombre">First Name</string>
+    <string name="LabelApellido">Last Name</string>
+    <string name="LabelEdad">Age</string>
+    <string name="LabelDireccion">Address</string>
+    <string name="LabelCiudad">City</string>
+    <string name="LabelPais">Residence Country</string>
+    <string name="LabelOrigen">Origin Country</string>
+    <string name="LabelTelefono">Phone Number</string>
+    <string name="LabelFoto">Photo</string>
+    <string name="LabelPolitica">Accept Data Policy</string>
+    <string name="LabelTitleAcademicInfo">Title</string>
+    <string name="LabelInstitutionAcademicInfo">Institution</string>
+    <string name="BotonRolesTecnicos">Technical information</string>
+    <string name="BotonTecnologías">Technologies</string>
+    <string name="LabelCountryAcademicInfo">Country</string>
+    <string name="BotonTechcnicalRoles">Technical roles</string>
+    <string name="BotonInformacionLaboral">Working information</string>
+    <string name="LabelStartDateAcademicInfo">Start</string>
+    <string name="LabelEndDateAcademicInfo">End</string>
+    <string name="LabelVigenteAcademicInfo">Current</string>
+    <string name="LabelDescriptionAcademicInfo">Description</string>
+    <string name="LabelVigente">Current</string>
+    <string name="placeCorreo">Enter your email</string>
+    <string name="placeClave">Enter your password</string>
+    <string name="placeDocumento">Enter your document</string>
+    <string name="placeNombre">Enter your first Name</string>
+    <string name="placeApelliido">Enter your Last Name</string>
+    <string name="placeDireccion">Enter your residence address</string>
+    <string name="placeCiudad">Enter your residence city</string>
+    <string name="placeTelefono">Enter your phone number</string>
+    <string name="placeFoto">Upload a photo</string>
+    <string name="placeTitleAcademicInfo">Enter your title</string>
+    <string name="placeInstitutionAcademicInfo">Enter the institution</string>
+    <string name="placeDescriptionAcademicInfo">Enter description</string>
+    <string name="InputNombre">Name</string>
+    <string name="invalidSelect">Select</string>
+    <string name="correoInvalido">Enter a valid email</string>
+    <string name="claveInvalida">The password must contain a minimum of 6 characters. It must include an uppercase letter, a lowercase letter, a number and a special character.</string>
+    <string name="documentoInvalido">Enter a document number between 6 and 30 digits.</string>
+    <string name="nombreInvalido">Enter a name between 2 and 30 characters.</string>
+    <string name="apellidoInvalido">Enter a last name between 2 and 30 characters</string>
+    <string name="direccionInvalida">Enter a valid address between 8 and 60 characters</string>
+    <string name="LabelNameCreateTechnicalRoles">Role name</string>
+    <string name="LabelExperienceCreateTechnicalRoles">Experience in years</string>
+    <string name="ciudadInvalida">Ingrese una ciudad entre 2 y 30 caracteres.</string>
+    <string name="telefonoInvalido">Enter a phone number between 8 and 30 digits.</string>
+    <string name="politicaInvalida">You must accept the data policy</string>
+    <string name="usuarioInvalido">Enter a user between 2 and 30 characters.</string>
+    <string name="networkError">Network error</string>
+    <string name="invalidCredentials">Invalid user or password</string>
+    <string name="loginSuccess">Login Successful</string>
+    <string name="tituloInvalido">Enter a title of maximum 60 characters</string>
+    <string name="institucionInvalida">Enter an institution of maximum 60 characters</string>
+    <string name="descriptionInvalida">Enter an description of maximum 500 characters</string>
+    <string name="TechnologyInfoTitle">Technology information</string>
+    <string name="LabelNameCreateTechnologyInfo">Technology</string>
+    <string name="placeNameCreateTechnology">Enter the name of the technology</string>
+    <string name="LabelLevelCreateTechnology">Level</string>
+    <string name="LabelCargoLaboralInfo">Position</string>
+    <string name="InformaciónLaboralTitulo">Working Information</string>
+    <string name="placePositionWorkingInfo">Enter a position</string>
+    <string name="LabelCompanyWorkingInfo">Company</string>
+    <string name="placeCompanyWorkingInfo">Enter the company</string>
+    <string name="LabelDireccionLaboralInfo">Address</string>
+    <string name="placeAddressWorkingInfo">Enter the address</string>
+    <string name="LabelTelephoneLaboralInfo">Telephone</string>
+    <string name="placeTelephoneWorkingInfo">Enter the telephone</string>
+    <string name="placeDescriptionWorkingInfo">Enter the description</string>
+
+
+    <string name="nombreTecnologiaInvalido">Enter a correct name</string>
+    <string name="experienciaCreateTechnologyInvalida">Enter a value greater than 0</string>
+    <string name="descriptionInvalidaCreateTechnology">Enter a description of maximum 500 characters</string>
+    <string name="TecnologiaCreada">Technology information has been successfully created</string>
+    <string name="ConfirmationToCancelCreateTechnologyInfo">Are you sure about canceling the creation of the technology?</string>
+    <string name="ConfirmationToCancelCreateTechnicalRoleInfo">Are you sure about canceling the creation of the technical role?</string>
+
+    <!--Info messages -->
+    <string name="candidatoCreado">The candidate has been created successfully</string>
+    <string name="InformacionAcademicaCreada">Academic information has been created successfully</string>
+    <string name="ConfirmationToCancelCreateAcademicInfo">Are you sure about canceling the creation of the technical role?</string>
+    <string name="ConfirmationSi">Yes</string>
+    <string name="BotonRepeticionDesc">Boton para retardar la alarma</string>
+    <string name="BotonDetenerDesc">Boton para detener la alarma</string>
+    <string name="BotonNotificacionDesc">Boton para notificaciones de la alarma</string>
+    <string name="BotonCrearDesc">Boton para Crear</string>
+    <string name="BotonCancelarDesc">Boton para Cancelar</string>
+    <string name="placeRoleNameCreateTechnicalRole">Enter the name rol</string>
+
+    <string name="BotonAceptarDesc">Boton para confirmar el proceso</string>
+    <string name="ConfirmationNo">No</string>
+    <string name="Advertencia">Warning!</string>
+    <string name="sesionCerrada">You must log in again</string>
+    <string name="BotonVolverDesc">Boton para Volver</string>
+    <string name="placeExperienceCreateTechnicalRole">Enter the experience</string>
+    <string name="roleTecnicoCreado">The technical role has been created successfully</string>
+    <string name="RoleTecnicoInvalido">Enter a correct name</string>
+    <string name="experienciaRoleTecnicoInvalida">Enter a value greater than 0</string>
+    <string name="descriptionInvalidaRoleTecnico">Enter a description of maximum 500 characters</string>
+    <string name="workingInfoInvalidPosition">Enter a charge of up to 60 characters</string>
+    <string name="workingInfoInvalidCompany">Enter the company name of maximum 40 characters</string>
+    <string name="workingInfoInvalidAddress">Enter the company address of maximum 60 characters</string>
+    <string name="workingInfoInvalidTelephone">Enter the company phone number</string>
+    <string name="workingInfoInvalidDescription">Enter the position description of maximum 500 characters</string>
+    <string name="InformacionLaboralCreada">Job information has been created successfully</string>
+    <string name="ConfirmationToCancelCreateWorkingInfo">Are you sure about canceling the creation of working information?</string>
+
+
+
+</resources>

@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AbcJobs" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/Gris50AOC</item>
+        <item name="colorPrimaryDark">@color/Gris90AOC</item>
+        <item name="colorAccent">@color/Gris30AOC</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

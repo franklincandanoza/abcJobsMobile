@@ -1,0 +1,28 @@
+name: Android CI
+
+on:
+  push:
+    branches: 
+      - 'feature**'
+
+  pull_request:
+    branches:
+      - 'develop'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: gradle
+    - name: Move to specific project and run test
+      run: |
+        cd applicant
+        ls -la
+        chmod +x gradlew
+        ./gradlew build
