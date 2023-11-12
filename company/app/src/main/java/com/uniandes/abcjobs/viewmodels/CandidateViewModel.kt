@@ -4,20 +4,25 @@ import android.app.Application
 import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.*
-import com.uniandes.abcjobs.models.Candidate
-import com.uniandes.abcjobs.models.CandidateRequest
 import com.uniandes.abcjobs.repositories.CandidateRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import com.google.gson.JsonObject
-import com.uniandes.abcjobs.models.CandidateResponse
+import com.uniandes.abcjobs.models.*
+import com.uniandes.abcjobs.repositories.LoginRepository
 
 class CandidateViewModel(application: Application) :  AndroidViewModel(application) {
 
     private val candidatesRepo = CandidateRepository()
 
+    private val loginRepository = LoginRepository()
+
     private val candidatesMutableData = MutableLiveData<List<Candidate>>()
+
+    private var _eventLoginFail = MutableLiveData<Boolean>(false)
+    val eventLoginFail: LiveData<Boolean>
+        get() = _eventLoginFail
 
     private var _eventNetworkError = MutableLiveData<Boolean>(false)
     val eventNetworkError: LiveData<Boolean>
@@ -30,20 +35,19 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
     val isNetworkErrorShown: LiveData<Boolean>
         get() = _isNetworkErrorShown
 
-    init {
-        //refreshCandidates()
-    }
 
     fun onNetworkErrorShown() {
         _isNetworkErrorShown.value = true
     }
 
-    //val candidates: LiveData<List<Candidate>>
-      //  get() = candidatesMutableData
+    private var _eventGetCandidateSuccess = MutableLiveData<Boolean>(false)
+    val eventGetCandidateSuccess: LiveData<Boolean>
+        get() = _eventGetCandidateSuccess
 
-    init {
-        //refreshCandidates()
-    }
+    private var _isUnSuccessShownCandidatesInfo = MutableLiveData<Boolean>(false)
+    val isUnSuccessShownCandidatesInfo: LiveData<Boolean>
+        get() = _isUnSuccessShownCandidatesInfo
+
 
     private fun refreshCandidates() {
         viewModelScope.launch(Dispatchers.Default) {
@@ -77,6 +81,36 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
         return responseCode
     }
 
+    fun searchCandidate(search_filter: CandidateRequestSearch, onComplete:(resp: List<CandidateResponseSearch>)->Unit,
+                                onError: (error: Exception)->Unit) {
+                println("Enviando peticion desde el viewmodel para buscar")
+                viewModelScope.launch(Dispatchers.Default) {
+                    withContext(Dispatchers.IO) {
+                        loginRepository.whoIAm({ response ->
+                            var token = response.token
+                            viewModelScope.launch(Dispatchers.Default) {
+                                withContext(Dispatchers.IO) {
+                                    if (token != null) {
+                                        candidatesRepo.searchCandidate(token, search_filter,
+                                            {
+                                                //it.size?.let { it1 -> Log.d("Success", it1.toString()) }
+                                                _eventGetCandidateSuccess.postValue(true)
+                                                _isUnSuccessShownCandidatesInfo.postValue(false)
+                                                onComplete(it)
+                                            },
+                                            {
+                                                onError(it)
+                                            })
+                                    }
+                                }
+                            }
+                        }, {
+                            //handleException(it)
+                            onError(it)
+                        })
+                    }
+                }
+    }
 
 
     private fun candidateToJsonObject(candidate: CandidateRequest): JsonObject {

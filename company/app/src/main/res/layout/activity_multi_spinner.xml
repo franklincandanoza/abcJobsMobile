@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.MultiSpinner">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -91,18 +91,20 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
+                android:id="@+id/pruebaSpinner"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/LabelUsuario"
+                android:text=""
+                android:background="@android:drawable/editbox_background"
+                android:drawableRight="@android:drawable/arrow_down_float"
                 android:textColor="@color/Gris80AOC" />
 
 
         </LinearLayout>
 
         <EditText
-            android:id="@+id/editTextUser"
+            android:id="@+id/textUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -143,7 +145,7 @@
             android:background="@drawable/campotexto"
             android:ems="10"
             android:inputType="textPassword"
-            android:text=""
+            android:text="9876.."
             android:minHeight="48dp"
             android:textColor="@color/Gris80AOC"
             android:textSize="14sp" />
@@ -158,38 +160,8 @@
         </LinearLayout>
 
 
-        <Spinner
-            android:id="@+id/spinnerLanguage"
-            style="@style/SpinnerTheme"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:entries="@array/language"
-            android:spinnerMode="dropdown"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="5dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="16sp"
-                android:gravity="center_horizontal"
-                android:text="@string/LabelRegistro"
-                android:textColor="@color/Gris80AOC" />
 
 
-        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -345,4 +317,3 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
-

@@ -312,5 +312,9 @@
         <item>Zambia-ZM</item>
         <item>Zimbabue-ZW</item>
     </string-array>
-
+    <string-array name="filter">
+        <item>Contiene</item>
+        <item>Comienza con</item>
+        <item>Igual a</item>
+    </string-array>
 </resources>
