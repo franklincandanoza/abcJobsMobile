@@ -5,7 +5,7 @@
     android:id="@+id/global"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.CandidateOptionsActivity">
+    tools:context=".ui.CompanyOptionsActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -88,6 +88,7 @@
             android:textStyle="bold" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardBasicos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -119,7 +120,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
-                        android:text="@string/BotonDatos"
+                        android:text="@string/BotonDatosEmpresa"
                         android:textColor="@color/blancoAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -148,8 +149,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="clip_vertical|right"
                         android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="@string/BotonEntrevistas"
-                        app:srcCompat="@drawable/ic_sonido"
+                        android:contentDescription="@string/BotonDatosEmpresa"
+                        app:srcCompat="@drawable/datos_basicos"
                         tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
 
                 </LinearLayout>
@@ -157,12 +158,13 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardCrearProyecto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="32dp"
-            android:onClick="irARepeticion"
+            android:clickable="true"
             app:cardCornerRadius="10dp"
             app:cardPreventCornerOverlap="false">
 
@@ -187,7 +189,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
-                        android:text="@string/BotonPruebas"
+                        android:text="@string/BotonProyectos"
                         android:textColor="@color/blancoAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -217,7 +219,7 @@
                         android:layout_gravity="clip_vertical|right"
                         android:backgroundTint="#00FFFFFF"
                         android:contentDescription="@string/BotonRepeticionDesc"
-                        app:srcCompat="@drawable/ic_retardar"
+                        app:srcCompat="@drawable/project_create"
                         tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
 
                 </LinearLayout>
@@ -225,6 +227,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardPerformance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -256,7 +259,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
-                        android:text="@string/BotonEntrevistas"
+                        android:text="@string/BotonEntrevistasEmpresa"
                         android:textColor="@color/blancoAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -286,7 +289,7 @@
                         android:layout_gravity="clip_vertical|right"
                         android:backgroundTint="#00FFFFFF"
                         android:contentDescription="@string/BotonDetenerDesc"
-                        app:srcCompat="@drawable/ic_detener"
+                        app:srcCompat="@drawable/interview"
                         tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
 
                 </LinearLayout>
@@ -299,15 +302,14 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="16dp"
-            android:clickable="true"
-            android:onClick="irANotificaciones"
+            android:clickable="false"
             app:cardCornerRadius="10dp"
             app:cardPreventCornerOverlap="false">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/botoncompuesto"
+                android:background="@drawable/botoncompuestodeshabilitado"
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
@@ -325,8 +327,8 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
-                        android:text="@string/BotonPagos"
-                        android:textColor="@color/blancoAOC"
+                        android:text="@string/BotonFacturas"
+                        android:textColor="@color/Gris40AOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -355,7 +357,7 @@
                         android:layout_gravity="clip_vertical|right"
                         android:backgroundTint="#00FFFFFF"
                         android:contentDescription="@string/BotonNotificacionDesc"
-                        app:srcCompat="@drawable/ic_notificacion"
+                        app:srcCompat="@drawable/payment_method"
                         tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
 
                 </LinearLayout>

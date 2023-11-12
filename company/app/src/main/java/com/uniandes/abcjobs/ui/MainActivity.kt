@@ -11,12 +11,10 @@ import android.widget.AdapterView
 import android.widget.EditText
 import android.widget.Spinner
 import com.uniandes.abcjobs.R
-import org.intellij.lang.annotations.Language
 import androidx.lifecycle.ViewModelProvider
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
-import com.uniandes.abcjobs.models.CandidateRequest
 import com.uniandes.abcjobs.models.LoginRequest
 import com.uniandes.abcjobs.viewmodels.LoginViewModel
 import kotlinx.coroutines.launch
@@ -172,7 +170,7 @@ class MainActivity : AppCompatActivity() {
             var passwordEditText: EditText = findViewById(R.id.editTextPassword)
             passwordEditText.text.clear()
 
-            val intent = Intent(this, CandidateOptionsActivity::class.java)
+            val intent = Intent(this, CompanyOptionsActivity::class.java)
             startActivity(intent)
         }
     }
