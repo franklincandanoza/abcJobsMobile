@@ -34,7 +34,7 @@ class CompanyOptionsActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.cardBasicos.setOnClickListener {
-            val intent = Intent(this, ExampleActivity::class.java).also {
+            val intent = Intent(this, ResultSearchActivity::class.java).also {
                 it.putExtra("Search_result", "1,2,3,5")
                 startActivity(it)
             }

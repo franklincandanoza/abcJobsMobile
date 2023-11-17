@@ -27,6 +27,8 @@ object NetworkAdapter {
     titleFilter: String, title: String, titleExperience: String): List<CandidateResponseSearch> = candidateResource.searchCandidate(bearerToken, roleFilter, role, roleExperience, technologies, abilities,
         titleFilter, title, titleExperience)
 
+    suspend fun addMember(bearerToken: String, member: JsonObject): JsonObject = projectResource.addMember(bearerToken, member)
+
     suspend fun getProjects(): List<ProjectResponse> =  projectResource.getProjects()
 
     suspend fun getProjectsByCompany(bearerToken : String): List<ProjectResponse> =  projectResource.getProjectsByCompany(bearerToken)
@@ -97,6 +99,9 @@ interface ProjectsResource {
 
     @GET("/projects/profiles/{project_id}")
     suspend fun getProfilesByProject(@Header("Authorization") bearerToken: String, @Path("project_id") projectId:Int): List<ProfileResponse>
+
+    @POST("/members")
+    suspend fun addMember(@Header("Authorization") bearerToken: String, @Body ProjectMember: JsonObject): JsonObject
 }
 
 interface TechnologiesResource {

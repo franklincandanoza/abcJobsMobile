@@ -2,6 +2,8 @@ package com.uniandes.abcjobs.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.View
 import android.widget.*
@@ -33,6 +35,7 @@ class SearchCandidatesActivity : AppCompatActivity(){
     private lateinit var profilesAdapter : ArrayAdapter<String>
     val ERROR_MESSAGE = "ErrorOnResponse"
     private var projectId: Int =0
+    private var handler= Handler(Looper.getMainLooper())
 
     // initialize variables
     var textView: TextView? = null
@@ -283,9 +286,9 @@ class SearchCandidatesActivity : AppCompatActivity(){
                 titleName,
                 titleYears
             )
-            searchCandidates(candidateRequest)
+            //searchCandidates(candidateRequest)
 
-            val intent = Intent(this, ExampleActivity::class.java).also {
+            val intent = Intent(this, ResultSearchActivity::class.java).also {
 
                 it.putExtra("projectId", projectId.toString() )
                 it.putExtra("projectName", projectName.toString() )
@@ -473,6 +476,12 @@ class SearchCandidatesActivity : AppCompatActivity(){
             Log.d(ERROR_MESSAGE, message)
         }
         return message
+    }
+    private fun printMessage(message: String )
+    {
+        handler?.postDelayed({
+            Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG ).show();
+        },1000)
     }
 }
 

@@ -111,7 +111,7 @@
 
     <!--Info messages -->
     <string name="candidatoCreado">Se ha creado el candidato de forma exitosa</string>
-
+    <string name="miembroCreado">Miembro ha sido agregado al proyecto</string>
     <!--Error messages-->
     <string name="networkError">Error de red</string>
     <string name="invalidCredentials">Usuario o contraseña errada</string>
@@ -133,4 +133,6 @@
     <!--Search Candidate-->
     <string name="proyectoInvalido">Debe seleccionar un proyecto</string>
     <string name="perfilInvalido">Debe seleccionar un perfil</string>
+    <string name="miembroNoCreado">Miembro no pudo ser agregado al proyecto</string>
+    <string name="noExistenCandidatos">No se encontraron candidatos</string>
 </resources>
