@@ -58,4 +58,17 @@ class ProjectRepository (){
         }
 
     }
+    suspend fun addMember(token: String, member: JsonObject, onComplete:(resp: JsonObject)->Unit,
+                          onError: (error: Exception)->Unit) {
+        println("Enviando peticion de crear miembro desde el repositorio")
+        try{
+            var response = NetworkAdapter.addMember("Bearer $token", member)
+            //CacheManager.getInstance().put("", projects, ProjectResponse::class.java)
+            onComplete(response)
+        }
+        catch (e:Exception){
+            Log.i("Error", "${e} ")
+            onError(e)
+        }
+    }
 }

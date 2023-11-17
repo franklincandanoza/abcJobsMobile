@@ -66,6 +66,7 @@
     <string name="InputNombre">Name</string>
     <string name="invalidSelect">Select</string>
     <string name="candidatoCreado">The candidate has been created successfully</string>
+    <string name="miembroCreado">Member has been added to project</string>
     <string name="correoInvalido">Enter a valid email</string>
     <string name="claveInvalida">The password must contain a minimum of 6 characters. It must include an uppercase letter, a lowercase letter, a number and a special character.</string>
     <string name="documentoInvalido">Enter a document number between 6 and 30 digits.</string>
@@ -83,4 +84,6 @@
     <string name="loginSuccess">Login Successful</string>
     <string name="sesionCerrada">You must log in again</string>
     <string name="sinPerfiles">There are NO profiles in the project</string>
+    <string name="miembroNoCreado">Member could not be added to project</string>
+    <string name="noExistenCandidatos">No candidates found</string>
 </resources>

@@ -19,6 +19,7 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
     private val loginRepository = LoginRepository()
 
     private val candidatesMutableData = MutableLiveData<List<Candidate>>()
+    private val candidatesSearchMutableData = MutableLiveData<List<CandidateResponseSearch>>()
 
     private var _eventLoginFail = MutableLiveData<Boolean>(false)
     val eventLoginFail: LiveData<Boolean>
@@ -48,6 +49,8 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
     val isUnSuccessShownCandidatesInfo: LiveData<Boolean>
         get() = _isUnSuccessShownCandidatesInfo
 
+    val candidatesSearch: LiveData<List<CandidateResponseSearch>>
+        get() = candidatesSearchMutableData
 
     private fun refreshCandidates() {
         viewModelScope.launch(Dispatchers.Default) {

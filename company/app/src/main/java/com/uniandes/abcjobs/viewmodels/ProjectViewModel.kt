@@ -6,9 +6,8 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.uniandes.abcjobs.models.Candidate
-import com.uniandes.abcjobs.models.ProfileResponse
-import com.uniandes.abcjobs.models.ProjectResponse
+import com.google.gson.JsonObject
+import com.uniandes.abcjobs.models.*
 import com.uniandes.abcjobs.repositories.CandidateRepository
 import com.uniandes.abcjobs.repositories.LoginRepository
 import com.uniandes.abcjobs.repositories.ProjectRepository
@@ -52,6 +51,10 @@ class ProjectViewModel (application: Application) :  AndroidViewModel(applicatio
         get() = _isUnSuccessShownProjectsInfo
 
 
+    private var _eventAddMemberSuccess = MutableLiveData<Boolean>(false)
+    val eventAddMemberSuccess: LiveData<Boolean>
+        get() = _eventAddMemberSuccess
+
 
     private var _isSuccessShownProjectsInfo = MutableLiveData<Boolean>(false)
     val isSuccessShownProjectsInfo: LiveData<Boolean>
@@ -61,6 +64,11 @@ class ProjectViewModel (application: Application) :  AndroidViewModel(applicatio
     val isSuccessShownProfilesInfo: LiveData<Boolean>
         get() = _isSuccessShownProfilesInfo
 
+
+    private var _isUnSuccessAddMember = MutableLiveData<Boolean>(false)
+    val isUnSuccessAddMember: LiveData<Boolean>
+        get() = _isUnSuccessAddMember
+
     fun onUnSuccessShownProjectsInfo() {
         _isUnSuccessShownProjectsInfo.value = true
     }
@@ -69,6 +77,9 @@ class ProjectViewModel (application: Application) :  AndroidViewModel(applicatio
         _isSuccessShownProjectsInfo.value = true
     }
 
+    fun onUnSuccessAddMember() {
+        _isUnSuccessAddMember.value = true
+    }
     init {
         //refreshCandidates()
     }
@@ -154,6 +165,36 @@ class ProjectViewModel (application: Application) :  AndroidViewModel(applicatio
         }
     }
 
+    fun addMember(request : ProjectMemberRequest, onComplete:(resp: JsonObject)->Unit,
+                  onError: (error: Exception)->Unit){
+        println("Enviando peticion de miembro desde el viewmodel")
+        viewModelScope.launch(Dispatchers.Default) {
+            withContext(Dispatchers.IO) {
+                loginRepository.whoIAm({ response ->
+                    var token = response.token
+                    viewModelScope.launch(Dispatchers.Default) {
+                        withContext(Dispatchers.IO) {
+                            if (token != null) {
+                                projectsRepo.addMember(token, memberToJsonObject(request),
+                                    {
+                                        //it.size?.let { it1 -> Log.d("Success", it1.toString()) }
+                                        _eventAddMemberSuccess.postValue(true)
+                                        _isUnSuccessAddMember.postValue(false)
+                                        onComplete(it)
+                                    },
+                                    {
+                                        onError(it)
+                                    })
+                            }
+                        }
+                    }
+                }, {
+                    //handleException(it)
+                    onError(it)
+                })
+            }
+        }
+    }
     private fun handleException(exception: Exception) {
         Log.d("Error", exception.toString())
         if (exception is retrofit2.HttpException) {
@@ -173,4 +214,15 @@ class ProjectViewModel (application: Application) :  AndroidViewModel(applicatio
             _isNetworkErrorShown.postValue(false)
         }
     }
+
+    private fun memberToJsonObject(member: ProjectMemberRequest): JsonObject {
+        val paramObject = JsonObject()
+        paramObject.addProperty("active", 1)
+        paramObject.addProperty("description", "Nuevo miembro")
+        paramObject.addProperty("personId", member.personId)
+        paramObject.addProperty("profileId", member.profileId)
+        paramObject.addProperty("projectId", member.projectId)
+        return paramObject
+    }
+
 }
