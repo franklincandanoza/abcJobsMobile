@@ -76,6 +76,9 @@ class RegisterTestResultActivity : AppCompatActivity(){
             }
         }
 
+        var dateEditText: DatePicker = findViewById(R.id.date)
+        dateEditText.maxDate=System.currentTimeMillis()
+        dateEditText.minDate=1672598368000
         var registerTestResultButton: CardView = binding.RegisterTestResultButton
 
         var cancelCreateCandidateButton: CardView = binding.cancelCreateCandidateButton

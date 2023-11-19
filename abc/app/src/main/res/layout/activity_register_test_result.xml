@@ -120,7 +120,9 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:textSize="16dp"
                     android:layout_marginTop="10dp"
+
                     android:layout_marginBottom="15dp" />
 
 
@@ -142,6 +144,12 @@ tools:context=".ui.CreateCandidateActivity">
 
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal">
             <Spinner
                 android:id="@+id/technology"
                 style="@style/SpinnerTheme"
@@ -151,7 +159,7 @@ tools:context=".ui.CreateCandidateActivity">
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"
                 android:entries="@array/technologies" />
-
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -176,9 +184,7 @@ tools:context=".ui.CreateCandidateActivity">
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:calendarViewShown="false"
-                android:minDate="1700374664689"
                 android:datePickerMode="spinner" />
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -273,7 +279,6 @@ tools:context=".ui.CreateCandidateActivity">
                 android:hint="@string/placePoints"
                 android:minHeight="48dp"
                 android:textColor="@color/Gris80AOC"
-                android:textSize="14sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -299,12 +304,12 @@ tools:context=".ui.CreateCandidateActivity">
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="15dp"
                 android:ems="10"
+                android:textSize="14sp"
                 android:gravity="start|top"
+                android:background="@drawable/campotexto"
                 android:textColor="@color/Gris80AOC"
+                android:minHeight="48sp"
                 android:inputType="textMultiLine" />
-
-
-
 
         </LinearLayout>
         </ScrollView>

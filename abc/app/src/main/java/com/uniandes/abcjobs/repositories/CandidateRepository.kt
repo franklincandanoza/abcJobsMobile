@@ -39,16 +39,20 @@ class CandidateRepository (){
                     onComplete(candidate[0])
                 }else{
                     onComplete(null)
-                }
+                }fo
 
             }catch (e:Exception){
                 onError(e)
             }
 
         } else{
-            var result = potentialResp as CandidateItem
+            var result = potentialResp as List<CandidateItem>
             Log.i("Cache", "return element from cache")
-            onComplete(result)
+            if(result.size==1){
+                onComplete(result[0])
+            }else{
+                onComplete(null)
+            }
         }
     }
 
