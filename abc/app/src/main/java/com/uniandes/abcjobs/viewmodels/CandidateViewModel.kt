@@ -11,13 +11,15 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import com.google.gson.JsonObject
+import com.uniandes.abcjobs.models.CandidateItem
 import com.uniandes.abcjobs.models.CandidateResponse
+import com.uniandes.abcjobs.models.Test
 
 class CandidateViewModel(application: Application) :  AndroidViewModel(application) {
 
     private val candidatesRepo = CandidateRepository()
 
-    private val candidatesMutableData = MutableLiveData<List<Candidate>>()
+    private val candidatesMutableData = MutableLiveData<List<CandidateItem>>()
 
     private var _eventNetworkError = MutableLiveData<Boolean>(false)
     val eventNetworkError: LiveData<Boolean>
@@ -30,9 +32,10 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
     val isNetworkErrorShown: LiveData<Boolean>
         get() = _isNetworkErrorShown
 
-    init {
-        //refreshCandidates()
-    }
+    private val candidateData = MutableLiveData<CandidateItem>()
+    val candidate: LiveData<CandidateItem>
+        get() = candidateData
+
 
     fun onNetworkErrorShown() {
         _isNetworkErrorShown.value = true
@@ -75,6 +78,20 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
             responseCode = e.message.toString()
         }
         return responseCode
+    }
+
+    fun findCandidate(candidateDocument:String){
+        viewModelScope.launch(Dispatchers.Default) {
+            withContext(Dispatchers.IO) {
+                candidatesRepo.getCandidate(candidateDocument,{
+                    Log.d("Info", it.toString())
+                    candidateData.postValue(it)
+                },{
+                    it.printStackTrace()
+                    Log.d("Error", it.toString())
+                })
+            }
+        }
     }
 
 

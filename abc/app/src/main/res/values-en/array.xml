@@ -312,5 +312,14 @@
         <item>Zambia-ZM</item>
         <item>Zimbabue-ZW</item>
     </string-array>
+    <string-array name="technologies">
+        <item>JAVA</item>
+        <item>PYTHON</item>
+        <item>AWS</item>
+        <item>GCP</item>
+        <item>JAVASCRIPT</item>
 
+
+
+    </string-array>
 </resources>

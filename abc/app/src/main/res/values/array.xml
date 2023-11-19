@@ -10,6 +10,16 @@
         <item>Pasaporte-PA</item>
         <item>Otro-OT</item>
     </string-array>
+    <string-array name="technologies">
+        <item>JAVA</item>
+        <item>PYTHON</item>
+        <item>AWS</item>
+        <item>GCP</item>
+        <item>JAVASCRIPT</item>
+
+
+
+    </string-array>
     <string-array name="age">
         <item>18</item>
         <item>19</item>

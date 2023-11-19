@@ -54,4 +54,31 @@
     <string name="networkError">Network error</string>
     <string name="invalidCredentials">Invalid user or password</string>
     <string name="loginSuccess">Login Successful</string>
+
+    <string name="ButtonRegisterTest">Register test</string>
+    <string name="LabelTechnology">Technology</string>
+    <string name="LabelTest">Test</string>
+    <string name="LabelTestDate">Test date</string>
+    <string name="placeDate">Date</string>
+    <string name="LabelCandidateDocument">Candidate document</string>
+    <string name="LabelCandidateName">Candidate name</string>
+    <string name="InputDocument">Enter document</string>
+    <string name="InputName">Enter name</string>
+    <string name="LabelPoints">Points</string>
+    <string name="placePoints">Enter the points</string>
+    <string name="LabelObservation">Observation</string>
+    <string name="LoadTestTitle">Load test</string>
+    <string name="PuntajeInvalido">Enter points between 0 and 100</string>
+
+
+    <string name="warning">Warning!</string>
+
+    <string name="yes">si</string>
+    <string name="no">no</string>
+
+    <string name="confirmCancel">Do you want to cancel the register result of the test?</string>
+
+    <string name="testCreated">The test result has been successfully recorded</string>
+
+    <string name="documentoNameNotFound">No candidate was found with the provided document</string>
 </resources>
