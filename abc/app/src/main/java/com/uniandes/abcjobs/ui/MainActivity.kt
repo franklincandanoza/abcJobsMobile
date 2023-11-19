@@ -172,7 +172,7 @@ class MainActivity : AppCompatActivity() {
             var passwordEditText: EditText = findViewById(R.id.editTextPassword)
             passwordEditText.text.clear()
 
-            val intent = Intent(this, CandidateOptionsActivity::class.java)
+            val intent = Intent(this, CompanyOptionsActivity::class.java)
             startActivity(intent)
         }
     }
