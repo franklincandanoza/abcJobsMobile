@@ -39,7 +39,7 @@ class CandidateRepository (){
                     onComplete(candidate[0])
                 }else{
                     onComplete(null)
-                }fo
+                }
 
             }catch (e:Exception){
                 onError(e)

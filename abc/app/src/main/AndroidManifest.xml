@@ -49,12 +49,21 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.CandidateOptionsActivity"
+            android:name=".ui.CompanyOptionsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".ui.RegisterTestResultActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+
     </application>
 
 </manifest>

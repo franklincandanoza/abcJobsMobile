@@ -10,7 +10,6 @@ import okhttp3.OkHttpClient
 import retrofit2.Response
 import retrofit2.Retrofit
 
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 import retrofit2.http.Body
@@ -77,7 +76,6 @@ object NetworkAdapter {
 
                 //.addCallAdapterFactory(DefaultCallAdapterFactory)
                 .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .client(client)
                 .build()
         }
