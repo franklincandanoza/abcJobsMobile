@@ -305,7 +305,10 @@ class SearchCandidatesActivity : AppCompatActivity(){
             }
 
         }
-
+        cancelsearchCandidateButton.setOnClickListener {
+            val intent = Intent(this, ProjectOptionsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 

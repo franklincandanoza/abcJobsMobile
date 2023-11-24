@@ -34,6 +34,10 @@ class ProjectOptionsActivity : AppCompatActivity() {
             val intent = Intent(this, SearchCandidatesActivity::class.java)
             startActivity(intent)
         }
+        binding.cardPerformance.setOnClickListener {
+            val intent = Intent(this, CreateEvaluationPerformanceActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }

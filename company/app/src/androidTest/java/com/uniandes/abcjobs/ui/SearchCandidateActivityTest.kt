@@ -22,7 +22,7 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 @LargeTest
-class SearCandidateActivityTest {
+class SearchCandidateActivityTest {
     @get:Rule var activityTestScenarioRule = ActivityScenarioRule(SearchCandidatesActivity::class.java)
 
     @get:Rule var intentTestScenarioRule = IntentsTestRule(SearchCandidatesActivity::class.java)

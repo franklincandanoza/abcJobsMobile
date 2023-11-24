@@ -10,6 +10,7 @@ import com.google.gson.JsonObject
 import com.uniandes.abcjobs.models.*
 import com.uniandes.abcjobs.repositories.CandidateRepository
 import com.uniandes.abcjobs.repositories.LoginRepository
+import com.uniandes.abcjobs.repositories.MemberRepository
 import com.uniandes.abcjobs.repositories.ProjectRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -22,7 +23,11 @@ class ProjectViewModel (application: Application) :  AndroidViewModel(applicatio
 
     private val loginRepository = LoginRepository()
 
+    private val memberRepo = MemberRepository()
+
     private val projectsMutableData = MutableLiveData<List<ProjectResponse>>()
+
+    private val membersMutableData = MutableLiveData<List<ProjectMemberResponse>>()
 
     private var _eventLoginFail = MutableLiveData<Boolean>(false)
     val eventLoginFail: LiveData<Boolean>
@@ -45,6 +50,10 @@ class ProjectViewModel (application: Application) :  AndroidViewModel(applicatio
     private var _eventGetProfileSuccess = MutableLiveData<Boolean>(false)
     val eventGetProfileSuccess: LiveData<Boolean>
         get() = _eventGetProfileSuccess
+
+    private var _eventGetMemberSuccess = MutableLiveData<Boolean>(false)
+    val eventGetMemberSuccess: LiveData<Boolean>
+        get() = _eventGetMemberSuccess
 
     private var _isUnSuccessShownProjectsInfo = MutableLiveData<Boolean>(false)
     val isUnSuccessShownProjectsInfo: LiveData<Boolean>
@@ -69,6 +78,10 @@ class ProjectViewModel (application: Application) :  AndroidViewModel(applicatio
     val isUnSuccessAddMember: LiveData<Boolean>
         get() = _isUnSuccessAddMember
 
+    private var _isUnSuccessGetMembersInfo = MutableLiveData<Boolean>(false)
+    val isUnSuccessGetMembersInfo: LiveData<Boolean>
+        get() = _isUnSuccessGetMembersInfo
+
     fun onUnSuccessShownProjectsInfo() {
         _isUnSuccessShownProjectsInfo.value = true
     }
@@ -80,9 +93,10 @@ class ProjectViewModel (application: Application) :  AndroidViewModel(applicatio
     fun onUnSuccessAddMember() {
         _isUnSuccessAddMember.value = true
     }
-    init {
-        //refreshCandidates()
+    fun onUnSuccessSGetMembersInfo() {
+        _isUnSuccessGetMembersInfo.value = true
     }
+
 
     fun onNetworkErrorShown() {
         _isNetworkErrorShown.value = true
@@ -195,6 +209,38 @@ class ProjectViewModel (application: Application) :  AndroidViewModel(applicatio
             }
         }
     }
+
+    fun getMembersbyProject(project_id: Int,onComplete:(resp: List<ProjectMemberResponse>)->Unit,
+                             onError: (error: Exception)->Unit){
+        println("Enviando peticion de meiembros desde el viewmodel")
+        viewModelScope.launch(Dispatchers.Default) {
+            withContext(Dispatchers.IO) {
+                loginRepository.whoIAm({ response ->
+                    var token = response.token
+                    viewModelScope.launch(Dispatchers.Default) {
+                        withContext(Dispatchers.IO) {
+                            if (token != null) {
+                                memberRepo.getMembersByProject(token, project_id,
+                                    {
+                                        //it.size?.let { it1 -> Log.d("Success", it1.toString()) }
+                                        _eventGetMemberSuccess.postValue(true)
+                                        _isUnSuccessGetMembersInfo.postValue(false)
+                                        onComplete(it)
+                                    },
+                                    {
+                                        onError(it)
+                                    })
+                            }
+                        }
+                    }
+                }, {
+                    //handleException(it)
+                    onError(it)
+                })
+            }
+        }
+    }
+
     private fun handleException(exception: Exception) {
         Log.d("Error", exception.toString())
         if (exception is retrofit2.HttpException) {
