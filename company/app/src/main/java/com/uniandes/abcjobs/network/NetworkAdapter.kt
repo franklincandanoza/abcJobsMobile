@@ -29,6 +29,8 @@ object NetworkAdapter {
 
     suspend fun addMember(bearerToken: String, member: JsonObject): JsonObject = projectResource.addMember(bearerToken, member)
 
+    suspend fun getMembersByProject(bearerToken: String, projectId:Int): List<ProjectMemberResponse> = projectResource.getMembersByProject(bearerToken, projectId)
+
     suspend fun getProjects(): List<ProjectResponse> =  projectResource.getProjects()
 
     suspend fun getProjectsByCompany(bearerToken : String): List<ProjectResponse> =  projectResource.getProjectsByCompany(bearerToken)
@@ -36,6 +38,8 @@ object NetworkAdapter {
     suspend fun getProfilesByProject(bearerToken: String, projectId :Int): List<ProfileResponse> = projectResource.getProfilesByProject(bearerToken, projectId)
 
     suspend fun getTechnologies(bearerToken : String): List<TechnologyResponse> =  technologyResource.getTechnologies(bearerToken)
+
+    suspend fun createEvaluation(bearerToken: String, evaluation : JsonObject): JsonObject = projectResource.createEvaluation(bearerToken, evaluation)
 
     suspend fun login(login : JsonObject): LoginResponse = loginResource.login(login)
 
@@ -102,6 +106,12 @@ interface ProjectsResource {
 
     @POST("/members")
     suspend fun addMember(@Header("Authorization") bearerToken: String, @Body ProjectMember: JsonObject): JsonObject
+
+    @POST("/evaluations")
+    suspend fun createEvaluation(@Header("Authorization") bearerToken: String, @Body candidate: JsonObject): JsonObject
+
+    @GET("/projects/members/{project_id}")
+    suspend fun getMembersByProject(@Header("Authorization") bearerToken: String, @Path("project_id") projectId:Int): List<ProjectMemberResponse>
 }
 
 interface TechnologiesResource {

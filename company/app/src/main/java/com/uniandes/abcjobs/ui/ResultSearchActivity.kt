@@ -167,6 +167,10 @@ class ResultSearchActivity : AppCompatActivity() {
             },
                 {
                     Log.d("Error", it.toString())
+                    if (it.toString().contains("400")) {
+                        val message = getString(R.string.miembroExistente).toString()
+                        printMessage(message)
+                    }
                 })
         }
     }

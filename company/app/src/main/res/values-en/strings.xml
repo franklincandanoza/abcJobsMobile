@@ -6,6 +6,7 @@
     <string name="CandidatoConfigTitulo">Menu</string>
     <string name="ListaCandidatosTitulo">Candidate List</string>
     <string name="FiltrosTitulo">Search Filters </string>
+    <string name="EvaluacionDesempenoTitulo">Performance Evaluation</string>
     <string name="BotonCrear">Create</string>
     <string name="BotonAceptar">Accept</string>
     <string name="BotonCancelar">Cancel</string>
@@ -52,6 +53,10 @@
     <string name="LabelFiltroTitulo">Title filter</string>
     <string name="LabelBuscarTitulo">Title</string>
     <string name="LabelExperienciaTitulo"> Graduated years</string>
+    <string name="LabelMiembro">Member</string>
+    <string name="LabelCalificacion">Score</string>
+    <string name="LabelObservacion">Comments</string>
+    <!--placeholders-->
     <string name="placeCorreo">Enter your email</string>
     <string name="placeClave">Enter your password</string>
     <string name="placeDocumento">Enter your document</string>
@@ -63,10 +68,19 @@
     <string name="placeFoto">Upload a photo</string>
     <string name="placeBuscarRol">Write a word or letters associated with the role</string>
     <string name="placeBuscarTitulo">Write a word or letters associated with the title</string>
+    <string name="placeObservacion">Enter an observation</string>
     <string name="InputNombre">Name</string>
     <string name="invalidSelect">Select</string>
+    <!--Info messages-->
     <string name="candidatoCreado">The candidate has been created successfully</string>
     <string name="miembroCreado">Member has been added to project</string>
+    <string name="evaluacionCreada">Evaluation has been saved successfully</string>
+    <string name="preguntaCandidatoCreacion">Do you want to cancel candidate creation?</string>
+    <string name="preguntaEvaluacion">Do you want to cancel the evaluation creation?</string>
+    <string name="advertencia">Warning</string>
+    <string name="si">Yes</string>
+    <string name="no">No</string>
+    <!--errores-->
     <string name="correoInvalido">Enter a valid email</string>
     <string name="claveInvalida">The password must contain a minimum of 6 characters. It must include an uppercase letter, a lowercase letter, a number and a special character.</string>
     <string name="documentoInvalido">Enter a document number between 6 and 30 digits.</string>
@@ -79,11 +93,17 @@
     <string name="usuarioInvalido">Enter a user between 2 and 30 characters.</string>
     <string name="proyectoInvalido">You must select a project</string>
     <string name="perfilInvalido">You must select a project profile</string>
+    <string name="miembroInvalido">You must select a project member</string>
+    <string name="calificacionInvalida">You must select a score</string>
+    <string name="observacionInvalida">Enter a detail between 10 and 500 digits</string>
     <string name="networkError">Network error</string>
     <string name="invalidCredentials">Invalid user or password</string>
     <string name="loginSuccess">Login Successful</string>
     <string name="sesionCerrada">You must log in again</string>
-    <string name="sinPerfiles">There are NO profiles in the project</string>
+    <string name="sinPerfiles">There are not profiles in the project</string>
     <string name="miembroNoCreado">Member could not be added to project</string>
+    <string name="miembroExistente">Member already exists in the project</string>
     <string name="noExistenCandidatos">No candidates found</string>
+    <string name="sinMiembros">There are not members in the project</string>
+    <string name="evaluacionExistente">Member already has an evaluation</string>
 </resources>

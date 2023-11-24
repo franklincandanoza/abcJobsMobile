@@ -16,7 +16,7 @@ class ProjectResponse {
     var active: String? = null
 
     @SerializedName("details")
-    var details: Number = 0
+    var details: String? = null
 
     @SerializedName("company_id")
     var company_id: String? = null
