@@ -25,4 +25,9 @@ class CandidateOptionsActivity : AppCompatActivity() {
         val intent = Intent(this, CandidateOptionsMyDataActivity::class.java)
         startActivity(intent)
     }
+
+    fun goMyInterviews(view: View) {
+        val intent = Intent(this, ListInterviewsActivity::class.java)
+        startActivity(intent)
+    }
 }

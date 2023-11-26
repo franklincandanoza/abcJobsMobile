@@ -5,6 +5,7 @@ import com.google.gson.JsonObject
 import com.uniandes.abcjobs.models.Candidate
 import com.uniandes.abcjobs.models.CandidateResponse
 import com.uniandes.abcjobs.models.CreateAcademicInfoResponse
+import com.uniandes.abcjobs.models.Interview
 import com.uniandes.abcjobs.network.CacheManager
 import com.uniandes.abcjobs.network.NetworkAdapter
 
@@ -24,6 +25,25 @@ class CandidateRepository (){
             }
         } else{
             var result = potentialResp as List<Candidate>
+            Log.i("Cache", "return ${result.size} elements from cache")
+            onComplete(result)
+        }
+    }
+
+    suspend fun getMyInterviews(candidateId:Int, onComplete:(resp:List<Interview>)->Unit, onError: (error: Exception)->Unit) {
+
+        var potentialResp = CacheManager.getInstance().get("", Interview::class.java)
+        return if(potentialResp==null){
+            Log.i("Cache", "from network")
+            try {
+                var interviews = NetworkAdapter.getInterviews(candidateId)
+                CacheManager.getInstance().put("", interviews, Candidate::class.java)
+                onComplete(interviews)
+            }catch (e:Exception){
+                onError(e)
+            }
+        } else{
+            var result = potentialResp as List<Interview>
             Log.i("Cache", "return ${result.size} elements from cache")
             onComplete(result)
         }
