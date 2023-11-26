@@ -10,6 +10,7 @@ import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.POST
 import retrofit2.http.Path
+import retrofit2.http.Query
 import java.util.concurrent.TimeUnit
 
 object NetworkAdapter {
@@ -17,6 +18,8 @@ object NetworkAdapter {
     private val candidateResource: CandidatesResource = RetrofitHelper.getRetrofit().create(CandidatesResource::class.java)
     private val loginResource: LoginResource = RetrofitHelper.getRetrofit().create(LoginResource::class.java)
     suspend fun getCandidates(): List<Candidate> = candidateResource.getCandidates()
+
+    suspend fun getInterviews(candidateId: Int): List<Interview> = candidateResource.getInterviews(candidateId)
 
     suspend fun getCandidate(candidateId: Int): Candidate = candidateResource.getCandidate(candidateId)
 
@@ -58,6 +61,9 @@ object RetrofitHelper {
 interface CandidatesResource {
     @GET("/candidates")
     suspend fun getCandidates(): List<Candidate>
+
+    @GET("/interviews")
+    suspend fun getInterviews(@Query("candidate") candidateID: Int): List<Interview>
 
     @GET("/candidates/{id}")
     suspend fun getCandidate(@Path("id") candidateID: Int): Candidate
