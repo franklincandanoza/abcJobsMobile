@@ -10,8 +10,8 @@
 
 
 ### APK Android Sprint 3
-ABC: 
-Applicant: 
+ABC: https://github.com/franklincandanoza/abcJobsMobile/blob/release/1.2.0/app-abc-debug.apk
+Applicant: https://github.com/franklincandanoza/abcJobsMobile/blob/release/1.2.0/app-applicant-debug.apk
 
 
 
