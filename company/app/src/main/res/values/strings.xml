@@ -3,6 +3,10 @@
     <string name="DatosBasicosTitulo">Datos Basicos</string>
     <string name="AlarmasNuevaTitulo">Nueva Alarma</string>
     <string name="CandidatoConfigTitulo">Menu</string>
+    <string name="ProyectosMenuTitulo">Proyectos</string>
+    <string name="FiltrosTitulo">Filtros de busqueda </string>
+    <string name="ListaCandidatosTitulo">Lista de Candidatos</string>
+    <string name="EvaluacionDesempenoTitulo">Evaluacion de Desempeño</string>
     <string name="AlarmasDetencionTitulo">Modo detencion</string>
     <string name="AlarmasCompartirTitulo">Compartir</string>
     <string name="AlarmasRepeticionTitulo">Repetición</string>
@@ -34,10 +38,14 @@
     <string name="BotonPruebas">Mis Pruebas</string>
     <string name="BotonEntrevistas">Mis Entrevistas</string>
     <string name="BotonPagos">Mis Pagos</string>
-    <string name="BotonAsistenteDesc">Boton para iniciar asistente</string>
-    <string name="BotonNuevaAlarmaDesc">Boton para Crear Alarma</string>
-    <string name="BotonCompartirDesc">Compartir</string>
-    <string name="BotonBorrarDesc">Boton para Eliminar</string>
+    <string name="BotonDatosEmpresa">DatosBásicos</string>
+    <string name="BotonProyectos">Proyectos</string>
+    <string name="BotonEntrevistasEmpresa">Entrevistas</string>
+    <string name="BotonFacturas">Mis Facturas</string>
+    <string name="BotonCrearProyecto">Crear Proyecto</string>
+    <string name="BotonCandidatosProyecto">Candidatos</string>
+    <string name="BotonDesempeñoProyecto">Evaluar Desempeño</string>
+    <string name="BotonPerfilProyecto">Crear Perfil</string>
     <string name="BotonVolverDesc">Boton para Volver</string>
     <string name="BotonSonidoDesc">Boton para Sonido</string>
     <string name="BotonRepeticionDesc">Boton para retardar la alarma</string>
@@ -67,8 +75,21 @@
     <string name="LabelTelefono">Telefono</string>
     <string name="LabelFoto">Foto</string>
     <string name="LabelPolitica">Acepta Politica de Datos</string>
-    <string name="LabelSms">SMS</string>
-
+    <string name="LabelProyecto">Proyecto</string>
+    <string name="LabelPerfil">Perfil</string>
+    <string name="LabelTecnologia">Tecnologias</string>
+    <string name="LabelHabilidad">Habilidades</string>
+    <string name="LabelTecnologias">Seleccione Tecnologias</string>
+    <string name="LabelHabilidades">Seleccione Habilidades</string>
+    <string name="LabelFiltroRol">Filtro Rol</string>
+    <string name="LabelBuscarRol">Rol</string>
+    <string name="LabelExperienciaRol">Años Experiencia</string>
+    <string name="LabelFiltroTitulo">Filtro Titulo</string>
+    <string name="LabelBuscarTitulo">Titulo</string>
+    <string name="LabelExperienciaTitulo">Años Graduado</string>
+    <string name="LabelMiembro">Miembro</string>
+    <string name="LabelCalificacion">Calificacion</string>
+    <string name="LabelObservacion">Observacion</string>
     <!--objeto formulario-->
     <string name="placeCorreo">Ingrese su correo</string>
     <string name="placeClave">Ingrese su Clave</string>
@@ -79,6 +100,9 @@
     <string name="placeCiudad">Ingrese su ciudad de residencia</string>
     <string name="placeTelefono">Ingrese su numero de telefono</string>
     <string name="placeFoto">Importe una foto</string>
+    <string name="placeBuscarRol">Escriba una palabra o letras asociadas al rol</string>
+    <string name="placeBuscarTitulo">Escriba una palabra o letras asociadas al titulo</string>
+    <string name="placeObservacion">Ingrese una observacion</string>
     <string name="InputNombre">Nombre</string>
     <string name="InputNombreDesc">Ingrese Nombre Alarma</string>
     <string name="InputHora">00</string>
@@ -91,10 +115,19 @@
 
     <!--Info messages -->
     <string name="candidatoCreado">Se ha creado el candidato de forma exitosa</string>
-
+    <string name="miembroCreado">Miembro ha sido agregado al proyecto</string>
+    <string name="evaluacionCreada">La evaluación ha sido guardada</string>
+    <string name="preguntaCandidatoCreacion">Desea cancelar la creacion del candidato?</string>
+    <string name="preguntaEvaluacion">Desea cancelar la creacion de la evaluación?</string>
+    <string name="advertencia">Advertencia</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
     <!--Error messages-->
     <string name="networkError">Error de red</string>
     <string name="invalidCredentials">Usuario o contraseña errada</string>
+    <string name="sesionCerrada">Debes iniciar sesión nuevamente</string>
+    <string name="sinPerfiles">NO existen perfiles en el proyecto</string>
+    <string name="sinMiembros">NO existen miembros en el proyecto</string>
     <!--Info messages -->
     <string name="loginSuccess">Login existoso</string>
     <!--CreateCandidate-->
@@ -108,4 +141,15 @@
     <string name="telefonoInvalido">Ingrese un telefono entre 8 y 30 digitos.</string>
     <string name="politicaInvalida">Debe aceptar la politica de datos</string>
     <string name="usuarioInvalido">Ingrese un usuario entre 6 y 30 digitos.</string>
+    <!--Search Candidate-->
+    <string name="proyectoInvalido">Debe seleccionar un proyecto</string>
+    <string name="perfilInvalido">Debe seleccionar un perfil</string>
+    <string name="miembroNoCreado">Miembro no pudo ser agregado al proyecto</string>
+    <string name="miembroExistente">Miembro ya existe en el proyecto</string>
+    <string name="noExistenCandidatos">No se encontraron candidatos</string>
+    <!--Create evulation-->
+    <string name="miembroInvalido">Debe seleccionar un miembro</string>
+    <string name="calificacionInvalida">Debe seleccionar una calificacion</string>
+    <string name="observacionInvalida">Ingrese un observación entre 10 y 500 caractered.</string>
+    <string name="evaluacionExistente">El miembro ya tiene una evaluacion de desempeño</string>
 </resources>

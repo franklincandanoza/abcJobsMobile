@@ -28,7 +28,6 @@ class CreateCandidateTechnicalRolesInfoActivity : AppCompatActivity() {
         val binding = ActivityCreateCandidateTechnicalRolesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //candidateAdapter = CandidateAdapter()
         viewModel = ViewModelProvider(this).get(CandidateViewModel::class.java)
 
         var createCandidateTechnicalRoleButton: CardView = binding.createCandidateTechnicalRoleButton
@@ -36,7 +35,7 @@ class CreateCandidateTechnicalRolesInfoActivity : AppCompatActivity() {
         var cancelCreateCandidateTechnicalRoleButton: CardView = binding.cancelCreateCandidateTechnicalRoleButton
 
         createCandidateTechnicalRoleButton.setOnClickListener {
-            // Do click handling here
+
             var nameEditText: EditText = findViewById(R.id.name)
             var name = nameEditText.text.toString()
 

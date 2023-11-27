@@ -7,43 +7,52 @@ import com.google.gson.JsonObject
 import com.uniandes.abcjobs.models.*
 
 class CandidateRepository (){
-    suspend fun refreshData(onComplete:(resp:List<Candidate>)->Unit, onError: (error: Exception)->Unit) {
+    suspend fun refreshData(onComplete:(resp:List<CandidateItem>)->Unit, onError: (error: Exception)->Unit) {
 
-        var potentialResp = CacheManager.getInstance().get("", Candidate::class.java)
+        var potentialResp = CacheManager.getInstance().get("", CandidateItem::class.java)
         return if(potentialResp==null){
             Log.i("Cache", "from network")
             try {
                 var candidates = NetworkAdapter.getCandidates()
-                CacheManager.getInstance().put("", candidates, Candidate::class.java)
+                CacheManager.getInstance().put("", candidates, CandidateItem::class.java)
                 onComplete(candidates)
             }catch (e:Exception){
                 onError(e)
             }
         } else{
-            var result = potentialResp as List<Candidate>
+            var result = potentialResp as List<CandidateItem>
             Log.i("Cache", "return ${result.size} elements from cache")
             onComplete(result)
         }
     }
 
-    suspend fun getCandidate(candidateId:Int, onComplete:(resp: Candidate)->Unit, onError: (error: Exception)->Unit) {
-        var potentialResp = CacheManager.getInstance().get(candidateId, Candidate::class.java)
+    suspend fun getCandidate(candidateId:String, onComplete:(resp: CandidateItem?)->Unit, onError: (error: Exception)->Unit) {
+        var potentialResp = CacheManager.getInstance().get(candidateId, CandidateItem::class.java)
 
         if(potentialResp==null){
             Log.i("Cache", "from network")
             try {
                 var candidate = NetworkAdapter.getCandidate(candidateId)
 
-                CacheManager.getInstance().put(candidateId, candidate, Candidate::class.java)
-                onComplete(candidate)
+                CacheManager.getInstance().put(candidateId, candidate, CandidateItem::class.java)
+                if(candidate.size==1){
+                    onComplete(candidate[0])
+                }else{
+                    onComplete(null)
+                }
+
             }catch (e:Exception){
                 onError(e)
             }
 
         } else{
-            var result = potentialResp as Candidate
+            var result = potentialResp as List<CandidateItem>
             Log.i("Cache", "return element from cache")
-            onComplete(result)
+            if(result.size==1){
+                onComplete(result[0])
+            }else{
+                onComplete(null)
+            }
         }
     }
 

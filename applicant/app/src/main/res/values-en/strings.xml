@@ -92,6 +92,7 @@
     <string name="LabelTelephoneLaboralInfo">Telephone</string>
     <string name="placeTelephoneWorkingInfo">Enter the telephone</string>
     <string name="placeDescriptionWorkingInfo">Enter the description</string>
+    <string name="MyInterviews">My interviews</string>
 
 
     <string name="nombreTecnologiaInvalido">Enter a correct name</string>
