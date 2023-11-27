@@ -10,11 +10,14 @@
     <string name="BotonAnterior">Previous</string>
     <string name="BotonDatos">My Data</string>
     <string name="BotonPruebas">My Tests</string>
-    <string name="BotonEntrevistas">My Interviews</string>
+    <string name="BotonEntrevistas">Interviews</string>
     <string name="BotonPagos">MY Payments</string>
     <string name="LabelUsuario">Username</string>
     <string name="LabelPassword">Password</string>
     <string name="LabelRegistro">Don\'t have a user?:</string>
+    <string name="CandidateNameLabelonInterview">Who</string>
+    <string name="ProfileNameLabelonInterview">Profile</string>
+    <string name="QualificationLabelonInterview">Qualification</string>
     <string name="LabelRegistro2">Sign Up</string>
     <string name="LabelCorreo">Email</string>
     <string name="LabelTipoDoc">Document Type</string>
@@ -69,6 +72,7 @@
     <string name="LabelObservation">Observation</string>
     <string name="LoadTestTitle">Load test</string>
     <string name="PuntajeInvalido">Enter points between 0 and 100</string>
+    <string name="InterviewListLabel">Interview List</string>
 
 
     <string name="warning">Warning!</string>
