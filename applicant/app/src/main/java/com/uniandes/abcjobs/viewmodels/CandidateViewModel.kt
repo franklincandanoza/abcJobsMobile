@@ -13,6 +13,7 @@ import com.uniandes.abcjobs.models.CreateAcademicInfoRequest
 import com.uniandes.abcjobs.models.CreateCandidateTechnicalRoleInfoRequest
 import com.uniandes.abcjobs.models.CreateCandidateTechnologyInfoRequest
 import com.uniandes.abcjobs.models.CreateWorkingInfoRequest
+import com.uniandes.abcjobs.models.Interview
 import com.uniandes.abcjobs.repositories.CandidateRepository
 import com.uniandes.abcjobs.repositories.LoginRepository
 import kotlinx.coroutines.Dispatchers
@@ -28,6 +29,8 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
     private val loginRepository = LoginRepository()
 
     private val candidatesMutableData = MutableLiveData<List<Candidate>>()
+
+    private val interviewsMutableData = MutableLiveData<List<Interview>>()
 
     private var _eventLoginFail = MutableLiveData<Boolean>(false)
     val eventLoginFail: LiveData<Boolean>
@@ -85,6 +88,36 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
                 })
             }
         }
+    }
+
+    suspend fun refreshInterviews(onComplete:(resp: List<Interview>)->Unit,
+                          onError: (error: Exception)->Unit){
+
+        viewModelScope.launch (Dispatchers.Default ){
+            withContext(Dispatchers.IO){
+                loginRepository.whoIAm({ response ->
+                    var personId = response.personId
+                    viewModelScope.launch (Dispatchers.Default){
+                        withContext(Dispatchers.IO) {
+                            if (personId != null) {
+                                candidatesRepo.getMyInterviews(personId.toInt(),
+                                    {
+                                        onComplete(it)
+                                        _isSuccessShownToCreateAcademicInfo.postValue(false)
+                                    },
+                                    {
+                                        handleException(it)
+                                    }
+                                )
+                            }
+                        }
+                    }
+                },{
+                    handleException(it)
+                })
+            }
+        }
+
     }
 
     fun createCandidate(request : CandidateRequest): String {

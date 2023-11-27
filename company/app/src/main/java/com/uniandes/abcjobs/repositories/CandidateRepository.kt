@@ -51,6 +51,24 @@ class CandidateRepository (){
         CacheManager.getInstance().invalidate("", Candidate::class.java)
         return NetworkAdapter.createCandidate(candidate)
     }
+
+    suspend fun searchCandidate(token: String, search_filter: CandidateRequestSearch, onComplete:(resp: List<CandidateResponseSearch>)->Unit,
+                                    onError: (error: Exception)->Unit) {
+        println("Enviando peticion de busqueda  desde el repositorio")
+
+        try{
+
+            var candidates = NetworkAdapter.searchCandidate("Bearer $token", search_filter.roleFilter,
+                search_filter.role, search_filter.roleExperience, search_filter.technologies, search_filter.abilities,
+            search_filter.titleFilter, search_filter.title, search_filter.titleExperience)
+            //CacheManager.getInstance().put("", projects, ProjectResponse::class.java)
+            onComplete(candidates)
+        }
+        catch (e:Exception){
+            Log.i("Error", "${e} ")
+            onError(e)
+        }
+    }
     /* ---- Metodos crear adjuntos de candidato--*/
 }
 

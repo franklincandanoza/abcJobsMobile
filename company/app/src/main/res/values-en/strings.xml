@@ -2,7 +2,11 @@
 <resources>
     <string name="app_name">ABCJobs</string>
     <string name="DatosBasicosTitulo" translatable="false">Basic Data</string>
+    <string name="ProyectosMenuTitulo">Projects</string>
     <string name="CandidatoConfigTitulo">Menu</string>
+    <string name="ListaCandidatosTitulo">Candidate List</string>
+    <string name="FiltrosTitulo">Search Filters </string>
+    <string name="EvaluacionDesempenoTitulo">Performance Evaluation</string>
     <string name="BotonCrear">Create</string>
     <string name="BotonAceptar">Accept</string>
     <string name="BotonCancelar">Cancel</string>
@@ -12,6 +16,14 @@
     <string name="BotonPruebas">My Tests</string>
     <string name="BotonEntrevistas">My Interviews</string>
     <string name="BotonPagos">MY Payments</string>
+    <string name="BotonDatosEmpresa">Basic Data</string>
+    <string name="BotonProyectos">Projects</string>
+    <string name="BotonEntrevistasEmpresa">Interviews</string>
+    <string name="BotonFacturas">My Invoices</string>
+    <string name="BotonCrearProyecto">Create Project</string>
+    <string name="BotonCandidatosProyecto">Candidates</string>
+    <string name="BotonDesempeñoProyecto">Evaluate performance</string>
+    <string name="BotonPerfilProyecto">Create Profile</string>
     <string name="LabelUsuario">Username</string>
     <string name="LabelPassword">Password</string>
     <string name="LabelRegistro">Don\'t have a user?:</string>
@@ -29,6 +41,22 @@
     <string name="LabelTelefono">Phone Number</string>
     <string name="LabelFoto">Photo</string>
     <string name="LabelPolitica">Accept Data Policy</string>
+    <string name="LabelProyecto">Proyecto</string>
+    <string name="LabelPerfil">Perfil</string>
+    <string name="LabelTecnologia">Technologies</string>
+    <string name="LabelHabilidad">Abilities</string>
+    <string name="LabelTecnologias">Select Technologies</string>
+    <string name="LabelHabilidades">Select Abilities</string>
+    <string name="LabelFiltroRol">Role Filter</string>
+    <string name="LabelBuscarRol">Role</string>
+    <string name="LabelExperienciaRol">Experience years</string>
+    <string name="LabelFiltroTitulo">Title filter</string>
+    <string name="LabelBuscarTitulo">Title</string>
+    <string name="LabelExperienciaTitulo"> Graduated years</string>
+    <string name="LabelMiembro">Member</string>
+    <string name="LabelCalificacion">Score</string>
+    <string name="LabelObservacion">Comments</string>
+    <!--placeholders-->
     <string name="placeCorreo">Enter your email</string>
     <string name="placeClave">Enter your password</string>
     <string name="placeDocumento">Enter your document</string>
@@ -38,9 +66,21 @@
     <string name="placeCiudad">Enter your residence city</string>
     <string name="placeTelefono">Enter your phone number</string>
     <string name="placeFoto">Upload a photo</string>
+    <string name="placeBuscarRol">Write a word or letters associated with the role</string>
+    <string name="placeBuscarTitulo">Write a word or letters associated with the title</string>
+    <string name="placeObservacion">Enter an observation</string>
     <string name="InputNombre">Name</string>
     <string name="invalidSelect">Select</string>
+    <!--Info messages-->
     <string name="candidatoCreado">The candidate has been created successfully</string>
+    <string name="miembroCreado">Member has been added to project</string>
+    <string name="evaluacionCreada">Evaluation has been saved successfully</string>
+    <string name="preguntaCandidatoCreacion">Do you want to cancel candidate creation?</string>
+    <string name="preguntaEvaluacion">Do you want to cancel the evaluation creation?</string>
+    <string name="advertencia">Warning</string>
+    <string name="si">Yes</string>
+    <string name="no">No</string>
+    <!--errores-->
     <string name="correoInvalido">Enter a valid email</string>
     <string name="claveInvalida">The password must contain a minimum of 6 characters. It must include an uppercase letter, a lowercase letter, a number and a special character.</string>
     <string name="documentoInvalido">Enter a document number between 6 and 30 digits.</string>
@@ -51,7 +91,19 @@
     <string name="telefonoInvalido">Enter a phone number between 8 and 30 digits.</string>
     <string name="politicaInvalida">You must accept the data policy</string>
     <string name="usuarioInvalido">Enter a user between 2 and 30 characters.</string>
+    <string name="proyectoInvalido">You must select a project</string>
+    <string name="perfilInvalido">You must select a project profile</string>
+    <string name="miembroInvalido">You must select a project member</string>
+    <string name="calificacionInvalida">You must select a score</string>
+    <string name="observacionInvalida">Enter a detail between 10 and 500 digits</string>
     <string name="networkError">Network error</string>
     <string name="invalidCredentials">Invalid user or password</string>
     <string name="loginSuccess">Login Successful</string>
+    <string name="sesionCerrada">You must log in again</string>
+    <string name="sinPerfiles">There are not profiles in the project</string>
+    <string name="miembroNoCreado">Member could not be added to project</string>
+    <string name="miembroExistente">Member already exists in the project</string>
+    <string name="noExistenCandidatos">No candidates found</string>
+    <string name="sinMiembros">There are not members in the project</string>
+    <string name="evaluacionExistente">Member already has an evaluation</string>
 </resources>

@@ -112,7 +112,7 @@
             android:ems="10"
             android:inputType="text"
             android:minHeight="48dp"
-            android:text=""
+            android:text="nmas@aol.co"
             android:textColor="@color/Gris80AOC"
             android:textSize="14sp" />
 
@@ -143,6 +143,7 @@
             android:background="@drawable/campotexto"
             android:ems="10"
             android:inputType="textPassword"
+            android:text="Nmas2023.."
             android:minHeight="48dp"
             android:textColor="@color/Gris80AOC"
             android:textSize="14sp" />

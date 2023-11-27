@@ -5,7 +5,7 @@
     android:id="@+id/global"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.CandidateOptionsActivity">
+    tools:context=".ui.">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -82,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:paddingBottom="10dp"
-            android:text="@string/CandidatoConfigTitulo"
+            android:text="@string/ProyectosMenuTitulo"
             android:textColor="@color/negroAOC"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -94,7 +94,6 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="32dp"
             android:clickable="true"
-            android:onClick="irASonidos"
             app:cardCornerRadius="10dp"
             app:cardPreventCornerOverlap="false">
 
@@ -119,7 +118,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
-                        android:text="@string/BotonDatos"
+                        android:text="@string/BotonCrearProyecto"
                         android:textColor="@color/blancoAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -148,8 +147,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="clip_vertical|right"
                         android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="@string/BotonEntrevistas"
-                        app:srcCompat="@drawable/ic_sonido"
+                        android:contentDescription="@string/BotonCrearProyecto"
+                        app:srcCompat="@drawable/project_create"
                         tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
 
                 </LinearLayout>
@@ -157,12 +156,13 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id = "@+id/botonBusqueda"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="32dp"
-            android:onClick="irARepeticion"
+            android:clickable="true"
             app:cardCornerRadius="10dp"
             app:cardPreventCornerOverlap="false">
 
@@ -187,7 +187,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
-                        android:text="@string/BotonPruebas"
+                        android:text="@string/BotonCandidatosProyecto"
                         android:textColor="@color/blancoAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -216,8 +216,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="clip_vertical|right"
                         android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="@string/BotonRepeticionDesc"
-                        app:srcCompat="@drawable/ic_retardar"
+                        android:contentDescription="@string/BotonCandidatosProyecto"
+                        app:srcCompat="@drawable/employees"
                         tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
 
                 </LinearLayout>
@@ -225,13 +225,13 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardPerformance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="32dp"
             android:clickable="true"
-            android:onClick="irADetencion"
             app:cardCornerRadius="10dp"
             app:cardPreventCornerOverlap="false">
 
@@ -256,7 +256,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
-                        android:text="@string/BotonEntrevistas"
+                        android:text="@string/BotonDesempeñoProyecto"
                         android:textColor="@color/blancoAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -285,8 +285,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="clip_vertical|right"
                         android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="@string/BotonDetenerDesc"
-                        app:srcCompat="@drawable/ic_detener"
+                        android:contentDescription="@string/BotonDesempeñoProyecto"
+                        app:srcCompat="@drawable/test"
                         tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
 
                 </LinearLayout>
@@ -299,15 +299,14 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="16dp"
-            android:clickable="true"
-            android:onClick="irANotificaciones"
+            android:clickable="false"
             app:cardCornerRadius="10dp"
             app:cardPreventCornerOverlap="false">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/botoncompuesto"
+                android:background="@drawable/botoncompuestodeshabilitado"
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
@@ -325,8 +324,8 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
-                        android:text="@string/BotonPagos"
-                        android:textColor="@color/blancoAOC"
+                        android:text="@string/BotonPerfilProyecto"
+                        android:textColor="@color/Gris40AOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -354,8 +353,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="clip_vertical|right"
                         android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="@string/BotonNotificacionDesc"
-                        app:srcCompat="@drawable/ic_notificacion"
+                        android:contentDescription="@string/BotonPerfilProyecto"
+                        app:srcCompat="@drawable/businessman"
                         tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
 
                 </LinearLayout>
