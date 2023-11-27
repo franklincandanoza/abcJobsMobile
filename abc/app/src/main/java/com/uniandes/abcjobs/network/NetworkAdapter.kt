@@ -30,6 +30,12 @@ object NetworkAdapter {
         RetrofitHelper.getRetrofit().create(LoginResource::class.java)
     private val testResource: TestResource =
         RetrofitHelper.getRetrofit().create(TestResource::class.java)
+    private val companyResource: CompanyResource =
+        RetrofitHelper.getRetrofit().create(NetworkAdapter.CompanyResource::class.java)
+    private val projectResource: ProjectResource =
+        RetrofitHelper.getRetrofit().create(NetworkAdapter.ProjectResource::class.java)
+    private val interviewResource: InterviewResource =
+        RetrofitHelper.getRetrofit().create(NetworkAdapter.InterviewResource::class.java)
 
     suspend fun getCandidates(): List<CandidateItem> = candidateResource.getCandidates()
 
@@ -48,6 +54,11 @@ object NetworkAdapter {
         testResource.registerResult(registerResult)
 
     suspend fun getEnabledTests(): List<Test> = testResource.getEnabledTests()
+
+    suspend fun getCompanies(): List<Company> = companyResource.getCompanies()
+    suspend fun getProjectsByCompany(companyId: String): List<Project> = projectResource.getProjectsByCompany(companyId)
+
+    suspend fun getInterviewResultsByProject(projectId: String): List<InterviewResult> = interviewResource.getResultsByProject(projectId)
 
     /*{
         var result = testResource.getEnabledTests()
@@ -72,7 +83,7 @@ object NetworkAdapter {
 
             return Retrofit.Builder()
                 .baseUrl("https://backend-test-dw7pbvtayq-uc.a.run.app")
-                //.baseUrl("http://localhost:8000")
+                //.baseUrl("http://10.0.2.2:8000")
 
                 //.addCallAdapterFactory(DefaultCallAdapterFactory)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -98,6 +109,24 @@ object NetworkAdapter {
 
         @GET("/user/myself")
         suspend fun whoIAm(@Header("Authorization") bearerToken: String): MyselfResponse
+    }
+
+    interface CompanyResource {
+
+        @GET("/companies")
+        suspend fun getCompanies(): List<Company>
+    }
+
+    interface ProjectResource {
+
+        @GET("/projects/")
+        suspend fun getProjectsByCompany(@Query("company_id") companyId: String?=null): List<Project>
+    }
+
+    interface InterviewResource {
+
+        @GET("/interviews/result-detail")
+        suspend fun getResultsByProject(@Query("project_id") projectId: String?=null): List<InterviewResult>
     }
 
 

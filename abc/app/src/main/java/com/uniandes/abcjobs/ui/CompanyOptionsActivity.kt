@@ -25,4 +25,12 @@ class CompanyOptionsActivity : AppCompatActivity() {
         )
         startActivity(refresh)
     }
+
+    fun viewInterviews(view: View) {
+        val refresh = Intent(
+            this,
+            ListInterviewsActivity::class.java
+        )
+        startActivity(refresh)
+    }
 }

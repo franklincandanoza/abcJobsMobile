@@ -20,6 +20,7 @@
     <string name="AsistentePaso6Titulo">Paso 6</string>
     <string name="AsistentePaso6Desc">Ingrese un nombre para su nueva alarma</string>
     <string name="LoadTestTitle">Cargar prueba</string>
+    <string name="InterviewListLabel">Lista de entrevistas</string>
 
 
     <!--texto Botones-->
@@ -35,7 +36,10 @@
     <string name="BotonPm" translatable="false">PM</string>
     <string name="BotonDatos">Mis Datos</string>
     <string name="BotonPruebas">Mis Pruebas</string>
-    <string name="BotonEntrevistas">Mis Entrevistas</string>
+    <string name="BotonEntrevistas">Entrevistas</string>
+    <string name="CandidateNameLabelonInterview">Quien</string>
+    <string name="ProfileNameLabelonInterview">Perfil</string>
+    <string name="QualificationLabelonInterview">Calificación</string>
     <string name="BotonPagos">Mis Pagos</string>
     <string name="BotonAsistenteDesc">Boton para iniciar asistente</string>
     <string name="BotonNuevaAlarmaDesc">Boton para Crear Alarma</string>
@@ -75,6 +79,8 @@
     <string name="LabelSms">SMS</string>
     <string name="LabelTechnology">Tecnología</string>
     <string name="LabelTest">Prueba</string>
+    <string name="LabelCompany">Empresa</string>
+    <string name="LabelProject">Proyecto</string>
     <string name="LabelTestDate">Fecha prueba</string>
     <string name="LabelCandidateDocument">Documento candidato</string>
     <string name="LabelCandidateName">Nombre candidato</string>
