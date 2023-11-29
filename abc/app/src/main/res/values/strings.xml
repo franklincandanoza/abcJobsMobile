@@ -141,6 +141,7 @@
     <string name="no">no</string>
 
     <string name="confirmCancel">¿Esta seguro de cancelar el registro de la prueba?</string>
+    <string name="confirmCancelCreateUser">¿Esta seguro de cancelar el registro del usuario?</string>
 
 
 </resources>

@@ -154,8 +154,8 @@ class CreateCandidateActivity : AppCompatActivity(){
     }
     private fun createCandidate(candidateRequest: CandidateRequest) {
         lifecycleScope.launch {
-          var message:String =""
-          val responseCode = viewModel.createCandidate(candidateRequest)
+            var message:String =""
+            val responseCode = viewModel.createCandidate(candidateRequest)
 
             if (responseCode.length == 0)
                 message=resources.getString(R.string.candidatoCreado)
@@ -212,7 +212,7 @@ class CreateCandidateActivity : AppCompatActivity(){
     }
     private fun openCancelDialog(intent: Intent){
         val builder = AlertDialog.Builder(this@CreateCandidateActivity)
-        builder.setMessage(getString(R.string.preguntaEvaluacion))
+        builder.setMessage(getString(R.string.preguntaCancelaciónRegistro))
         builder.setTitle("Advertencia!")
         builder.setCancelable(false)
         builder.setPositiveButton("Si",

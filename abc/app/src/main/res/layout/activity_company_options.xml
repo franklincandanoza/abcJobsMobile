@@ -101,7 +101,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/botoncompuesto"
+                android:background="@drawable/botoncompuestodeshabilitado"
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
@@ -120,7 +120,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonDatos"
-                        android:textColor="@color/blancoAOC"
+                        android:textColor="@color/Gris40AOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -156,74 +156,6 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="32dp"
-            android:onClick="irARepeticion"
-            app:cardCornerRadius="10dp"
-            app:cardPreventCornerOverlap="false">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/botoncompuesto"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/listaAlarma2Label"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:minHeight="22sp"
-                        android:text="@string/BotonPruebas"
-                        android:textColor="@color/blancoAOC"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/listaAlarma2Dias"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="0dp"
-                        android:text=""
-                        android:textColor="@color/blancoAOC"
-                        android:textSize="13sp" />
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/ConfigAlarma2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="clip_vertical|right"
-                        android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="@string/BotonRepeticionDesc"
-                        app:srcCompat="@drawable/ic_retardar"
-                        tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
-
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -361,74 +293,6 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="16dp"
-            android:clickable="true"
-            android:onClick="irANotificaciones"
-            app:cardCornerRadius="10dp"
-            app:cardPreventCornerOverlap="false">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/botoncompuesto"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/listaAlarma4Label"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:minHeight="22sp"
-                        android:text="@string/BotonPagos"
-                        android:textColor="@color/blancoAOC"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/listaAlarma4Dias"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="0dp"
-                        android:text=""
-                        android:textColor="@color/blancoAOC"
-                        android:textSize="13sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/ConfigAlarma4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="clip_vertical|right"
-                        android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="@string/BotonNotificacionDesc"
-                        app:srcCompat="@drawable/ic_notificacion"
-                        tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
-
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

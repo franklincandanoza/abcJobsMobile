@@ -17,6 +17,7 @@
     <string name="LabelRegistro">Don\'t have a user?:</string>
     <string name="CandidateNameLabelonInterview">Who</string>
     <string name="ProfileNameLabelonInterview">Profile</string>
+    <string name="confirmCancelCreateUser">Are you sure to exit user creation??</string>
     <string name="QualificationLabelonInterview">Qualification</string>
     <string name="LabelRegistro2">Sign Up</string>
     <string name="LabelCorreo">Email</string>
