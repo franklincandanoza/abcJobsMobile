@@ -38,6 +38,10 @@ class ProjectOptionsActivity : AppCompatActivity() {
             val intent = Intent(this, CreateEvaluationPerformanceActivity::class.java)
             startActivity(intent)
         }
+        binding.backButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }

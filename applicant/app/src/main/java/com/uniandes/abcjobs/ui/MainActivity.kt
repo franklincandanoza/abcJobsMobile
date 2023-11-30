@@ -52,8 +52,8 @@ class MainActivity : AppCompatActivity() {
                 id: Long
             ) {
                 when (position) {
-                    0 -> setLocale("es")
-                    1 -> setLocale("en")
+                    1 -> setLocale("es")
+                    2 -> setLocale("en")
                 }
                 //println("********************************************")
                 //println("Opcion escogida: $position")
@@ -92,12 +92,15 @@ class MainActivity : AppCompatActivity() {
 
 
         }
-        binding.imagenCancelar.setOnClickListener{
+        binding.cardCancelar.setOnClickListener{
             var editTextUser: EditText = findViewById(R.id.editTextUser)
             editTextUser.text.clear()
 
             var passwordEditText: EditText = findViewById(R.id.editTextPassword)
             passwordEditText.text.clear()
+            finishAffinity()
+            finish()
+            System.exit(0)
         }
 
         viewModel.eventNetworkError.observe(this, Observer<Boolean> { isNetworkError ->
@@ -122,19 +125,21 @@ class MainActivity : AppCompatActivity() {
 
     private fun setLocale(localeName: String) {
         if (localeName != currentLanguage) {
-            //println("Ingresando a canviar")
+            println("**** Ingresando a cambiar idioma ${localeName}")
             locale = Locale(localeName)
             val res = resources
             val dm = res.displayMetrics
             val conf = res.configuration
             conf.locale = locale
             res.updateConfiguration(conf, dm)
+            Locale.setDefault(locale)
             val refresh = Intent(
                 this,
                 MainActivity::class.java
             )
             refresh.putExtra(currentLang, localeName)
             startActivity(refresh)
+            finish()
         } else {
             Toast.makeText(
                 this@MainActivity, "Language, already, selected!", Toast.LENGTH_SHORT).show();

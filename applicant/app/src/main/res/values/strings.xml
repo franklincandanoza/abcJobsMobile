@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">ABCJobs</string>
+    <string name="app_name">ABCJobs Candidato</string>
     <string name="DatosBasicosTitulo">Datos Basicos</string>
     <string name="DatosAcademicosTitulo">Información académica</string>
     <string name="InformaciónLaboralTitulo">Información laboral</string>
@@ -38,6 +38,7 @@
     <!--label-->
     <string name="LabelUsuario">Usuario</string>
     <string name="LabelPassword">Clave</string>
+    <string name="LabelIdioma">Cambiar Idioma</string>
     <string name="LabelRegistro">Eres Nuevo?:</string>
     <string name="LabelRegistro2">Registrate</string>
     <string name="LabelCorreo">Correo</string>
@@ -115,6 +116,7 @@
     <string name="networkError">Error de red</string>
     <string name="invalidCredentials">Usuario o contraseña errada</string>
     <string name="sesionCerrada">Debes iniciar sesión nuevamente</string>
+    <string name="candidatoExiste">El candidato ya existe</string>
     <!--Info messages -->
     <string name="loginSuccess">Login existoso</string>
     <!--CreateCandidate-->

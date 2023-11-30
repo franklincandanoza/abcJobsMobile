@@ -44,6 +44,10 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
     val eventCreationSuccess: LiveData<Boolean>
         get() = _eventCreationSuccess
 
+    private var _isUnSuccessCreateCandidate = MutableLiveData<Boolean>(false)
+    val isUnSuccessCreateCandidate: LiveData<Boolean>
+        get() = _isUnSuccessCreateCandidate
+
     private var _isNetworkErrorShown = MutableLiveData<Boolean>(false)
 
     private var _isSuccessShownToCreateAcademicInfo = MutableLiveData<Boolean>(false)
@@ -120,21 +124,23 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
 
     }
 
-    fun createCandidate(request : CandidateRequest): String {
-        var responseCode="";
-        try {
-            viewModelScope.launch (Dispatchers.Default){
-                withContext(Dispatchers.IO) {
-                    candidatesRepo.createCandidate(candidateToJsonObject(request))
-                }
+    fun createCandidate(request : CandidateRequest,onComplete:(resp: JsonObject)->Unit,
+                        onError: (error: Exception)->Unit ){
+        println("Enviando peticion de candidato desde el viewmodel")
+        viewModelScope.launch(Dispatchers.Default) {
+            withContext(Dispatchers.IO) {
+               candidatesRepo.createCandidate(candidateToJsonObject(request),
+               {
+                  //it.size?.let { it1 -> Log.d("Success", it1.toString()) }
+                  _eventCreationSuccess.postValue(true)
+                  _isUnSuccessCreateCandidate.postValue(false)
+                  onComplete(it)
+               },
+               {
+                  onError(it)
+               })
             }
-
         }
-        catch (e:Exception){
-            println("Error creando Candidato")
-            responseCode = e.message.toString()
-        }
-        return responseCode
     }
 
     fun createCandidateAcademicInfo(request : CreateAcademicInfoRequest) {
@@ -299,6 +305,7 @@ class CandidateViewModel(application: Application) :  AndroidViewModel(applicati
         paramObject.addProperty("residenceCountry", candidate.residenceCountry)
         paramObject.addProperty("residenceCity", candidate.residenceCity)
         paramObject.addProperty("address", candidate.address)
+        println("***** ${paramObject.toString()}")
         return paramObject
     }
 

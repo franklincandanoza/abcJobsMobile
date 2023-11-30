@@ -70,9 +70,17 @@ class CandidateRepository (){
         }
     }
 
-    suspend fun createCandidate(candidate: JsonObject): CandidateResponse {
-        CacheManager.getInstance().invalidate("", Candidate::class.java)
-        return NetworkAdapter.createCandidate(candidate)
+    suspend fun createCandidate(candidate: JsonObject, onComplete:(resp: JsonObject)->Unit,
+                                onError: (error: Exception)->Unit) {
+        try{
+            Log.i("createCandidateAcademic", "************* ${candidate} ")
+            var response = NetworkAdapter.createCandidate(candidate)
+            onComplete(response)
+        }
+        catch (e:Exception){
+            Log.i("Error", "${e} ")
+            onError(e)
+        }
     }
 
     suspend fun createCandidateAcademicInfo(createCandidateAcademicInfo: JsonObject, token: String,

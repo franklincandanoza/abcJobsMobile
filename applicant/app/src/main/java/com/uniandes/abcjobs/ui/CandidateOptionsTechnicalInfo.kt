@@ -25,7 +25,10 @@ class CandidateOptionsTechnicalInfo : AppCompatActivity() {
             val intent = Intent(this, CreateCandidateTechnologyInfoActivity::class.java)
             startActivity(intent)
         }
-
+        binding.backButton.setOnClickListener{
+            val intent = Intent(this, CandidateOptionsMyDataActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 

@@ -3,6 +3,7 @@ package com.uniandes.abcjobs.ui
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.uniandes.abcjobs.R
@@ -18,6 +19,10 @@ class CandidateOptionsActivity : AppCompatActivity() {
         binding = ActivityCandidateOptionsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.backButton.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 
@@ -30,4 +35,6 @@ class CandidateOptionsActivity : AppCompatActivity() {
         val intent = Intent(this, ListInterviewsActivity::class.java)
         startActivity(intent)
     }
+
+
 }

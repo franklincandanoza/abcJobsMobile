@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ABCJobs</string>
+    <string name="app_name">ABCJobs Company</string>
     <string name="DatosBasicosTitulo" translatable="false">Basic Data</string>
     <string name="ProyectosMenuTitulo">Projects</string>
     <string name="CandidatoConfigTitulo">Menu</string>
@@ -26,6 +26,7 @@
     <string name="BotonPerfilProyecto">Create Profile</string>
     <string name="LabelUsuario">Username</string>
     <string name="LabelPassword">Password</string>
+    <string name="LabelIdioma">Change Language</string>
     <string name="LabelRegistro">Don\'t have a user?:</string>
     <string name="LabelRegistro2">Sign Up</string>
     <string name="LabelCorreo">Email</string>
@@ -41,8 +42,8 @@
     <string name="LabelTelefono">Phone Number</string>
     <string name="LabelFoto">Photo</string>
     <string name="LabelPolitica">Accept Data Policy</string>
-    <string name="LabelProyecto">Proyecto</string>
-    <string name="LabelPerfil">Perfil</string>
+    <string name="LabelProyecto">Project</string>
+    <string name="LabelPerfil">Profile</string>
     <string name="LabelTecnologia">Technologies</string>
     <string name="LabelHabilidad">Abilities</string>
     <string name="LabelTecnologias">Select Technologies</string>
