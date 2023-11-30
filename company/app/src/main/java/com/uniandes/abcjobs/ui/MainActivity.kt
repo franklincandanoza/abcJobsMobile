@@ -1,10 +1,12 @@
 package com.uniandes.abcjobs.ui
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.ui.AppBarConfiguration
 import com.uniandes.abcjobs.databinding.ActivityMainBinding
 import android.content.Intent
+import android.os.LocaleList
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
@@ -52,9 +54,10 @@ class MainActivity : AppCompatActivity() {
                 id: Long
             ) {
                 when (position) {
-                    0 -> setLocale("es")
-                    1 -> setLocale("en")
+                    1 -> setLocale("es")
+                    2 -> setLocale("en")
                 }
+
                 //println("********************************************")
                 //println("Opcion escogida: $position")
 
@@ -92,12 +95,15 @@ class MainActivity : AppCompatActivity() {
 
 
         }
-        binding.imagenCancelar.setOnClickListener{
+        binding.cardCancelar.setOnClickListener{
             var editTextUser: EditText = findViewById(R.id.editTextUser)
             editTextUser.text.clear()
 
             var passwordEditText: EditText = findViewById(R.id.editTextPassword)
             passwordEditText.text.clear()
+            finishAffinity()
+            finish()
+            System.exit(0)
         }
 
         viewModel.eventNetworkError.observe(this, Observer<Boolean> { isNetworkError ->
@@ -122,19 +128,22 @@ class MainActivity : AppCompatActivity() {
 
     private fun setLocale(localeName: String) {
         if (localeName != currentLanguage) {
-            //println("Ingresando a canviar")
+            println("**** Ingresando a cambiar ${localeName}")
+
             locale = Locale(localeName)
             val res = resources
             val dm = res.displayMetrics
             val conf = res.configuration
             conf.locale = locale
             res.updateConfiguration(conf, dm)
+            Locale.setDefault(locale)
             val refresh = Intent(
                 this,
                 MainActivity::class.java
             )
             refresh.putExtra(currentLang, localeName)
             startActivity(refresh)
+            finish()
         } else {
             Toast.makeText(
                 this@MainActivity, "Language, already, selected!", Toast.LENGTH_SHORT).show();
@@ -173,5 +182,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, CompanyOptionsActivity::class.java)
             startActivity(intent)
         }
+    }
+    private fun loadLocale() {
+
+        val sharedPref = getSharedPreferences("Settings", Context.MODE_PRIVATE)
+        val localeToSet: String = sharedPref.getString("locale_to_set", "")!!
+        println("******** Usando ${localeToSet}")
+        setLocale(localeToSet)
     }
 }

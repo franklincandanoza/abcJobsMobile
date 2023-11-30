@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ABCJobs</string>
+    <string name="app_name">ABCJobs Recruiter</string>
     <string name="DatosBasicosTitulo" translatable="false">Basic Data</string>
     <string name="CandidatoConfigTitulo">Menu</string>
     <string name="BotonCrear">Create</string>
@@ -15,6 +15,7 @@
     <string name="LabelUsuario">Username</string>
     <string name="LabelPassword">Password</string>
     <string name="LabelRegistro">Don\'t have a user?:</string>
+    <string name="LabelIdioma">Change Language</string>
     <string name="CandidateNameLabelonInterview">Who</string>
     <string name="ProfileNameLabelonInterview">Profile</string>
     <string name="QualificationLabelonInterview">Qualification</string>

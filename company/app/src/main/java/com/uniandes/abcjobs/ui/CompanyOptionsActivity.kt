@@ -39,5 +39,8 @@ class CompanyOptionsActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
+        binding.backButton.setOnClickListener {
+            finish()
+        }
     }
 }

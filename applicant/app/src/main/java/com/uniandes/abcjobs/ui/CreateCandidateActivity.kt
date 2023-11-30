@@ -4,6 +4,9 @@ import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.util.Log
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Spinner
@@ -23,6 +26,7 @@ class CreateCandidateActivity : AppCompatActivity(){
 
     private lateinit var viewModel: CandidateViewModel
     /*private var canadidateAdapter: CandidateAdapter? = null*/
+    private var handler= Handler(Looper.getMainLooper())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -153,19 +157,40 @@ class CreateCandidateActivity : AppCompatActivity(){
 
     }
     private fun createCandidate(candidateRequest: CandidateRequest) {
+
         lifecycleScope.launch {
-            var message:String =""
-            val responseCode = viewModel.createCandidate(candidateRequest)
-
-            if (responseCode.length == 0)
-                message=resources.getString(R.string.candidatoCreado)
-
-            val toast =
-                Toast.makeText(applicationContext, message, Toast.LENGTH_LONG)
-
-            toast.show()
+            viewModel.createCandidate(candidateRequest, {
+                var messsage: String = ""
+                try {
+                    val response = it.get("msg")
+                    var message = ""
+                    if (response.toString().contains("Candidate has been")) {
+                        message = getString(R.string.candidatoCreado).toString()
+                    } else {
+                        message = response.toString()
+                    }
+                    printMessage(message)
+                    println("Valor de msg ${response.toString()}")
+                    handler?.postDelayed({
+                        val intent = Intent(
+                            getApplicationContext(),
+                            CandidateOptionsActivity::class.java
+                        )
+                        startActivity(intent)
+                    }, 1500)
+                } catch (e: Exception) {
+                    Log.d("ERROR", "${e.message}")
+                    println("Entrando al catch")
+                }
+            },
+                {
+                    Log.d("Error", it.toString())
+                    if (it.toString().contains("400")) {
+                        val message = getString(R.string.candidatoExiste).toString()
+                        printMessage(message)
+                    }
+                })
         }
-
     }
     fun isValidPassword(password: String?) : Boolean {
         password?.let {
@@ -225,5 +250,11 @@ class CreateCandidateActivity : AppCompatActivity(){
 
         val alertDialog = builder.create()
         alertDialog.show()
+    }
+    private fun printMessage(message: String )
+    {
+        handler?.postDelayed({
+            Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG ).show();
+        },1000)
     }
 }

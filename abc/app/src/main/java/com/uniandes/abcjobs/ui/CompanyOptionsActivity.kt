@@ -16,6 +16,11 @@ class CompanyOptionsActivity : AppCompatActivity() {
         val binding = ActivityCompanyOptionsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.backButton.setOnClickListener {
+                finish()
+            }
+
+
     }
 
     fun registerTest(view: View) {

@@ -29,6 +29,10 @@ class CandidateOptionsMyDataActivity : AppCompatActivity() {
             val intent = Intent(this, CreateCandidateWorkingInfoActivity::class.java)
             startActivity(intent)
         }
+        binding.backButton.setOnClickListener{
+            val intent = Intent(this, CandidateOptionsActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

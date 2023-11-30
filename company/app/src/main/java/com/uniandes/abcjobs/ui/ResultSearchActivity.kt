@@ -76,7 +76,7 @@ class ResultSearchActivity : AppCompatActivity() {
         val titleName = intent.getStringExtra("titleName")
         val titleYears = intent.getStringExtra("titleYears")
         
-        println("Recibido : proyect=$projectId&profile=$profileId$$roleFilter&role=$roleName&roleExperience=$roleYears&technologies=$technologies&abilities=$abilities&titleFilter=$titleFilter&title=$titleName&titleExperience=$titleYears")
+        println("Recibido : proyect=$projectId&profile=$profileId&role$roleFilter&role=$roleName&roleExperience=$roleYears&technologies=$technologies&abilities=$abilities&titleFilter=$titleFilter&title=$titleName&titleExperience=$titleYears")
 
         binding.nameProject.text = projectName
         binding.nameProfile.text = profileId
