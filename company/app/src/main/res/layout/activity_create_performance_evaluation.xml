@@ -96,7 +96,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/LabelProyecto"
-                        android:textColor="@color/Gris70AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16dp" />
 
 
@@ -109,6 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
+                    android:minHeight="48dp"
                     android:layout_marginBottom="15dp" />
 
                 <LinearLayout
@@ -123,7 +124,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/LabelMiembro"
-                        android:textColor="@color/Gris70AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -134,6 +135,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
+                    android:minHeight="48dp"
                     android:layout_marginBottom="15dp" />
 
                 <LinearLayout
@@ -161,7 +163,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/LabelCalificacion"
-                        android:textColor="@color/Gris70AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -187,7 +189,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/LabelObservacion"
-                        android:textColor="@color/Gris70AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16dp" />
                 </LinearLayout>
 

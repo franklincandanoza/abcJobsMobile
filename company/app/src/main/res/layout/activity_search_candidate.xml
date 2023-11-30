@@ -94,7 +94,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/LabelProyecto"
-                        android:textColor="@color/Gris70AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16dp" />
 
 
@@ -107,6 +107,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
+                    android:minHeight="48dp"
                     android:layout_marginBottom="15dp"
                     />
 
@@ -122,7 +123,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/LabelPerfil"
-                        android:textColor="@color/Gris70AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -133,6 +134,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
+                    android:minHeight="48dp"
                     android:layout_marginBottom="15dp"
                      />
 
@@ -147,7 +149,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/LabelTecnologia"
-                        android:textColor="@color/Gris70AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16dp" />
 
                 </LinearLayout>
@@ -178,7 +180,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/LabelHabilidad"
-                        android:textColor="@color/Gris70AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16dp" />
 
 
@@ -208,7 +210,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/LabelFiltroRol"
-                        android:textColor="@color/Gris70AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -220,6 +222,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="15dp"
+                    android:minHeight="48dp"
                     android:entries="@array/filter" />
 
                 <LinearLayout
@@ -234,7 +237,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/LabelBuscarRol"
-                        android:textColor="@color/Gris70AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -268,7 +271,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/LabelExperienciaRol"
-                        android:textColor="@color/Gris70AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -301,7 +304,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/LabelFiltroTitulo"
-                        android:textColor="@color/Gris70AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -327,7 +330,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/LabelBuscarTitulo"
-                        android:textColor="@color/Gris70AOC"
+                        android:minHeight="48dp"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -357,7 +361,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/LabelExperienciaTitulo"
-                        android:textColor="@color/Gris70AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16dp" />
                 </LinearLayout>
 

@@ -96,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/LabelUsuario"
-                android:textColor="@color/Gris80AOC" />
+                android:textColor="@color/negroAOC" />
 
 
         </LinearLayout>
@@ -112,7 +112,7 @@
             android:ems="10"
             android:inputType="text"
             android:minHeight="48dp"
-            android:text="nmas@aol.co"
+            android:text=""
             android:textColor="@color/Gris80AOC"
             android:textSize="14sp" />
 
@@ -128,7 +128,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/LabelPassword"
-                android:textColor="@color/Gris80AOC"/>
+                android:textColor="@color/negroAOC"/>
 
 
         </LinearLayout>
@@ -143,7 +143,7 @@
             android:background="@drawable/campotexto"
             android:ems="10"
             android:inputType="textPassword"
-            android:text="Nmas2023.."
+            android:text=""
             android:minHeight="48dp"
             android:textColor="@color/Gris80AOC"
             android:textSize="14sp" />
@@ -160,7 +160,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/Gris80AOC"
+                android:textColor="@color/negroAOC"
                 android:text="@string/LabelIdioma"/>
         </LinearLayout>
 
@@ -212,7 +212,7 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="@string/LabelRegistro2"
-                android:textColor="@color/azulClaAOC"
+                android:textColor="@color/azulOscAOC"
                 android:textSize="24sp"
                 android:clickable="true"
                 />

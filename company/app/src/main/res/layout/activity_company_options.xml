@@ -121,7 +121,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonDatosEmpresa"
-                        android:textColor="@color/Gris40AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -190,7 +190,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonProyectos"
-                        android:textColor="@color/blancoAOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -260,7 +260,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonEntrevistasEmpresa"
-                        android:textColor="@color/Gris40AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -328,7 +328,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonFacturas"
-                        android:textColor="@color/Gris40AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 

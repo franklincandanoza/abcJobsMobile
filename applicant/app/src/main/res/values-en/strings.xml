@@ -45,6 +45,9 @@
     <string name="LabelStartDateAcademicInfo">Start</string>
     <string name="LabelEndDateAcademicInfo">End</string>
     <string name="LabelVigenteAcademicInfo">Current</string>
+    <string name="userDescription">User</string>
+    <string name="passwordDescription">Password</string>
+    <string name="MyDataDescription">My data</string>
     <string name="LabelDescriptionAcademicInfo">Description</string>
     <string name="LabelVigente">Current</string>
     <string name="placeCorreo">Enter your email</string>

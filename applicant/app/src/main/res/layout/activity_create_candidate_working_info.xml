@@ -93,7 +93,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelCargoLaboralInfo"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
 
 
@@ -127,7 +127,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelCompanyWorkingInfo"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
 
 
@@ -160,7 +160,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelCountryAcademicInfo"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
             </LinearLayout>
 
@@ -171,6 +171,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
+                android:minHeight="48dp"
                 android:layout_marginBottom="15dp"
                 android:entries="@array/country" />
 
@@ -195,7 +196,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelStartDateAcademicInfo"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
 
                 <LinearLayout
@@ -209,6 +210,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="5"
+                        android:minHeight="48dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="15dp"
@@ -222,6 +224,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="5"
+                        android:minHeight="48dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="15dp"
@@ -241,7 +244,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/LabelEndDateAcademicInfo"
-                        android:textColor="@color/Gris70AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16dp" />
 
                     <CheckBox
@@ -265,6 +268,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="5"
+                        android:minHeight="48dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="15dp"
@@ -278,6 +282,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="5"
+                        android:minHeight="48dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="15dp"
@@ -297,7 +302,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelDireccionLaboralInfo"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
 
 
@@ -315,7 +320,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                 android:inputType="textCapCharacters"
                 android:minHeight="48dp"
                 android:hint="@string/placeAddressWorkingInfo"
-                android:textColor="@color/Gris80AOC"
+                android:textColor="@color/negroAOC"
                 android:textSize="14sp" />
 
             <LinearLayout
@@ -330,7 +335,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelTelephoneLaboralInfo"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
 
 
@@ -365,7 +370,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelDescriptionAcademicInfo"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
             </LinearLayout>
 

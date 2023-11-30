@@ -93,7 +93,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelNameCreateTechnicalRoles"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
 
 
@@ -127,7 +127,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelExperienceCreateTechnicalRoles"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
 
 
@@ -177,7 +177,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelDescriptionAcademicInfo"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
             </LinearLayout>
 

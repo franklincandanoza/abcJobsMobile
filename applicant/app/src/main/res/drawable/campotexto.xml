@@ -11,6 +11,6 @@
     <solid
         android:color="@color/Gris37AOC"
         />
-    <stroke android:color="@color/Gris40AOC"
+    <stroke android:color="@color/negroAOC"
         android:width="1dp"/>
 </shape>

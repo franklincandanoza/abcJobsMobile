@@ -25,6 +25,7 @@
     <string name="BotonTecnologías">Tecnologías</string>
     <string name="BotonPruebas">Mis Pruebas</string>
     <string name="BotonEntrevistas">Mis Entrevistas</string>
+    <string name="MyDataDescription">Mis datos</string>
     <string name="BotonPagos">Mis Pagos</string>
     <string name="BotonVolverDesc">Boton para Volver</string>
     <string name="BotonRepeticionDesc">Boton para retardar la alarma</string>
@@ -38,6 +39,8 @@
     <!--label-->
     <string name="LabelUsuario">Usuario</string>
     <string name="LabelPassword">Clave</string>
+    <string name="userDescription">Usuario</string>
+    <string name="passwordDescription">Contraseña</string>
     <string name="LabelIdioma">Cambiar Idioma</string>
     <string name="LabelRegistro">Eres Nuevo?:</string>
     <string name="LabelRegistro2">Registrate</string>

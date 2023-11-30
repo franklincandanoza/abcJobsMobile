@@ -120,7 +120,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonDatos"
-                        android:textColor="@color/blancoAOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -148,7 +148,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="clip_vertical|right"
                         android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="@string/BotonEntrevistas"
+                        android:contentDescription="@string/MyDataDescription"
                         app:srcCompat="@drawable/ic_sonido"
                         tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
 
@@ -190,7 +190,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonPruebas"
-                        android:textColor="@color/Gris40AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -259,7 +259,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonEntrevistas"
-                        android:textColor="@color/blancoAOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -327,7 +327,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonPagos"
-                        android:textColor="@color/Gris40AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 

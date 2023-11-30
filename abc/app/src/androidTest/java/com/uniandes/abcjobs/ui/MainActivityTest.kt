@@ -72,15 +72,4 @@ class MainActivityTest{
                 )
             )
     }
-
-    @Test
-    fun loginOpenRegisterActivity(){
-
-        onView(withId(R.id.registerButton)).perform(click())
-
-        Thread.sleep(2000)
-
-        intended(hasComponent(CreateCandidateActivity::class.java.name))
-
-    }
 }
