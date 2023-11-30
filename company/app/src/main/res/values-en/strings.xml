@@ -7,6 +7,7 @@
     <string name="ListaCandidatosTitulo">Candidate List</string>
     <string name="FiltrosTitulo">Search Filters </string>
     <string name="EvaluacionDesempenoTitulo">Performance Evaluation</string>
+    <string name="preguntaCancelaciónRegistro">Do you want to cancel the user registration??</string>
     <string name="BotonCrear">Create</string>
     <string name="BotonAceptar">Accept</string>
     <string name="BotonCancelar">Cancel</string>

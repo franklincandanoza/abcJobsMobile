@@ -106,7 +106,7 @@
     <!--Info messages -->
     <string name="candidatoCreado">The candidate has been created successfully</string>
     <string name="InformacionAcademicaCreada">Academic information has been created successfully</string>
-    <string name="ConfirmationToCancelCreateAcademicInfo">Are you sure about canceling the creation of the technical role?</string>
+    <string name="ConfirmationToCancelCreateAcademicInfo">Are you sure about canceling the creation of the academic info?</string>
     <string name="ConfirmationSi">Yes</string>
     <string name="candidatoExiste">Candidate already exists</string>
     <string name="BotonRepeticionDesc">Boton para retardar la alarma</string>

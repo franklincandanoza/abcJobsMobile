@@ -38,7 +38,7 @@
     <string name="BotonPruebas">Mis Pruebas</string>
     <string name="BotonEntrevistas">Mis Entrevistas</string>
     <string name="BotonPagos">Mis Pagos</string>
-    <string name="BotonDatosEmpresa">DatosBásicos</string>
+    <string name="BotonDatosEmpresa">Datos Básicos</string>
     <string name="BotonProyectos">Proyectos</string>
     <string name="BotonEntrevistasEmpresa">Entrevistas</string>
     <string name="BotonFacturas">Mis Facturas</string>
@@ -120,6 +120,7 @@
     <string name="evaluacionCreada">La evaluación ha sido guardada</string>
     <string name="preguntaCandidatoCreacion">Desea cancelar la creacion del candidato?</string>
     <string name="preguntaEvaluacion">Desea cancelar la creacion de la evaluación?</string>
+    <string name="preguntaCancelaciónRegistro">Desea cancelar el registro del usuario?</string>
     <string name="advertencia">Advertencia</string>
     <string name="si">Si</string>
     <string name="no">No</string>

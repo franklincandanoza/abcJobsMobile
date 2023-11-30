@@ -171,7 +171,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/botoncompuesto"
+                android:background="@drawable/botoncompuestodeshabilitado"
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
@@ -190,7 +190,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonPruebas"
-                        android:textColor="@color/blancoAOC"
+                        android:textColor="@color/Gris40AOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -308,7 +308,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/botoncompuesto"
+                android:background="@drawable/botoncompuestodeshabilitado"
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
@@ -327,7 +327,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonPagos"
-                        android:textColor="@color/blancoAOC"
+                        android:textColor="@color/Gris40AOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 

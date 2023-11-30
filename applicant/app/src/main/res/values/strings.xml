@@ -103,7 +103,7 @@
     <string name="InformacionLaboralCreada">Se ha creado la información laboral exitósamente</string>
     <string name="roleTecnicoCreado">Se ha creado el rol técnico exitósamente</string>
     <string name="TecnologiaCreada">Se ha creado la información de la tecnología exitósamente</string>
-    <string name="ConfirmationToCancelCreateAcademicInfo">Está seguro de cancelar la creacion del rol técnico?</string>
+    <string name="ConfirmationToCancelCreateAcademicInfo">Está seguro de cancelar la creacion de la información académica?</string>
     <string name="ConfirmationToCancelCreateWorkingInfo">Está seguro de cancelar la creacion de información laboral?</string>
     <string name="ConfirmationToCancelCreateTechnicalRoleInfo">Está seguro de cancelar la creacion del rol técnico?</string>
     <string name="ConfirmationToCancelCreateTechnologyInfo">Está seguro de cancelar la creacion de la tecnología?</string>

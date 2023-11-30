@@ -212,7 +212,7 @@ class CreateCandidateActivity : AppCompatActivity(){
     }
     private fun openCancelDialog(intent: Intent){
         val builder = AlertDialog.Builder(this@CreateCandidateActivity)
-        builder.setMessage("Esta seguro de cancelar la creacion del Candidato?")
+        builder.setMessage(R.string.confirmCancelCreateUser)
         builder.setTitle("Advertencia!")
         builder.setCancelable(false)
         builder.setPositiveButton("Si",

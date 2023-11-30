@@ -15,6 +15,12 @@ class CandidateOptionsMyDataActivity : AppCompatActivity() {
         binding = ActivityCandidateMyDataBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.backButton.setOnClickListener {
+
+            val intent = Intent(this, CandidateOptionsActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.createAcademicInfo.setOnClickListener {
             val intent = Intent(this, CreateCandidateAcademicInfoActivity::class.java)
             startActivity(intent)

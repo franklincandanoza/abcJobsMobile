@@ -43,6 +43,12 @@ class ListInterviewsActivity : AppCompatActivity() {
 
         getMyInterviews()
 
+        binding.backButton.setOnClickListener {
+
+            val intent = Intent(this, CandidateOptionsActivity::class.java)
+            startActivity(intent)
+        }
+
 
 
     }
