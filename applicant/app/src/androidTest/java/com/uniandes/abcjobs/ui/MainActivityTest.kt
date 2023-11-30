@@ -36,7 +36,7 @@ class MainActivityTest{
         onView(withId(R.id.editTextPassword)).perform(typeText("password"), closeSoftKeyboard())
 
         Thread.sleep(2000)
-        onView(withId(R.id.BotonAceptar)).perform(click())
+        onView(withId(R.id.CardAceptar)).perform(click())
 
         Thread.sleep(2000)
         onView(withId(R.id.editTextUser)).check(matches(isDisplayed()));
@@ -49,7 +49,7 @@ class MainActivityTest{
         onView(withId(R.id.editTextPassword)).perform(typeText(""), closeSoftKeyboard())
 
         Thread.sleep(2000)
-        onView(withId(R.id.BotonAceptar)).perform(click())
+        onView(withId(R.id.CardAceptar)).perform(click())
 
         Thread.sleep(2000)
         onView(withId(R.id.editTextUser)).check(matches(isDisplayed()));

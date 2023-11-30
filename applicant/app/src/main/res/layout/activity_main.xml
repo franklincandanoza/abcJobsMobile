@@ -114,7 +114,8 @@
             android:inputType="text"
             android:minHeight="48dp"
             android:text=""
-            android:textColor="@color/Gris80AOC"
+            android:textColor="@color/negroAOC"
+            android:hint="@string/userDescription"
             android:textSize="14sp" />
 
         <LinearLayout
@@ -146,7 +147,8 @@
             android:text=""
             android:inputType="textPassword"
             android:minHeight="48dp"
-            android:textColor="@color/Gris80AOC"
+            android:textColor="@color/negroAOC"
+            android:hint="@string/passwordDescription"
             android:textSize="14sp" />
 
         <LinearLayout
@@ -174,6 +176,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
             android:entries="@array/language"
+            android:minHeight="48dp"
             android:spinnerMode="dropdown"/>
 
         <LinearLayout
@@ -213,8 +216,9 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="@string/LabelRegistro2"
-                android:textColor="@color/azulClaAOC"
+                android:textColor="@color/azulOscAOC"
                 android:textSize="24sp"
+                android:minHeight="48dp"
                 android:clickable="true"
                 />
         </LinearLayout>
@@ -244,7 +248,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/CardAceptar"
+                android:id="@+id/cardAceptar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="2dp"
@@ -261,7 +265,7 @@
                     android:orientation="horizontal">
 
                      <TextView
-                        android:id="@+id/BotonAceptar"
+                        android:id="@+id/textAceptar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -340,7 +344,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
                         android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="@string/BotonCancelarDesc"
                         android:minWidth="48dp"
                         android:minHeight="48dp"
                         app:srcCompat="@drawable/ic_cancelar" />

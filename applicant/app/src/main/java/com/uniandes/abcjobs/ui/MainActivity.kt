@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.BotonAceptar.setOnClickListener{
+        binding.cardAceptar.setOnClickListener{
             // Do click handling here
             var editTextUser: EditText = findViewById(R.id.editTextUser)
             var userName = editTextUser.text.toString()

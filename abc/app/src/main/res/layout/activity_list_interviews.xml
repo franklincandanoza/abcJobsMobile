@@ -101,7 +101,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelCompany"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
 
 
@@ -121,6 +121,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:textSize="16dp"
+                    android:minHeight="48dp"
                     android:layout_marginTop="10dp"
 
                     android:layout_marginBottom="15dp" />
@@ -139,7 +140,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelProject"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
 
 
@@ -157,6 +158,7 @@ tools:context=".ui.CreateCandidateActivity">
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
+                android:minHeight="48dp"
                 android:layout_marginBottom="15dp"/>
             </LinearLayout>
 

@@ -120,7 +120,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonDatos"
-                        android:textColor="@color/Gris40AOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -188,7 +188,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/ButtonRegisterTest"
-                        android:textColor="@color/blancoAOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -257,7 +257,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonEntrevistas"
-                        android:textColor="@color/blancoAOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 

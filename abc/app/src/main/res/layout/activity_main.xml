@@ -96,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/LabelUsuario"
-                android:textColor="@color/Gris80AOC" />
+                android:textColor="@color/negroAOC" />
 
 
         </LinearLayout>
@@ -112,7 +112,7 @@
             android:ems="10"
             android:inputType="text"
             android:minHeight="48dp"
-            android:text="Jamaal.Bahringer@gmail.com"
+            android:text=""
             android:textColor="@color/Gris80AOC"
             android:textSize="14sp" />
 
@@ -128,7 +128,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/LabelPassword"
-                android:textColor="@color/Gris80AOC"/>
+                android:textColor="@color/negroAOC"/>
 
 
         </LinearLayout>
@@ -143,7 +143,7 @@
             android:background="@drawable/campotexto"
             android:ems="10"
             android:inputType="textPassword"
-            android:text="CxQb6gmNIG4jCyn"
+            android:text=""
             android:minHeight="48dp"
             android:textColor="@color/Gris80AOC"
             android:textSize="14sp" />
@@ -156,12 +156,12 @@
 
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/Gris80AOC"
-                android:text="@string/LabelIdioma" />
+                android:textColor="@color/negroAOC"
+                android:text="@string/LabelIdioma"/>
         </LinearLayout>
 
 
@@ -172,6 +172,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
+            android:minHeight="48dp"
             android:entries="@array/language"
             android:spinnerMode="dropdown"/>
 
@@ -326,4 +327,3 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
-

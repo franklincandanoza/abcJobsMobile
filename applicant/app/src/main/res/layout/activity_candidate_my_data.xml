@@ -120,7 +120,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonDatosAcademicos"
-                        android:textColor="@color/blancoAOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -189,7 +189,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonRolesTecnicos"
-                        android:textColor="@color/blancoAOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -250,7 +250,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonInformacionLaboral"
-                        android:textColor="@color/blancoAOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 

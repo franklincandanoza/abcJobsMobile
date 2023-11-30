@@ -93,7 +93,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelCorreo"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
 
 
@@ -127,7 +127,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelPassword"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
 
 
@@ -160,7 +160,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelTipoDoc"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
             </LinearLayout>
 
@@ -171,6 +171,7 @@ tools:context=".ui.CreateCandidateActivity">
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
+                android:minHeight="48dp"
                 android:layout_marginBottom="15dp"
                 android:entries="@array/documentType" />
 
@@ -186,7 +187,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelDocumento"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
             </LinearLayout>
 
@@ -218,7 +219,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelNombre"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
 
 
@@ -251,7 +252,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelApellido"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
             </LinearLayout>
 
@@ -283,7 +284,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelEdad"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
             </LinearLayout>
 
@@ -295,6 +296,7 @@ tools:context=".ui.CreateCandidateActivity">
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"
+                android:minHeight="48dp"
                 android:entries="@array/age" />
 
             <LinearLayout
@@ -309,7 +311,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelDireccion"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
             </LinearLayout>
 
@@ -341,7 +343,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelCiudad"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
             </LinearLayout>
 
@@ -373,7 +375,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelPais"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
             </LinearLayout>
 
@@ -385,6 +387,7 @@ tools:context=".ui.CreateCandidateActivity">
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"
+                android:minHeight="48dp"
                 android:entries="@array/country" />
 
             <LinearLayout
@@ -399,7 +402,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelOrigen"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
             </LinearLayout>
 
@@ -411,6 +414,7 @@ tools:context=".ui.CreateCandidateActivity">
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"
+                android:minHeight="48dp"
                 android:entries="@array/country" />
 
             <LinearLayout
@@ -425,7 +429,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelTelefono"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
             </LinearLayout>
 
@@ -457,7 +461,7 @@ tools:context=".ui.CreateCandidateActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelFoto"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
 
             </LinearLayout>

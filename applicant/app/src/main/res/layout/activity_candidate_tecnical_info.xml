@@ -120,7 +120,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonTechcnicalRoles"
-                        android:textColor="@color/blancoAOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -189,7 +189,7 @@
                         android:layout_marginBottom="5dp"
                         android:minHeight="22sp"
                         android:text="@string/BotonTecnologías"
-                        android:textColor="@color/blancoAOC"
+                        android:textColor="@color/negroAOC"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 

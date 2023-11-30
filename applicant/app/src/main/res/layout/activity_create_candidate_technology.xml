@@ -93,7 +93,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelNameCreateTechnologyInfo"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
 
 
@@ -127,7 +127,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelExperienceCreateTechnicalRoles"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
 
 
@@ -159,7 +159,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelLevelCreateTechnology"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
             </LinearLayout>
             <LinearLayout
@@ -175,6 +175,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                     android:layout_weight="5"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
+                    android:minHeight="48dp"
                     android:layout_marginBottom="15dp"
                     android:entries="@array/technologyLevel"/>
 
@@ -205,7 +206,7 @@ tools:context=".ui.CreateCandidateAcademicInfoActivity">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/LabelDescriptionAcademicInfo"
-                    android:textColor="@color/Gris70AOC"
+                    android:textColor="@color/negroAOC"
                     android:textSize="16dp" />
             </LinearLayout>
 
